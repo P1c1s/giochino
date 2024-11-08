@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://c4gtobtru7t2v"]
+
+[ext_resource type="Texture2D" uid="uid://q1i23e5egcbo" path="res://Assets/Characters/Villains/Cacodaemon Sprite Sheet.png" id="1_cdsgd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8277e"]
+atlas = ExtResource("1_cdsgd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpqu8"]
+atlas = ExtResource("1_cdsgd")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcy7l"]
+atlas = ExtResource("1_cdsgd")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lb7oi"]
+atlas = ExtResource("1_cdsgd")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_somcj"]
+atlas = ExtResource("1_cdsgd")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rft5d"]
+atlas = ExtResource("1_cdsgd")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fg84o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8277e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpqu8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcy7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lb7oi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_somcj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rft5d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_meefg"]
+size = Vector2(33, 27)
+
+[node name="Nemico" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.65625, 0.625)
+sprite_frames = SubResource("SpriteFrames_fg84o")
+autoplay = "default"
+frame = 1
+frame_progress = 0.0683163
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_meefg")
