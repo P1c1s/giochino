@@ -62,8 +62,8 @@ position = Vector2(0, -1)
 scale = Vector2(0.65625, 0.625)
 sprite_frames = SubResource("SpriteFrames_fg84o")
 autoplay = "default"
-frame = 1
-frame_progress = 0.0683163
+frame = 5
+frame_progress = 0.548083
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -403,9 +403,9 @@ script = ExtResource("1_0jmt3")
 position = Vector2(-3, -20)
 scale = Vector2(2.125, 2.125)
 sprite_frames = SubResource("SpriteFrames_47223")
-animation = &"Jump"
-frame = 2
-frame_progress = 0.149051
+animation = &"Look"
+frame = 13
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.5, -1.5)
