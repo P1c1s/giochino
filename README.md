@@ -20,6 +20,8 @@ survival/adventure
 - [x] character boosts (with reload bar)
 - [ ] kill super final boss
 - [ ] aiutante animale
+- [ ] mini livelli solo per l'aiutante
+- [ ] primo livello nudo, da quelli dopo con armature
 
 ### Nemici
 - [ ] mostri/alieni
