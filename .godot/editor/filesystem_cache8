@@ -1,0 +1,84 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1732140433
+icon.svg::CompressedTexture2D::8783545481028713336::1732140378::1732140435::1::::<><>::
+login_menu.gd::GDScript::-1::1732140378::0::1::::<>Control<>::
+login_menu.tscn::PackedScene::2181507695287045470::1732140378::0::1::::<><>::res://login_menu.gd
+node_2d.tscn::PackedScene::8131192800889890977::1732140378::0::1::::<><>::
+README.md::TextFile::-1::1732140378::0::1::::<><>::
+::res://Assets/::1732140378
+::res://Assets/Characters/::1732140378
+::res://Assets/Characters/Heroes/::1732140378
+::res://Assets/Characters/Heroes/Adventurer/::1732140378
+Adventurer Sprite Sheet v1.5.png::CompressedTexture2D::5685125591193178649::1732140378::1732140435::1::::<><>::
+::res://Assets/Characters/Heroes/Fox/::1732140378
+Fox Sprite Sheet.png::CompressedTexture2D::6335744065569880275::1732140378::1732140435::1::::<><>::
+::res://Assets/Characters/Villains/::1732140378
+Cacodaemon Sprite Sheet.png::CompressedTexture2D::1177230750393304168::1732140378::1732140435::1::::<><>::
+Ghoul Sprite Sheet.png::CompressedTexture2D::8783982139006709190::1732140378::1732140435::1::::<><>::
+::res://Assets/Characters/Villains/FireWorm/::1732140378
+Attack.png::CompressedTexture2D::4453625997658181052::1732140378::1732140435::1::::<><>::
+Death.png::CompressedTexture2D::674063758825251901::1732140378::1732140435::1::::<><>::
+::res://Assets/Characters/Villains/FlyingEye/::1732140378
+Attack3.png::CompressedTexture2D::3802256265259117327::1732140378::1732140435::1::::<><>::
+projectile_sprite.png::CompressedTexture2D::2994137896160623465::1732140378::1732140435::1::::<><>::
+::res://Assets/Characters/Villains/Goblin/::1732140378
+Attack3.png::CompressedTexture2D::5618876976672657850::1732140378::1732140435::1::::<><>::
+::res://Assets/Items/::1732140378
+::res://Assets/Items/Props/::1732140378
+Bushes.png::CompressedTexture2D::330528905205482721::1732140378::1732140435::1::::<><>::
+Dimensional_Portal.png::CompressedTexture2D::1882729607973618888::1732140378::1732140435::1::::<><>::
+Flowers.png::CompressedTexture2D::2831886602237901757::1732140378::1732140435::1::::<><>::
+Trees.png::CompressedTexture2D::5965491067580502618::1732140378::1732140435::1::::<><>::
+::res://Assets/Landscapes/::1732140378
+2.png::CompressedTexture2D::5551405491216823957::1732140378::1732140435::1::::<><>::
+cielo.jpg::CompressedTexture2D::3403325086714759234::1732140378::1732140435::1::::<><>::
+deserto.png::CompressedTexture2D::2691799843714095751::1732140378::1732140435::1::::<><>::
+Isole.png::CompressedTexture2D::4224050991231634017::1732140378::1732140436::1::::<><>::
+orig.png::CompressedTexture2D::4561275587715362785::1732140378::1732140435::1::::<><>::
+origbig.png::CompressedTexture2D::4842049071054266768::1732140378::1732140435::1::::<><>::
+Sprite-0004.jpg::CompressedTexture2D::4939278438319626631::1732140378::1732140436::1::::<><>::
+Sprite-0006.jpg::CompressedTexture2D::4886414942659057829::1732140378::1732140436::1::::<><>::
+Sprite-0007.jpg::CompressedTexture2D::2258302158796080333::1732140378::1732140436::1::::<><>::
+Textures-16.png::CompressedTexture2D::4968683837014272054::1732140378::1732140435::1::::<><>::
+tileset.png::CompressedTexture2D::5000870120990203793::1732140378::1732140435::1::::<><>::
+::res://Assets/UI/::1732140378
+frecce-removebg-preview.png::CompressedTexture2D::3332997219594459944::1732140378::1732140435::1::::<><>::
+freccia.png::CompressedTexture2D::6469323522592978423::1732140378::1732140435::1::::<><>::
+notPressed60.png::CompressedTexture2D::5626468875882518585::1732140378::1732140435::1::::<><>::
+notPressed70.png::CompressedTexture2D::651772211896821374::1732140378::1732140435::1::::<><>::
+pressed60.png::CompressedTexture2D::6678557987902845147::1732140378::1732140435::1::::<><>::
+pressed70.png::CompressedTexture2D::79620749437863663::1732140378::1732140435::1::::<><>::
+SwordNotPressed.png::CompressedTexture2D::3348885172922975667::1732140378::1732140435::1::::<><>::
+SwordPressed.png::CompressedTexture2D::3627684391814875684::1732140378::1732140435::1::::<><>::
+::res://Scenes/::1732140378
+::res://Scenes/Characters/::1732140378
+::res://Scenes/Characters/Heroes/::1732140378
+Adventurer.tscn::PackedScene::2778722539322995599::1732140378::0::1::::<><>::uid://cm86gngoogf26::::res://Assets/Characters/Heroes/Adventurer Sprite Sheet v1.5.png
+minonna.tscn::PackedScene::3767313236072467268::1732140378::0::1::::<><>::res://Scripts/Characters/Heroes/minonna.gd<>uid://cm86gngoogf26::::res://Assets/Characters/Heroes/Adventurer/Adventurer Sprite Sheet v1.5.png
+personaggio.tscn::PackedScene::446854056385697614::1732140378::0::1::::<><>::res://Scripts/Characters/Heroes/personaggio.gd<>uid://cwjc1qvuhuum2::::res://Assets/Characters/Heroes/Fox/Fox Sprite Sheet.png
+::res://Scenes/Characters/Villains/::1732140378
+Ghoul.tscn::PackedScene::6099316537155037094::1732140378::0::1::::<><>::uid://dxfa5xi27fjtu::::res://Assets/Characters/Villains/Ghoul Sprite Sheet.png
+nemico.tscn::PackedScene::6821882806065774871::1732140378::0::1::::<><>::uid://q1i23e5egcbo::::res://Assets/Characters/Villains/Cacodaemon Sprite Sheet.png
+::res://Scenes/Items/::1732140378
+::res://Scenes/Items/Props/::1732140378
+portale.tscn::PackedScene::2364906654131508027::1732140378::0::1::::<><>::uid://13ajtq7iuv7u::::res://Assets/Items/Props/Dimensional_Portal.png<>res://Scripts/Items/Props/portale.gd
+::res://Scenes/Levels/::1732140378
+livello_1.tscn::PackedScene::8722623536425085856::1732140378::0::1::::<><>::uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg<>uid://4m0li4cvpxxb::::res://Scenes/UI/MobileControls.tscn<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/personaggio.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn<>uid://c4gtobtru7t2v::::res://Scenes/Characters/Villains/nemico.tscn<>res://Scripts/Characters/Villains/nemico.gd<>uid://btw6dl74bkjxs::::res://Scenes/Characters/Heroes/minonna.tscn
+livello_2.tscn::PackedScene::463196220579163851::1732140378::0::1::::<><>::uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/personaggio.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn
+livello_3.tscn::PackedScene::1394784066586757830::1732140378::0::1::::<><>::uid://cfe6gcvadv7ao::::res://Assets/Landscapes/pixilart-drawing.png<>uid://cdipun5qj4lwb::::res://Assets/Landscapes/tileset.png<>uid://c4gtobtru7t2v::::res://Scenes/Characters/Villains/nemico.tscn<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/personaggio.tscn
+livello_4.tscn::PackedScene::1061809212238019892::1732140378::0::1::::<><>::uid://d1g612dth8nfr::::res://Assets/Landscapes/pixil-frame-0.png<>uid://0fq7so24lfcv::::res://Assets/Landscapes/CaveG.png<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/personaggio.tscn<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn
+::res://Scenes/UI/::1732140378
+MobileControls.tscn::PackedScene::2061787032209451955::1732140378::0::1::::<><>::uid://cmfredef5lkjh::::res://Assets/UI/notPressed60.png<>uid://c2fe4yx6tjmxf::::res://Assets/UI/pressed60.png<>uid://bnyhwc3yxis3d::::res://Assets/UI/SwordNotPressed.png<>uid://brxjoxki0hpxs::::res://Assets/UI/SwordPressed.png
+::res://Scripts/::1732140378
+::res://Scripts/Characters/::1732140378
+::res://Scripts/Characters/Heroes/::1732140378
+Adventurer.gd::GDScript::-1::1732140378::0::1::::<>CharacterBody2D<>::
+minonna.gd::GDScript::-1::1732140378::0::1::::<>CharacterBody2D<>::
+personaggio.gd::GDScript::-1::1732140378::0::1::::<>CharacterBody2D<>::
+::res://Scripts/Characters/Villains/::1732140378
+Ghoul.gd::GDScript::-1::1732140378::0::1::::<>CharacterBody2D<>::
+nemico (2).gd::GDScript::-1::1732140378::0::1::::<>CharacterBody2D<>::
+nemico.gd::GDScript::-1::1732140378::0::1::::<>CharacterBody2D<>::
+::res://Scripts/Items/::1732140378
+::res://Scripts/Items/Props/::1732140378
+portale.gd::GDScript::-1::1732140378::0::1::::portale<>Area2D<>::

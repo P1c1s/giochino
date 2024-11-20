@@ -1,8 +1,7 @@
-[gd_scene load_steps=15 format=4 uid="uid://dwjklns2s2jiu"]
+[gd_scene load_steps=14 format=4 uid="uid://dwjklns2s2jiu"]
 
 [ext_resource type="Texture2D" uid="uid://boqujcub1urp7" path="res://Assets/Landscapes/cielo.jpg" id="1_e6ws5"]
 [ext_resource type="PackedScene" uid="uid://4m0li4cvpxxb" path="res://Scenes/UI/MobileControls.tscn" id="1_j66bs"]
-[ext_resource type="PackedScene" uid="uid://gmpvd5wxub47" path="res://Scenes/Characters/Heroes/personaggio.tscn" id="2_l7rx8"]
 [ext_resource type="Texture2D" uid="uid://cc14q5mwl8kig" path="res://Assets/Landscapes/Textures-16.png" id="3_nwygy"]
 [ext_resource type="PackedScene" uid="uid://8xtwxe1fifct" path="res://Scenes/Items/Props/portale.tscn" id="4_8frh0"]
 [ext_resource type="PackedScene" uid="uid://c4gtobtru7t2v" path="res://Scenes/Characters/Villains/nemico.tscn" id="5_3qhn1"]
@@ -891,18 +890,6 @@ position = Vector2(5, 1)
 
 [node name="MobileControls" parent="." instance=ExtResource("1_j66bs")]
 
-[node name="Personaggio" parent="." instance=ExtResource("2_l7rx8")]
-z_index = 1
-position = Vector2(672, 177)
-script = null
-
-[node name="Camera2D" type="Camera2D" parent="Personaggio"]
-z_index = 4
-limit_left = 0
-limit_top = 0
-limit_bottom = 648
-editor_draw_limits = true
-
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = 1
 position = Vector2(-1, -2)
@@ -945,3 +932,12 @@ stretch_mode = 1
 [node name="minonna" parent="." instance=ExtResource("8_4pyi7")]
 position = Vector2(126, 304)
 scale = Vector2(1.5, 1.5)
+
+[node name="Camera2D" type="Camera2D" parent="minonna"]
+z_index = 4
+position = Vector2(364, -84.6667)
+scale = Vector2(0.666667, 0.666667)
+limit_left = 0
+limit_top = 0
+limit_bottom = 648
+editor_draw_limits = true
