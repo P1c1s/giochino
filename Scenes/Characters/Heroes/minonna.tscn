@@ -3,57 +3,8 @@
 [ext_resource type="Script" path="res://Scripts/Characters/Heroes/minonna.gd" id="1_ddey6"]
 [ext_resource type="Texture2D" uid="uid://cm86gngoogf26" path="res://Assets/Characters/Heroes/Adventurer/Adventurer Sprite Sheet v1.5.png" id="2_ucwrl"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rjwpq"]
-animation = &"Attack"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yghp6"]
-animation = &"Idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6yifu"]
-animation = &"Jump"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2cxmn"]
-animation = &"Run"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hwchw"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e3hql"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xqx0e"]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_alpuu"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_33lr5"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4nmyw"]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pgogg"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_523ac"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5ti7t"]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hvwjq"]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3d3ha"]
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_wa1v7"]
-states/Attack/node = SubResource("AnimationNodeAnimation_rjwpq")
-states/Attack/position = Vector2(430.594, 4.94995)
-states/End/position = Vector2(842, 149.491)
-states/Idle/node = SubResource("AnimationNodeAnimation_yghp6")
-states/Idle/position = Vector2(289.3, 143.424)
-states/Jump/node = SubResource("AnimationNodeAnimation_6yifu")
-states/Jump/position = Vector2(430.24, 301.137)
-states/Run/node = SubResource("AnimationNodeAnimation_2cxmn")
-states/Run/position = Vector2(570.8, 143.665)
-states/Start/position = Vector2(136.5, 147.481)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_hwchw"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_e3hql"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_xqx0e"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_alpuu"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_33lr5"), "Attack", "Run", SubResource("AnimationNodeStateMachineTransition_4nmyw"), "Run", "Attack", SubResource("AnimationNodeStateMachineTransition_pgogg"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_523ac"), "Jump", "Idle", SubResource("AnimationNodeStateMachineTransition_5ti7t"), "Jump", "Run", SubResource("AnimationNodeStateMachineTransition_hvwjq"), "Run", "Jump", SubResource("AnimationNodeStateMachineTransition_3d3ha")]
-graph_offset = Vector2(-49.04, 45.0999)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eabih"]
+height = 20.0
 
 [sub_resource type="Animation" id="Animation_hljs6"]
 resource_name = "Attack"
@@ -148,15 +99,60 @@ _data = {
 "Run": SubResource("Animation_7wdro")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eabih"]
-height = 20.0
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rjwpq"]
+animation = &"Attack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yghp6"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6yifu"]
+animation = &"Jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2cxmn"]
+animation = &"Run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hwchw"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e3hql"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xqx0e"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_alpuu"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_33lr5"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4nmyw"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pgogg"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_523ac"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5ti7t"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hvwjq"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3d3ha"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_wa1v7"]
+states/Attack/node = SubResource("AnimationNodeAnimation_rjwpq")
+states/Attack/position = Vector2(430.594, 4.94995)
+states/End/position = Vector2(842, 149.491)
+states/Idle/node = SubResource("AnimationNodeAnimation_yghp6")
+states/Idle/position = Vector2(289.3, 143.424)
+states/Jump/node = SubResource("AnimationNodeAnimation_6yifu")
+states/Jump/position = Vector2(430.24, 301.137)
+states/Run/node = SubResource("AnimationNodeAnimation_2cxmn")
+states/Run/position = Vector2(570.8, 143.665)
+states/Start/position = Vector2(136.5, 147.481)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_hwchw"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_e3hql"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_xqx0e"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_alpuu"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_33lr5"), "Attack", "Run", SubResource("AnimationNodeStateMachineTransition_4nmyw"), "Run", "Attack", SubResource("AnimationNodeStateMachineTransition_pgogg"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_523ac"), "Jump", "Idle", SubResource("AnimationNodeStateMachineTransition_5ti7t"), "Jump", "Run", SubResource("AnimationNodeStateMachineTransition_hvwjq"), "Run", "Jump", SubResource("AnimationNodeStateMachineTransition_3d3ha")]
+graph_offset = Vector2(-49.04, 45.0999)
 
 [node name="minonna" type="CharacterBody2D"]
 script = ExtResource("1_ddey6")
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeStateMachine_wa1v7")
-anim_player = NodePath("../AnimationPlayer")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2, -7)
@@ -164,13 +160,17 @@ texture = ExtResource("2_ucwrl")
 hframes = 13
 vframes = 15
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -2)
+shape = SubResource("CapsuleShape2D_eabih")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_l1gxi")
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -2)
-shape = SubResource("CapsuleShape2D_eabih")
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_wa1v7")
+anim_player = NodePath("../AnimationPlayer")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
