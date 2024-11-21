@@ -890,6 +890,20 @@ position = Vector2(5, 1)
 
 [node name="MobileControls" parent="." instance=ExtResource("1_j66bs")]
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sfondo" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 1625.0
+offset_bottom = 661.0
+texture = ExtResource("1_e6ws5")
+expand_mode = 2
+stretch_mode = 1
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = 1
 position = Vector2(-1, -2)
@@ -914,20 +928,6 @@ shape = SubResource("WorldBoundaryShape2D_dq85c")
 [node name="Nemico" parent="." instance=ExtResource("5_3qhn1")]
 position = Vector2(881, 528)
 script = ExtResource("6_4w4qq")
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0, 0)
-
-[node name="Sfondo" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
-offset_left = -4.0
-offset_top = -4.0
-offset_right = 1625.0
-offset_bottom = 661.0
-texture = ExtResource("1_e6ws5")
-expand_mode = 2
-stretch_mode = 1
 
 [node name="minonna" parent="." instance=ExtResource("8_4pyi7")]
 position = Vector2(126, 304)

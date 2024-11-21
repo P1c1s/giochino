@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cmfredef5lkjh" path="res://Assets/UI/notPressed60.png" id="1_yqf8t"]
 [ext_resource type="Texture2D" uid="uid://c2fe4yx6tjmxf" path="res://Assets/UI/pressed60.png" id="2_nhvuo"]
-[ext_resource type="Texture2D" uid="uid://bnyhwc3yxis3d" path="res://Assets/UI/SwordNotPressed.png" id="3_om1c7"]
-[ext_resource type="Texture2D" uid="uid://brxjoxki0hpxs" path="res://Assets/UI/SwordPressed.png" id="4_eqyld"]
+[ext_resource type="Texture2D" uid="uid://cou8oof0d282n" path="res://Assets/UI/notPressed.png" id="3_3sw5o"]
+[ext_resource type="Texture2D" uid="uid://tlac7giehnpm" path="res://Assets/UI/Pressed.png" id="4_23apb"]
 
 [node name="MobileControls" type="CanvasLayer"]
 
@@ -38,6 +38,6 @@ action = "ui_accept"
 [node name="Attack" type="TouchScreenButton" parent="GridContainer"]
 position = Vector2(859, 358)
 scale = Vector2(0.223, 0.223)
-texture_normal = ExtResource("3_om1c7")
-texture_pressed = ExtResource("4_eqyld")
+texture_normal = ExtResource("3_3sw5o")
+texture_pressed = ExtResource("4_23apb")
 action = "ui_attack"

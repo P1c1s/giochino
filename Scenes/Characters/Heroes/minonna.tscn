@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://btw6dl74bkjxs"]
+[gd_scene load_steps=26 format=3 uid="uid://btw6dl74bkjxs"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/Heroes/minonna.gd" id="1_ddey6"]
 [ext_resource type="Texture2D" uid="uid://cm86gngoogf26" path="res://Assets/Characters/Heroes/Adventurer/Adventurer Sprite Sheet v1.5.png" id="2_ucwrl"]
@@ -8,6 +8,9 @@ animation = &"Attack"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yghp6"]
 animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6yifu"]
+animation = &"Jump"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2cxmn"]
 animation = &"Run"
@@ -28,17 +31,29 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pgogg"]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_523ac"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5ti7t"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hvwjq"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3d3ha"]
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_wa1v7"]
 states/Attack/node = SubResource("AnimationNodeAnimation_rjwpq")
-states/Attack/position = Vector2(423.3, 5.44995)
-states/End/position = Vector2(698, 121)
+states/Attack/position = Vector2(430.594, 4.94995)
+states/End/position = Vector2(842, 149.491)
 states/Idle/node = SubResource("AnimationNodeAnimation_yghp6")
-states/Idle/position = Vector2(309.3, 146.215)
+states/Idle/position = Vector2(289.3, 143.424)
+states/Jump/node = SubResource("AnimationNodeAnimation_6yifu")
+states/Jump/position = Vector2(430.24, 301.137)
 states/Run/node = SubResource("AnimationNodeAnimation_2cxmn")
-states/Run/position = Vector2(535.8, 145.649)
+states/Run/position = Vector2(570.8, 143.665)
 states/Start/position = Vector2(136.5, 147.481)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_hwchw"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_e3hql"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_xqx0e"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_alpuu"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_33lr5"), "Attack", "Run", SubResource("AnimationNodeStateMachineTransition_4nmyw"), "Run", "Attack", SubResource("AnimationNodeStateMachineTransition_pgogg")]
-graph_offset = Vector2(-166.2, -50.52)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_hwchw"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_e3hql"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_xqx0e"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_alpuu"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_33lr5"), "Attack", "Run", SubResource("AnimationNodeStateMachineTransition_4nmyw"), "Run", "Attack", SubResource("AnimationNodeStateMachineTransition_pgogg"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_523ac"), "Jump", "Idle", SubResource("AnimationNodeStateMachineTransition_5ti7t"), "Jump", "Run", SubResource("AnimationNodeStateMachineTransition_hvwjq"), "Run", "Jump", SubResource("AnimationNodeStateMachineTransition_3d3ha")]
+graph_offset = Vector2(-49.04, 45.0999)
 
 [sub_resource type="Animation" id="Animation_hljs6"]
 resource_name = "Attack"

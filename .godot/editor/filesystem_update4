@@ -1,1 +1,4 @@
+res://Scenes/UI/MobileControls.tscn
 res://Scenes/Levels/livello_1.tscn
+res://Scenes/Characters/Heroes/minonna.tscn
+res://Scripts/Characters/Heroes/minonna.gd
