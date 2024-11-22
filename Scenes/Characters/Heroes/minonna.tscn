@@ -8,7 +8,6 @@ height = 20.0
 
 [sub_resource type="Animation" id="Animation_hljs6"]
 resource_name = "Attack"
-length = 1.1
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -25,7 +24,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_w4cd6"]
 resource_name = "Idle"
-length = 1.4
+length = 1.3
 loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
@@ -43,7 +42,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_xiq5n"]
 resource_name = "Jump"
-length = 0.7
+length = 0.6
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -149,7 +148,7 @@ states/Run/node = SubResource("AnimationNodeAnimation_2cxmn")
 states/Run/position = Vector2(570.8, 143.665)
 states/Start/position = Vector2(136.5, 147.481)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_hwchw"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_e3hql"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_xqx0e"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_alpuu"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_33lr5"), "Attack", "Run", SubResource("AnimationNodeStateMachineTransition_4nmyw"), "Run", "Attack", SubResource("AnimationNodeStateMachineTransition_pgogg"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_523ac"), "Jump", "Idle", SubResource("AnimationNodeStateMachineTransition_5ti7t"), "Jump", "Run", SubResource("AnimationNodeStateMachineTransition_hvwjq"), "Run", "Jump", SubResource("AnimationNodeStateMachineTransition_3d3ha")]
-graph_offset = Vector2(-49.04, 45.0999)
+graph_offset = Vector2(-82.28, -63.4701)
 
 [node name="minonna" type="CharacterBody2D"]
 script = ExtResource("1_ddey6")

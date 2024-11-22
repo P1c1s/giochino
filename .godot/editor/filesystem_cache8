@@ -1,7 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1732222305
+::res://::1732272201
 icon.svg::CompressedTexture2D::8783545481028713336::1732140378::1732140435::1::::<><>::
-login_menu.gd::GDScript::-1::1732140378::0::1::::<>Control<>::
 README.md::TextFile::-1::1732140549::0::1::::<><>::
 ::res://Assets/::1732140378
 ::res://Assets/Characters/::1732140378
@@ -52,31 +51,31 @@ SwordNotPressed.png::CompressedTexture2D::3348885172922975667::1732140378::17321
 SwordPressed.png::CompressedTexture2D::3627684391814875684::1732140378::1732140435::1::::<><>::
 ::res://Scenes/::1732222293
 ::res://Scenes/Characters/::1732140378
-::res://Scenes/Characters/Heroes/::1732140378
+::res://Scenes/Characters/Heroes/::1732266164
 Adventurer.tscn::PackedScene::2778722539322995599::1732140378::0::1::::<><>::uid://cm86gngoogf26::::res://Assets/Characters/Heroes/Adventurer Sprite Sheet v1.5.png
-minonna.tscn::PackedScene::3767313236072467268::1732140378::0::1::::<><>::res://Scripts/Characters/Heroes/minonna.gd<>uid://cm86gngoogf26::::res://Assets/Characters/Heroes/Adventurer/Adventurer Sprite Sheet v1.5.png
-personaggio.tscn::PackedScene::446854056385697614::1732140378::0::1::::<><>::res://Scripts/Characters/Heroes/personaggio.gd<>uid://cwjc1qvuhuum2::::res://Assets/Characters/Heroes/Fox/Fox Sprite Sheet.png
+minonna.tscn::PackedScene::3767313236072467268::1732266164::0::1::::<><>::res://Scripts/Characters/Heroes/minonna.gd<>uid://cm86gngoogf26::::res://Assets/Characters/Heroes/Adventurer/Adventurer Sprite Sheet v1.5.png
+personaggio.tscn::PackedScene::446854056385697614::1732266164::0::1::::<><>::res://Scripts/Characters/Heroes/personaggio.gd<>uid://cwjc1qvuhuum2::::res://Assets/Characters/Heroes/Fox/Fox Sprite Sheet.png
 ::res://Scenes/Characters/Villains/::1732140378
 Ghoul.tscn::PackedScene::6099316537155037094::1732140378::0::1::::<><>::uid://dxfa5xi27fjtu::::res://Assets/Characters/Villains/Ghoul Sprite Sheet.png
 nemico.tscn::PackedScene::6821882806065774871::1732140378::0::1::::<><>::uid://q1i23e5egcbo::::res://Assets/Characters/Villains/Cacodaemon Sprite Sheet.png
 ::res://Scenes/Items/::1732140378
 ::res://Scenes/Items/Props/::1732140378
 portale.tscn::PackedScene::2364906654131508027::1732140378::0::1::::<><>::uid://13ajtq7iuv7u::::res://Assets/Items/Props/Dimensional_Portal.png<>res://Scripts/Items/Props/portale.gd
-::res://Scenes/Levels/::1732140472
-livello_1.tscn::PackedScene::8722623536425085856::1732140472::0::1::::<><>::uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg<>uid://4m0li4cvpxxb::::res://Scenes/UI/MobileControls.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn<>uid://c4gtobtru7t2v::::res://Scenes/Characters/Villains/nemico.tscn<>res://Scripts/Characters/Villains/nemico.gd<>uid://btw6dl74bkjxs::::res://Scenes/Characters/Heroes/minonna.tscn
-livello_2.tscn::PackedScene::463196220579163851::1732140378::0::1::::<><>::uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/personaggio.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn
+::res://Scenes/Levels/::1732266164
+livello_1.tscn::PackedScene::8722623536425085856::1732266164::0::1::::<><>::uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg<>uid://4m0li4cvpxxb::::res://Scenes/UI/MobileControls.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn<>uid://c4gtobtru7t2v::::res://Scenes/Characters/Villains/nemico.tscn<>res://Scripts/Characters/Villains/nemico.gd<>uid://btw6dl74bkjxs::::res://Scenes/Characters/Heroes/minonna.tscn
+livello_2.tscn::PackedScene::463196220579163851::1732266164::0::1::::<><>::uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/personaggio.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn
 livello_3.tscn::PackedScene::1394784066586757830::1732140378::0::1::::<><>::uid://cfe6gcvadv7ao::::res://Assets/Landscapes/pixilart-drawing.png<>uid://cdipun5qj4lwb::::res://Assets/Landscapes/tileset.png<>uid://c4gtobtru7t2v::::res://Scenes/Characters/Villains/nemico.tscn<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/personaggio.tscn
 livello_4.tscn::PackedScene::1061809212238019892::1732140378::0::1::::<><>::uid://d1g612dth8nfr::::res://Assets/Landscapes/pixil-frame-0.png<>uid://0fq7so24lfcv::::res://Assets/Landscapes/CaveG.png<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/personaggio.tscn<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn
-::res://Scenes/Menus/::1732222305
-login_menu.tscn::PackedScene::2181507695287045470::1732140378::0::1::::<><>::res://login_menu.gd
+::res://Scenes/Menus/::1732222315
+login_menu.tscn::PackedScene::2181507695287045470::1732222315::0::1::::<><>::res://Scripts/Menus/login_menu.gd
 ::res://Scenes/UI/::1732222122
 MobileControls.tscn::PackedScene::2061787032209451955::1732222122::0::1::::<><>::uid://cmfredef5lkjh::::res://Assets/UI/notPressed60.png<>uid://c2fe4yx6tjmxf::::res://Assets/UI/pressed60.png<>uid://cou8oof0d282n::::res://Assets/UI/notPressed.png<>uid://tlac7giehnpm::::res://Assets/UI/Pressed.png
 ::res://Scripts/::1732222312
 ::res://Scripts/Characters/::1732140378
-::res://Scripts/Characters/Heroes/::1732140378
+::res://Scripts/Characters/Heroes/::1732224853
 Adventurer.gd::GDScript::-1::1732140378::0::1::::<>CharacterBody2D<>::
-minonna.gd::GDScript::-1::1732140378::0::1::::<>CharacterBody2D<>::
-personaggio.gd::GDScript::-1::1732140378::0::1::::<>CharacterBody2D<>::
+minonna.gd::GDScript::-1::1732223327::0::1::::<>CharacterBody2D<>::
+personaggio.gd::GDScript::-1::1732224853::0::1::::<>CharacterBody2D<>::
 ::res://Scripts/Characters/Villains/::1732140378
 Ghoul.gd::GDScript::-1::1732140378::0::1::::<>CharacterBody2D<>::
 nemico (2).gd::GDScript::-1::1732140378::0::1::::<>CharacterBody2D<>::
@@ -84,4 +83,5 @@ nemico.gd::GDScript::-1::1732140378::0::1::::<>CharacterBody2D<>::
 ::res://Scripts/Items/::1732140378
 ::res://Scripts/Items/Props/::1732140378
 portale.gd::GDScript::-1::1732140378::0::1::::portale<>Area2D<>::
-::res://Scripts/Menus/::1732222312
+::res://Scripts/Menus/::1732222315
+login_menu.gd::GDScript::-1::1732140378::0::1::::<>Control<>::

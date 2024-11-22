@@ -927,6 +927,7 @@ shape = SubResource("WorldBoundaryShape2D_dq85c")
 
 [node name="Nemico" parent="." instance=ExtResource("5_3qhn1")]
 position = Vector2(881, 528)
+scale = Vector2(0.8, 0.8)
 script = ExtResource("6_4w4qq")
 
 [node name="minonna" parent="." instance=ExtResource("8_4pyi7")]

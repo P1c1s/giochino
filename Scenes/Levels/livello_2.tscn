@@ -887,6 +887,7 @@ distance = -3.0
 [node name="Personaggio" parent="." instance=ExtResource("1_nojr0")]
 z_index = 1
 position = Vector2(82, 475)
+scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="Personaggio"]
 limit_left = 0
