@@ -1,7 +1,65 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1732272201
+::res://::1732284344
 icon.svg::CompressedTexture2D::8783545481028713336::1732140378::1732140435::1::::<><>::
 README.md::TextFile::-1::1732140549::0::1::::<><>::
+::res://addons/::1732284382
+::res://addons/SilentWolf/::1732284382
+plugin.cfg::TextFile::-1::1732284308::0::1::::<><>::
+SilentWolf.gd::GDScript::-1::1732284308::0::1::::<>Node<>::
+silent_wolf.gd::GDScript::-1::1732284308::0::1::::<>EditorPlugin<>::
+::res://addons/SilentWolf/assets/::1732284078
+::res://addons/SilentWolf/assets/fonts/::1732284078
+Comfortaa-Bold.ttf::FontFile::271040723689385196::1732284078::1732284385::1::::<><>::
+::res://addons/SilentWolf/assets/gfx/::1732284078
+checkbox_checked.png::CompressedTexture2D::3468020692350256878::1732284078::1732284385::1::::<><>::
+checkbox_unchecked.png::CompressedTexture2D::2846717820554890245::1732284078::1732284385::1::::<><>::
+dummy_info_icon_small.png::CompressedTexture2D::428710156687873495::1732284078::1732284385::1::::<><>::
+info_icon.png::CompressedTexture2D::2716626596262750719::1732284078::1732284385::1::::<><>::
+info_icon_small.png::CompressedTexture2D::7719019821522443599::1732284078::1732284385::1::::<><>::
+::res://addons/SilentWolf/assets/themes/::1732284078
+sw_theme.tres::Theme::9062636269328026305::1732284078::0::1::::<><>::uid://d4kabkagmfeq::::res://addons/silent_wolf/assets/fonts/Comfortaa-Bold.ttf
+::res://addons/SilentWolf/Auth/::1732284308
+Auth.gd::GDScript::-1::1732284308::0::1::::<>Node<>::
+ConfirmEmail.gd::GDScript::-1::1732284308::0::1::::<>TextureRect<>::
+ConfirmEmail.tscn::PackedScene::3666020689521619779::1732284308::0::1::::<><>::res://addons/silent_wolf/Auth/ConfirmEmail.gd<>uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn
+Login.gd::GDScript::-1::1732284308::0::1::::<>TextureRect<>::
+Login.tscn::PackedScene::3014700595930598416::1732284308::0::1::::<><>::res://addons/silent_wolf/Auth/Login.gd<>uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn<>uid://bpn62aabunxva::::res://addons/silent_wolf/assets/gfx/checkbox_checked.png<>uid://bgs8a50ilk5cj::::res://addons/silent_wolf/assets/gfx/checkbox_unchecked.png
+Register.gd::GDScript::-1::1732284308::0::1::::<>TextureRect<>::
+Register.tscn::PackedScene::5311945745348205939::1732284308::0::1::::<><>::res://addons/silent_wolf/Auth/Register.gd<>uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn<>uid://dh8fem1lgom04::::res://addons/silent_wolf/assets/gfx/info_icon_small.png<>uid://gdw18po2h7hb::::res://addons/silent_wolf/assets/gfx/dummy_info_icon_small.png
+RegisterUsernamePassword.tscn::PackedScene::1289353403102707883::1732284308::0::1::::<><>::res://addons/silent_wolf/Auth/Register.gd<>uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn<>uid://dh8fem1lgom04::::res://addons/silent_wolf/assets/gfx/info_icon_small.png<>uid://gdw18po2h7hb::::res://addons/silent_wolf/assets/gfx/dummy_info_icon_small.png
+ResetPassword.gd::GDScript::-1::1732284308::0::1::::<>TextureRect<>::
+ResetPassword.tscn::PackedScene::7942062648086173727::1732284308::0::1::::<><>::res://addons/silent_wolf/Auth/ResetPassword.gd<>uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn
+::res://addons/SilentWolf/common/::1732284308
+SWButton.tscn::PackedScene::5568296785936591155::1732284308::0::1::::<><>::
+::res://addons/SilentWolf/examples/::1732284308
+::res://addons/SilentWolf/examples/CustomLeaderboards/::1732284308
+ReverseLeaderboard.gd::GDScript::-1::1732284308::0::1::::<>Node2D<>::
+ReverseLeaderboard.tscn::PackedScene::7502756930110382987::1732284308::0::1::::<><>::uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn<>res://addons/silent_wolf/examples/CustomLeaderboards/ReverseLeaderboard.gd
+SmallScoreItem.tscn::PackedScene::3554781840265839843::1732284308::0::1::::<><>::uid://2wy4d8d5av0l::::res://addons/silent_wolf/Scores/ScoreItem.tscn
+TimeBasedLboards.gd::GDScript::-1::1732284308::0::1::::<>Node2D<>::
+TimeBasedLboards.tscn::PackedScene::3698473064175662389::1732284308::0::1::::<><>::uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn<>res://addons/silent_wolf/examples/CustomLeaderboards/TimeBasedLboards.gd
+::res://addons/SilentWolf/Muliplayer/::1732284308
+Multiplayer.gd::GDScript::-1::1732284308::0::1::::<>Node<>::
+::res://addons/SilentWolf/Muliplayer/ws/::1732284308
+WSClient.gd::GDScript::-1::1732284308::0::1::::<>Node<>::
+::res://addons/SilentWolf/Multiplayer/::1732284308
+Multiplayer.gd::GDScript::-1::1732284308::0::1::::<>Node<>::
+::res://addons/SilentWolf/Multiplayer/ws/::1732284308
+WSClient.gd::GDScript::-1::1732284308::0::1::::<>Node<>::
+::res://addons/SilentWolf/Players/::1732284308
+Players.gd::GDScript::-1::1732284308::0::1::::<>Node<>::
+::res://addons/SilentWolf/Scores/::1732284308
+Leaderboard.gd::GDScript::-1::1732284308::0::1::::<>Node2D<>::
+Leaderboard.tscn::PackedScene::4297999345383651085::1732284308::0::1::::<><>::res://addons/silent_wolf/Scores/Leaderboard.gd<>uid://d2eakbmaefnt6::::res://addons/silent_wolf/assets/themes/sw_theme.tres<>uid://clllbf6am8qdf::::res://addons/silent_wolf/common/SWButton.tscn
+ScoreItem.tscn::PackedScene::1942024293390844209::1732284308::0::1::::<><>::
+Scores.gd::GDScript::-1::1732284308::0::1::::<>Node<>::
+::res://addons/SilentWolf/utils/::1732284308
+SWHashing.gd::GDScript::-1::1732284308::0::1::::<>Node<>::
+SWHttpUtils.gd::GDScript::-1::1732284308::0::1::::<>Node<>::
+SWLocalFileStorage.gd::GDScript::-1::1732284308::0::1::::<>Node<>::
+SWLogger.gd::GDScript::-1::1732284308::0::1::::<>Node<>::
+SWUtils.gd::GDScript::-1::1732284308::0::1::::<>Node<>::
+UUID.gd::GDScript::-1::1732284308::0::1::::<>RefCounted<>::
 ::res://Assets/::1732140378
 ::res://Assets/Characters/::1732140378
 ::res://Assets/Characters/Heroes/::1732140378
@@ -51,19 +109,19 @@ SwordNotPressed.png::CompressedTexture2D::3348885172922975667::1732140378::17321
 SwordPressed.png::CompressedTexture2D::3627684391814875684::1732140378::1732140435::1::::<><>::
 ::res://Scenes/::1732222293
 ::res://Scenes/Characters/::1732140378
-::res://Scenes/Characters/Heroes/::1732266164
+::res://Scenes/Characters/Heroes/::1732273216
 Adventurer.tscn::PackedScene::2778722539322995599::1732140378::0::1::::<><>::uid://cm86gngoogf26::::res://Assets/Characters/Heroes/Adventurer Sprite Sheet v1.5.png
-minonna.tscn::PackedScene::3767313236072467268::1732266164::0::1::::<><>::res://Scripts/Characters/Heroes/minonna.gd<>uid://cm86gngoogf26::::res://Assets/Characters/Heroes/Adventurer/Adventurer Sprite Sheet v1.5.png
-personaggio.tscn::PackedScene::446854056385697614::1732266164::0::1::::<><>::res://Scripts/Characters/Heroes/personaggio.gd<>uid://cwjc1qvuhuum2::::res://Assets/Characters/Heroes/Fox/Fox Sprite Sheet.png
-::res://Scenes/Characters/Villains/::1732140378
+minonna.tscn::PackedScene::3767313236072467268::1732273216::0::1::::<><>::res://Scripts/Characters/Heroes/minonna.gd<>uid://cm86gngoogf26::::res://Assets/Characters/Heroes/Adventurer/Adventurer Sprite Sheet v1.5.png
+personaggio.tscn::PackedScene::446854056385697614::1732273128::0::1::::<><>::res://Scripts/Characters/Heroes/personaggio.gd<>uid://cwjc1qvuhuum2::::res://Assets/Characters/Heroes/Fox/Fox Sprite Sheet.png
+::res://Scenes/Characters/Villains/::1732272766
 Ghoul.tscn::PackedScene::6099316537155037094::1732140378::0::1::::<><>::uid://dxfa5xi27fjtu::::res://Assets/Characters/Villains/Ghoul Sprite Sheet.png
-nemico.tscn::PackedScene::6821882806065774871::1732140378::0::1::::<><>::uid://q1i23e5egcbo::::res://Assets/Characters/Villains/Cacodaemon Sprite Sheet.png
+nemico.tscn::PackedScene::6821882806065774871::1732272766::0::1::::<><>::uid://q1i23e5egcbo::::res://Assets/Characters/Villains/Cacodaemon Sprite Sheet.png
 ::res://Scenes/Items/::1732140378
 ::res://Scenes/Items/Props/::1732140378
 portale.tscn::PackedScene::2364906654131508027::1732140378::0::1::::<><>::uid://13ajtq7iuv7u::::res://Assets/Items/Props/Dimensional_Portal.png<>res://Scripts/Items/Props/portale.gd
-::res://Scenes/Levels/::1732266164
-livello_1.tscn::PackedScene::8722623536425085856::1732266164::0::1::::<><>::uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg<>uid://4m0li4cvpxxb::::res://Scenes/UI/MobileControls.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn<>uid://c4gtobtru7t2v::::res://Scenes/Characters/Villains/nemico.tscn<>res://Scripts/Characters/Villains/nemico.gd<>uid://btw6dl74bkjxs::::res://Scenes/Characters/Heroes/minonna.tscn
-livello_2.tscn::PackedScene::463196220579163851::1732266164::0::1::::<><>::uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/personaggio.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn
+::res://Scenes/Levels/::1732273128
+livello_1.tscn::PackedScene::8722623536425085856::1732273128::0::1::::<><>::uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg<>uid://4m0li4cvpxxb::::res://Scenes/UI/MobileControls.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn<>uid://c4gtobtru7t2v::::res://Scenes/Characters/Villains/nemico.tscn<>res://Scripts/Characters/Villains/nemico.gd<>uid://btw6dl74bkjxs::::res://Scenes/Characters/Heroes/minonna.tscn
+livello_2.tscn::PackedScene::463196220579163851::1732273128::0::1::::<><>::uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/personaggio.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn
 livello_3.tscn::PackedScene::1394784066586757830::1732140378::0::1::::<><>::uid://cfe6gcvadv7ao::::res://Assets/Landscapes/pixilart-drawing.png<>uid://cdipun5qj4lwb::::res://Assets/Landscapes/tileset.png<>uid://c4gtobtru7t2v::::res://Scenes/Characters/Villains/nemico.tscn<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/personaggio.tscn
 livello_4.tscn::PackedScene::1061809212238019892::1732140378::0::1::::<><>::uid://d1g612dth8nfr::::res://Assets/Landscapes/pixil-frame-0.png<>uid://0fq7so24lfcv::::res://Assets/Landscapes/CaveG.png<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/personaggio.tscn<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/portale.tscn
 ::res://Scenes/Menus/::1732222315
