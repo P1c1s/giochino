@@ -1,0 +1,6 @@
+res://Scenes/Levels/livello_1.tscn
+res://Scenes/Characters/Heroes/minonna.tscn
+res://Scenes/Characters/Heroes/personaggio.tscn
+res://Scenes/Levels/livello_2.tscn
+res://addons/SilentWolf/SilentWolf.gd
+res://Scripts/Characters/Heroes/minonna.gd

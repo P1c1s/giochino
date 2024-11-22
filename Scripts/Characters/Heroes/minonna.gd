@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var run_speed = 80.0
+const run_speed = 80.0
 var attacks = ["Attack"]
 
 const JUMP_VELOCITY = 300.0
@@ -15,7 +15,7 @@ func _physics_process(delta):
 	var current_anim = state_machine.get_current_node()
 	if current_anim in ["hurt", "die"]:
 		return
-		
+	
 	velocity.x = Input.get_axis("ui_left", "ui_right") * run_speed
 	if Input.is_action_just_pressed("ui_attack"):
 		print("ATTACCO")		#stampa di prova

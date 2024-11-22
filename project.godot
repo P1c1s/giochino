@@ -15,10 +15,6 @@ run/main_scene="res://Scenes/Levels/livello_1.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
-[autoload]
-
-SilentWolf="*res://addons/SilentWolf/SilentWolf.gd"
-
 [display]
 
 window/stretch/mode="viewport"
