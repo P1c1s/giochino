@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://gmpvd5wxub47"]
 
-[ext_resource type="Script" path="res://Scripts/Characters/Heroes/personaggio.gd" id="1_0jmt3"]
+[ext_resource type="Script" path="res://Scripts/Characters/Heroes/Fox.gd" id="1_0jmt3"]
 [ext_resource type="Texture2D" uid="uid://cwjc1qvuhuum2" path="res://Assets/Characters/Heroes/Fox/Fox Sprite Sheet.png" id="1_gnw2i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kywj8"]
@@ -8,7 +8,7 @@ size = Vector2(43, 35)
 
 [sub_resource type="Animation" id="Animation_5l5pa"]
 resource_name = "Idle"
-length = 2.1
+length = 1.4
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -130,17 +130,17 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nwidy"]
 states/End/position = Vector2(960, 100.733)
 states/Idle/node = SubResource("AnimationNodeAnimation_q6ekm")
-states/Idle/position = Vector2(409.5, 99.25)
+states/Idle/position = Vector2(409.5, 100.367)
 states/Jump/node = SubResource("AnimationNodeAnimation_wnqqx")
 states/Jump/position = Vector2(574.5, -40)
 states/Lying/node = SubResource("AnimationNodeAnimation_nfgn1")
 states/Lying/position = Vector2(573.75, 258.365)
 states/Run/node = SubResource("AnimationNodeAnimation_p08mp")
-states/Run/position = Vector2(733.5, 101.475)
+states/Run/position = Vector2(734, 101.104)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_kmc3r"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_fqgvm"), "Jump", "Idle", SubResource("AnimationNodeStateMachineTransition_ahsrb"), "Jump", "Run", SubResource("AnimationNodeStateMachineTransition_eau51"), "Run", "Jump", SubResource("AnimationNodeStateMachineTransition_bkdth"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_l7x6s"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_1ov55")]
-graph_offset = Vector2(-66.4801, -85.375)
+graph_offset = Vector2(66.4799, -280.96)
 
-[node name="Personaggio" type="CharacterBody2D"]
+[node name="Fox" type="CharacterBody2D"]
 script = ExtResource("1_0jmt3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

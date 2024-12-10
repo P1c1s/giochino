@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=4 uid="uid://pel3wbj0ruwa"]
 
-[ext_resource type="Texture2D" uid="uid://d1g612dth8nfr" path="res://Assets/Landscapes/pixil-frame-0.png" id="1_he2pt"]
-[ext_resource type="Texture2D" uid="uid://0fq7so24lfcv" path="res://Assets/Landscapes/CaveG.png" id="2_gtr5i"]
+[ext_resource type="Texture2D" path="res://Assets/Landscapes/pixil-frame-0.png" id="1_he2pt"]
+[ext_resource type="Texture2D" path="res://Assets/Landscapes/CaveG.png" id="2_gtr5i"]
 [ext_resource type="Texture2D" uid="uid://cc14q5mwl8kig" path="res://Assets/Landscapes/Textures-16.png" id="3_4fb18"]
-[ext_resource type="PackedScene" uid="uid://gmpvd5wxub47" path="res://Scenes/Characters/Heroes/personaggio.tscn" id="4_gghoq"]
-[ext_resource type="PackedScene" uid="uid://8xtwxe1fifct" path="res://Scenes/Items/Props/portale.tscn" id="5_8qxkq"]
+[ext_resource type="PackedScene" uid="uid://gmpvd5wxub47" path="res://Scenes/Characters/Heroes/Fox.tscn" id="4_gghoq"]
+[ext_resource type="PackedScene" uid="uid://8xtwxe1fifct" path="res://Scenes/Items/Props/Portale.tscn" id="5_8qxkq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vnogk"]
 texture = ExtResource("2_gtr5i")

@@ -12,18 +12,22 @@ var run_speed = 80.0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
+	var current_anim = state_machine.get_current_node()
+	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
-	var current_anim = state_machine.get_current_node()
+	else:
+		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+			print("SALTO")		#stampa di prova
+			velocity.y = JUMP_VELOCITY
+			move_and_slide()
+			state_machine.travel("Jump")
+			return
+	
 	
 	velocity.x = Input.get_axis("ui_left", "ui_right") * run_speed
 	
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		print("SALTO")		#stampa di prova
-		velocity.y = JUMP_VELOCITY
-		state_machine.travel("Jump")
-		return
+	
 	
 	if velocity.x != 0:
 		$Sprite2D.scale.x = sign(velocity.x)

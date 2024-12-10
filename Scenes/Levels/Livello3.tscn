@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://t4v5iusw1ptu"]
+[gd_scene load_steps=8 format=4 uid="uid://t4v5iusw1ptu"]
 
-[ext_resource type="Texture2D" uid="uid://cfe6gcvadv7ao" path="res://Assets/Landscapes/pixilart-drawing.png" id="1_d4e0r"]
 [ext_resource type="Texture2D" uid="uid://cdipun5qj4lwb" path="res://Assets/Landscapes/tileset.png" id="2_8d6kc"]
-[ext_resource type="PackedScene" uid="uid://c4gtobtru7t2v" path="res://Scenes/Characters/Villains/nemico.tscn" id="3_kfgcy"]
-[ext_resource type="PackedScene" uid="uid://8xtwxe1fifct" path="res://Scenes/Items/Props/portale.tscn" id="5_3fd8e"]
-[ext_resource type="PackedScene" uid="uid://gmpvd5wxub47" path="res://Scenes/Characters/Heroes/personaggio.tscn" id="5_tsby0"]
+[ext_resource type="PackedScene" uid="uid://c4gtobtru7t2v" path="res://Scenes/Characters/Villains/Cocodaemon.tscn" id="3_kfgcy"]
+[ext_resource type="PackedScene" uid="uid://8xtwxe1fifct" path="res://Scenes/Items/Props/Portale.tscn" id="5_3fd8e"]
+[ext_resource type="PackedScene" uid="uid://gmpvd5wxub47" path="res://Scenes/Characters/Heroes/Fox.tscn" id="5_tsby0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vw46u"]
 texture = ExtResource("2_8d6kc")
@@ -780,7 +779,7 @@ physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_vw46u")
 sources/1 = SubResource("TileSetAtlasSource_anftj")
 
-[node name="livello3" type="Node2D"]
+[node name="Livello3" type="Node2D"]
 position = Vector2(-80, -2)
 
 [node name="Background" type="TextureRect" parent="."]
@@ -788,7 +787,6 @@ offset_left = -30.0
 offset_top = -14.0
 offset_right = 3337.0
 offset_bottom = 672.0
-texture = ExtResource("1_d4e0r")
 metadata/_edit_group_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -812,7 +810,7 @@ position = Vector2(2367, 372)
 
 [node name="Portale" parent="." instance=ExtResource("5_3fd8e")]
 position = Vector2(3357, 395)
-connected_scene = "livello_4"
+connected_scene = "Livello4"
 
 [node name="Personaggio" parent="." instance=ExtResource("5_tsby0")]
 z_index = 1
