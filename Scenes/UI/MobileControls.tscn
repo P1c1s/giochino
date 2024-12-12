@@ -13,14 +13,14 @@ offset_bottom = 663.0
 columns = 7
 
 [node name="Right" type="TouchScreenButton" parent="GridContainer"]
-position = Vector2(272, 500)
+position = Vector2(191, 500)
 scale = Vector2(0.223005, 0.223005)
 texture_normal = ExtResource("1_yqf8t")
 texture_pressed = ExtResource("2_nhvuo")
 action = "ui_right"
 
 [node name="Left" type="TouchScreenButton" parent="GridContainer"]
-position = Vector2(232, 596)
+position = Vector2(151, 596)
 rotation = 3.14159
 scale = Vector2(0.223, 0.223)
 texture_normal = ExtResource("1_yqf8t")
@@ -28,7 +28,7 @@ texture_pressed = ExtResource("2_nhvuo")
 action = "ui_left"
 
 [node name="Jump" type="TouchScreenButton" parent="GridContainer"]
-position = Vector2(859, 593)
+position = Vector2(971, 593)
 rotation = -1.5708
 scale = Vector2(0.223, 0.223)
 texture_normal = ExtResource("1_yqf8t")
@@ -36,7 +36,7 @@ texture_pressed = ExtResource("2_nhvuo")
 action = "ui_accept"
 
 [node name="Attack" type="TouchScreenButton" parent="GridContainer"]
-position = Vector2(859, 358)
+position = Vector2(971, 358)
 scale = Vector2(0.223, 0.223)
 texture_normal = ExtResource("3_3sw5o")
 texture_pressed = ExtResource("4_23apb")

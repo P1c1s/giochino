@@ -885,7 +885,6 @@ distance = -3.0
 [node name="Livello2" type="Node2D"]
 
 [node name="Fox" parent="." instance=ExtResource("1_b1sgn")]
-z_index = 1
 position = Vector2(82, 475)
 scale = Vector2(2, 2)
 

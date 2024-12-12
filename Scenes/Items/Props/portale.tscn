@@ -61,7 +61,7 @@ position = Vector2(6, -6)
 scale = Vector2(1.375, 1.375)
 sprite_frames = SubResource("SpriteFrames_ms4il")
 autoplay = "default"
-frame = 4
-frame_progress = 0.837337
+frame = 3
+frame_progress = 0.621813
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
