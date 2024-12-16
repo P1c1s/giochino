@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Cocodaemon extends CharacterBody2D
 
 
 @export var speed = 40

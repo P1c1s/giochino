@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://bxeo1ufnd18nv"]
+[gd_scene load_steps=11 format=3 uid="uid://bxeo1ufnd18nv"]
 
+[ext_resource type="Script" path="res://Scripts/Items/Props/Coin.gd" id="1_o17vo"]
 [ext_resource type="Texture2D" uid="uid://c6bseqnvbfjch" path="res://Assets/Items/Props/coins-chests-etc-2-0.png" id="1_qwmo4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hhlqj"]
@@ -52,10 +53,24 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5r6w4"]
+radius = 6.03692
+
 [node name="Coin" type="Area2D"]
+position = Vector2(1, 0)
 scale = Vector2(1.5, 1.5)
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("1_o17vo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0ehw7")
 animation = &"rotatingCoin"
 autoplay = "rotatingCoin"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_5r6w4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="coin_collected" from="." to="." method="_on_coin_collected"]

@@ -146,6 +146,9 @@ radius = 71.007
 
 [node name="Fox" type="CharacterBody2D"]
 z_index = 1
+position = Vector2(1, 0)
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_0jmt3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

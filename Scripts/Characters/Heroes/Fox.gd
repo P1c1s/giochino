@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Fox extends CharacterBody2D
 
 const JUMP_VELOCITY = -300.0
 
@@ -58,14 +58,16 @@ func _physics_process(delta: float) -> void:
 			flip = (player.position.x < position.x)
 			$Sprite2D.flip_h = flip
 			state_machine.travel("Run")
-		if not (player.velocity.length() > 0 or abs(player.position.x - position.x) > limit):
+		if not (player.velocity.length() > 0 or abs(player.position.x - position.x) >= 10):
 			state_machine.travel("Idle")
+			#idle deve partire anche quando il personaggio è fermo e la fox lo ha raggiunto
+
 		
-		if (position.y - player.position.y) > 50 and collision > 0: #se il personaggio sta più in alto la fox salta
-			print("Stronzo più in alto")
+		if (position.y - player.position.y) > 50 and (position.y - player.position.y) < 200  or get_slide_collision_count() > 1: #se il personaggio sta più in alto la fox salta
 			velocity.y = JUMP_VELOCITY
 			state_machine.travel("Jump")
 			move_and_slide()
+			print(get_slide_collision_count())
 		
 		if Input.is_action_just_pressed("ui_accept"):
 			timer.start(0.8)

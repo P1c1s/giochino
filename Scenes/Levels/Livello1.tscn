@@ -877,7 +877,8 @@ texture = ExtResource("3_nwygy")
 13:31/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_6ngku"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 5
+physics_layer_0/collision_mask = 5
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_ttoqt")
 sources/0 = SubResource("TileSetAtlasSource_selx6")
 
@@ -936,11 +937,15 @@ shape = SubResource("WorldBoundaryShape2D_dq85c")
 [node name="Cocodaemon" parent="." instance=ExtResource("5_3qhn1")]
 position = Vector2(1316, 431)
 scale = Vector2(1.9, 1.9)
+collision_layer = 7
+collision_mask = 7
 script = ExtResource("6_bftbn")
 
 [node name="Adventurer" parent="." instance=ExtResource("8_4pyi7")]
 position = Vector2(223, 278)
 scale = Vector2(2.5, 2.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Adventurer"]
 z_index = 4
@@ -955,6 +960,7 @@ editor_draw_limits = true
 position = Vector2(148, 333)
 scale = Vector2(2, 2)
 safe_margin = 1.0
+limit = 0
 
 [node name="Coins" type="Container" parent="."]
 offset_right = 2896.0
@@ -984,19 +990,3 @@ scale = Vector2(3, 3)
 
 [node name="Coin" parent="LifeBar_CoinNumber" instance=ExtResource("13_gvxix")]
 position = Vector2(1107, 36)
-
-[node name="Label" type="Label" parent="LifeBar_CoinNumber/Coin"]
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -83.9999
-offset_top = -14.5
-offset_right = -21.9999
-offset_bottom = 14.5
-grow_horizontal = 0
-grow_vertical = 2
-text = "0"
-horizontal_alignment = 2
-vertical_alignment = 1
