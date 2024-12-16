@@ -12,7 +12,7 @@ var run_speed = 160.0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	var current_anim = state_machine.get_current_node()
+	var _current_anim = state_machine.get_current_node()
 	
 	if not is_on_floor():
 		velocity += get_gravity() * delta

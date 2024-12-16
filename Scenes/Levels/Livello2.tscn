@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://gmpvd5wxub47" path="res://Scenes/Characters/Heroes/Fox.tscn" id="1_b1sgn"]
 [ext_resource type="Texture2D" uid="uid://cc14q5mwl8kig" path="res://Assets/Landscapes/Textures-16.png" id="2_6jii7"]
-[ext_resource type="PackedScene" uid="uid://8xtwxe1fifct" path="res://Scenes/Items/Props/Portale.tscn" id="3_ctgjv"]
+[ext_resource type="PackedScene" uid="uid://8xtwxe1fifct" path="res://Scenes/Items/Props/portale.tscn" id="3_ctgjv"]
 [ext_resource type="Texture2D" uid="uid://boqujcub1urp7" path="res://Assets/Landscapes/cielo.jpg" id="4_xm01m"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wpto8"]

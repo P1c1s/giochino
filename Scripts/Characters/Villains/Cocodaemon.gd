@@ -35,7 +35,7 @@ func updateVelocity():
 	
 	velocity = moveDirection.normalized()*speed
 
-func _physics_process(delta: float) -> void:	
+func _physics_process(_delta: float) -> void:	
 	updateVelocity()
 	move_and_slide()
 

@@ -47,7 +47,7 @@ func _on_detection_area_body_entered(body: Node2D) -> void:
 
 func _physics_process(delta: float) -> void:
 	velocity += get_gravity() *delta
-	var collision = get_slide_collision_count()
+	var _collision = get_slide_collision_count()
 	move_and_slide()
 	
 	var flip = false
