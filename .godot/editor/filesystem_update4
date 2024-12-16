@@ -1,13 +1,2 @@
+res://Scenes/Levels/Level1.tscn
 res://Scenes/Levels/Livello1.tscn
-res://Scenes/Items/Props/Portale.tscn
-res://Scenes/Levels/Livello2.tscn
-res://Scenes/Characters/Heroes/Fox.tscn
-res://Scenes/Characters/Heroes/Adventurer.tscn
-res://Scenes/Items/Props/Coin.tscn
-res://Scenes/UI/IconCoin.tscn
-res://Scripts/Items/Props/Portale.gd
-res://Scripts/Characters/Heroes/Adventurer.gd
-res://Scripts/Characters/Villains/Cocodaemon.gd
-res://Scripts/Items/Props/Coin.gd
-res://Scripts/Characters/Heroes/Fox.gd
-res://Scripts/Items/Props/IconCoin.gd
