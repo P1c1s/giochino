@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://gbxpk8rnuasf"]
+
+[ext_resource type="Texture2D" uid="uid://c6bseqnvbfjch" path="res://Assets/Items/Props/coins-chests-etc-2-0.png" id="1_4vigf"]
+[ext_resource type="Script" path="res://Scripts/Items/Props/LifePotion.gd" id="1_8ty35"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0yxpg"]
+radius = 5.0
+height = 16.0
+
+[node name="LifePotion" type="Area2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_8ty35")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4vigf")
+hframes = 57
+vframes = 65
+frame = 724
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_0yxpg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

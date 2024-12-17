@@ -1,4 +1,4 @@
-class_name Coin extends Node
+class_name LifePotion extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,6 +9,6 @@ func _process(_delta: float) -> void:
 	pass
 
 func _on_body_entered(body: Node2D) -> void:
-	if (body is Adventurer) or (body is Fox):
-		GameManager.add_score()
+	if body is Adventurer:
+		GameManager.restoreLife()
 		self.queue_free()

@@ -15,39 +15,15 @@ var player = null
 # attack sounds
 @onready var state_machine = $AnimationTree["parameters/playback"]
 
-#func _physics_process(delta: float) -> void:
-	## Add the gravity.
-	#var current_anim = state_machine.get_current_node()
-	#
-	#if not is_on_floor():
-		#velocity += get_gravity() * delta
-	#else:
-		#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-			#print("SALTO")		#stampa di prova
-			#velocity.y = JUMP_VELOCITY
-			#move_and_slide()
-			#state_machine.travel("Jump")
-			#return
-	#
-	#velocity.x = Input.get_axis("ui_left", "ui_right") * run_speed
-	#
-	#
-	#if velocity.x != 0:
-		#$Sprite2D.scale.x = sign(velocity.x)
-	#if velocity.length() > 0:
-		#state_machine.travel("Run")
-	#else:
-		#state_machine.travel("Idle")
-	#move_and_slide()
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
-	player = body
-	player_chase = true
-	print("Player detected")
+	if body is Adventurer:
+		player = body
+		player_chase = true
+		print("Player detected")
 
 func _physics_process(delta: float) -> void:
 	velocity += get_gravity() *delta
-	var _collision = get_slide_collision_count()
 	move_and_slide()
 	
 	var flip = false
@@ -60,8 +36,7 @@ func _physics_process(delta: float) -> void:
 			state_machine.travel("Run")
 		if not (player.velocity.length() > 0 or abs(player.position.x - position.x) >= 10):
 			state_machine.travel("Idle")
-			#idle deve partire anche quando il personaggio è fermo e la fox lo ha raggiunto
-
+			#idle deve partire anche quando il personaggio è fermo e la fox lo ha raggiunt
 		
 		if (position.y - player.position.y) > 50 and (position.y - player.position.y) < 200  or get_slide_collision_count() > 1: #se il personaggio sta più in alto la fox salta
 			velocity.y = JUMP_VELOCITY

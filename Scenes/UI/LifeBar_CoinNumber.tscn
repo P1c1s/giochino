@@ -1,0 +1,103 @@
+[gd_scene load_steps=14 format=3 uid="uid://b1jxtxcbva7q2"]
+
+[ext_resource type="Script" path="res://Scripts/UI/LifeBar_CoinNumber.gd" id="1_grhr6"]
+[ext_resource type="Texture2D" uid="uid://denp81t30edqp" path="res://Assets/Items/Props/healthbarUnder.png" id="1_j44uh"]
+[ext_resource type="Texture2D" uid="uid://ckd1mtuus8hmb" path="res://Assets/Items/Props/healthbarProgress.png" id="2_juatb"]
+[ext_resource type="PackedScene" uid="uid://dblvwyuh7s3pd" path="res://Scenes/UI/IconHeart.tscn" id="3_515o7"]
+[ext_resource type="Texture2D" uid="uid://c6bseqnvbfjch" path="res://Assets/Items/Props/coins-chests-etc-2-0.png" id="5_6my45"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ik4gr"]
+atlas = ExtResource("5_6my45")
+region = Rect2(176, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f87l4"]
+atlas = ExtResource("5_6my45")
+region = Rect2(192, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gdoo"]
+atlas = ExtResource("5_6my45")
+region = Rect2(208, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8hwx"]
+atlas = ExtResource("5_6my45")
+region = Rect2(224, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jl3u"]
+atlas = ExtResource("5_6my45")
+region = Rect2(240, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e451b"]
+atlas = ExtResource("5_6my45")
+region = Rect2(256, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rigs"]
+atlas = ExtResource("5_6my45")
+region = Rect2(272, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_meguc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ik4gr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f87l4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gdoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8hwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jl3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e451b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rigs")
+}],
+"loop": true,
+"name": &"steadyCoin",
+"speed": 5.0
+}]
+
+[node name="LifeBar_CoinNumber" type="CanvasLayer"]
+script = ExtResource("1_grhr6")
+
+[node name="IconHeart" parent="." instance=ExtResource("3_515o7")]
+position = Vector2(40, 35)
+scale = Vector2(4, 4)
+
+[node name="LifeIndicator" type="TextureProgressBar" parent="."]
+offset_left = 78.0
+offset_top = 23.0
+offset_right = 142.0
+offset_bottom = 33.0
+scale = Vector2(4, 4)
+value = 100.0
+texture_under = ExtResource("1_j44uh")
+texture_progress = ExtResource("2_juatb")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 964.0
+offset_top = 12.0
+offset_right = -138.0
+offset_bottom = -278.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(2, 2)
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="IconCoin" type="AnimatedSprite2D" parent="."]
+position = Vector2(1111, 40)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_meguc")
+animation = &"steadyCoin"
+autoplay = "steadyCoin"
