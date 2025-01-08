@@ -8,3 +8,4 @@ res://Scenes/UI/LifeBar_CoinNumber.tscn
 res://Scenes/Characters/Heroes/Fox.tscn
 res://Scenes/Characters/Villains/Ghoul.tscn
 res://Scripts/Characters/Villains/Ghoul.gd
+res://Scripts/Characters/Villains/Cocodaemon.gd

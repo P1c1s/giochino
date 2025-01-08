@@ -148,7 +148,7 @@ scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_b86sv")
 hframes = 8
 vframes = 5
-frame = 9
+frame = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

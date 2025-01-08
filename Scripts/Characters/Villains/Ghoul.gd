@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Ghoul extends CharacterBody2D
 
 @export var speed = 40
 @export var limit = 0.5
@@ -34,7 +34,7 @@ func changeDirection():
 	var tempEnd = endPosition
 	endPosition = startPosition
 	startPosition = tempEnd
-	$Sprite2D.flip_h = !$Sprite2D.flip_h
+	#$Sprite2D.flip_h = !$Sprite2D.flip_h
 
 #if the ghoul doesn't chase the player, he moves back and forth between two points A and B
 #when he gets to A and B he stops there for 4 seconds in the Idle state
@@ -45,6 +45,7 @@ func move() -> void:
 			$Movimento.start()
 		state_machine.travel("Idle")
 	velocity = moveDirection.normalized() * speed
+	$Sprite2D.flip_h = (moveDirection.x < -0.05)
 
 #if the ghoul is chasing the player, the player's position is set to be the endPosition
 #if the distance betweem the player and the ghoul is under a limit, he starts to attack
