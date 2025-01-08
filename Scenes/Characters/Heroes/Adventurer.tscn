@@ -1,10 +1,10 @@
-[gd_scene load_steps=33 format=3 uid="uid://btw6dl74bkjxs"]
+[gd_scene load_steps=34 format=3 uid="uid://btw6dl74bkjxs"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/Heroes/Adventurer.gd" id="1_2s2le"]
 [ext_resource type="Texture2D" uid="uid://cm86gngoogf26" path="res://Assets/Characters/Heroes/Adventurer/Adventurer Sprite Sheet v1.5.png" id="2_ucwrl"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eabih"]
-height = 20.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0pspa"]
+size = Vector2(15, 19)
 
 [sub_resource type="Animation" id="Animation_hljs6"]
 resource_name = "Attack"
@@ -193,7 +193,10 @@ states/Run/node = SubResource("AnimationNodeAnimation_2cxmn")
 states/Run/position = Vector2(570.8, 143.665)
 states/Start/position = Vector2(136.5, 147.481)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_hwchw"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_e3hql"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_xqx0e"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_alpuu"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_33lr5"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_523ac"), "Jump", "Idle", SubResource("AnimationNodeStateMachineTransition_5ti7t"), "Jump", "Run", SubResource("AnimationNodeStateMachineTransition_hvwjq"), "Run", "Jump", SubResource("AnimationNodeStateMachineTransition_3d3ha"), "Jump", "Attack", SubResource("AnimationNodeStateMachineTransition_qhwr2"), "Run", "AttackRun", SubResource("AnimationNodeStateMachineTransition_hr3ge"), "Attack", "AttackRun", SubResource("AnimationNodeStateMachineTransition_4b33d"), "Jump", "AttackRun", SubResource("AnimationNodeStateMachineTransition_lb3ao"), "AttackRun", "Run", SubResource("AnimationNodeStateMachineTransition_h1ua7")]
-graph_offset = Vector2(366.46, 33.055)
+graph_offset = Vector2(57.8502, 52.4424)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adus2"]
+size = Vector2(10, 9.5)
 
 [node name="Adventurer" type="CharacterBody2D"]
 collision_layer = 2
@@ -207,9 +210,8 @@ hframes = 13
 vframes = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(1, -2)
-shape = SubResource("CapsuleShape2D_eabih")
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_0pspa")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -220,5 +222,12 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_wa1v7")
 anim_player = NodePath("../AnimationPlayer")
 parameters/AttackRun/blend_position = 0.00180507
+
+[node name="AreaAttacco" type="Area2D" parent="."]
+position = Vector2(10, -3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAttacco"]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_adus2")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

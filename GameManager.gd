@@ -12,8 +12,8 @@ func add_score():
 func getDamage():
 	pass
 
-func giveDamage():
-	pass
+func giveDamage(enemy : Cocodaemon):
+	enemy.life -= 20
 
 func restoreLife():
 	life = 100

@@ -1,7 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://8xtwxe1fifct"]
 
 [ext_resource type="Texture2D" uid="uid://13ajtq7iuv7u" path="res://Assets/Items/Props/Dimensional_Portal.png" id="1_h846m"]
-[ext_resource type="Script" path="res://Scripts/Items/Props/Portale.gd" id="1_irknh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5y8nv"]
 atlas = ExtResource("1_h846m")
@@ -53,8 +52,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ynk6"]
+radius = 8.0
+height = 42.0
+
 [node name="Portale" type="Area2D"]
-script = ExtResource("1_irknh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(6, -6)
@@ -63,5 +65,9 @@ sprite_frames = SubResource("SpriteFrames_ms4il")
 autoplay = "default"
 frame = 3
 frame_progress = 0.621813
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, -6)
+shape = SubResource("CapsuleShape2D_3ynk6")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

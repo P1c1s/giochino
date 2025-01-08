@@ -1,6 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://c4gtobtru7t2v"]
+[gd_scene load_steps=22 format=3 uid="uid://c4gtobtru7t2v"]
 
+[ext_resource type="Script" path="res://Scripts/Characters/Villains/Cocodaemon.gd" id="1_1xwuk"]
 [ext_resource type="Texture2D" uid="uid://q1i23e5egcbo" path="res://Assets/Characters/Villains/Cacodaemon Sprite Sheet.png" id="1_cdsgd"]
+[ext_resource type="Texture2D" uid="uid://ckd1mtuus8hmb" path="res://Assets/Items/Props/healthbarProgress.png" id="2_s84fh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8277e"]
 atlas = ExtResource("1_cdsgd")
@@ -121,14 +123,21 @@ animation = &"Walk"
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_01jqm"]
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_v1kjb"]
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_kg687"]
 states/Die/node = SubResource("AnimationNodeAnimation_mhcmk")
 states/Die/position = Vector2(606.5, 100.5)
 states/Walk/node = SubResource("AnimationNodeAnimation_jlls0")
 states/Walk/position = Vector2(416, 100)
-transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_01jqm")]
+transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_01jqm"), "Walk", "Die", SubResource("AnimationNodeStateMachineTransition_v1kjb")]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mo0ii"]
+radius = 88.0
 
 [node name="Cocodaemon" type="CharacterBody2D"]
+scale = Vector2(-1, 1)
+script = ExtResource("1_1xwuk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -146,6 +155,7 @@ hframes = 8
 vframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_meefg")
 
@@ -158,3 +168,24 @@ autoplay = "Walk"
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_kg687")
 anim_player = NodePath("../AnimationPlayer")
+
+[node name="CocodaemonLife" type="TextureProgressBar" parent="."]
+offset_left = -19.0
+offset_top = -22.0
+offset_right = 45.0
+offset_bottom = -12.0
+scale = Vector2(0.6, 0.6)
+value = 100.0
+texture_progress = ExtResource("2_s84fh")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape2D_mo0ii")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

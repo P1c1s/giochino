@@ -901,9 +901,8 @@ tile_set = SubResource("TileSet_f8xpf")
 
 [node name="Portale" parent="." instance=ExtResource("3_ctgjv")]
 position = Vector2(1056, 527)
-connected_scene = "Livello3"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portale"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Portale"]
 position = Vector2(7, -7)
 shape = SubResource("CapsuleShape2D_gy63k")
 
