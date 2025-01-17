@@ -1,9 +1,8 @@
 # This script is an autoload, that can be accessed from any other script!
-
 extends Node2D
 
 var score : int = 0
-var life : int = 50
+var adventurerLife : int = 100
 
 # Adds 1 to score variable
 func add_score():
@@ -12,11 +11,12 @@ func add_score():
 func getDamage():
 	pass
 
-func giveDamage(enemy : Cocodaemon):
+func giveDamage(enemy : CharacterBody2D):
+	print("Manager deve togliere vita a nemico")
 	enemy.life -= 20
 
 func restoreLife():
-	life = 100
+	adventurerLife = 100
 
 # Loads next level
 func load_next_level(next_scene : PackedScene):

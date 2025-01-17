@@ -976,4 +976,4 @@ rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_dq85c")
 
 [node name="Ghoul" parent="." instance=ExtResource("12_8c7ap")]
-position = Vector2(826, 433)
+position = Vector2(823, 435)

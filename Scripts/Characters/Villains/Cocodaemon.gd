@@ -47,7 +47,7 @@ func move() -> void:
 		#if $Movimento.is_stopped():
 			#$Movimento.start()
 		#state_machine.travel("Idle")
-	velocity = moveDirection.normalized() * speed
+	velocity.x = moveDirection.normalized().x * speed
 	$Sprite2D.flip_h = (moveDirection.x < -0.05)
 
 #if the ghoul is chasing the player, the player's position is set to be the endPosition
@@ -59,7 +59,7 @@ func chase():
 		endPosition = target.position
 		var dist = endPosition - position
 		#$Sprite2D.flip_h = (dist.x < 1)
-		velocity = dist.normalized() * speed
+		velocity.x = dist.normalized().x * speed
 		state_machine.travel("Walk")
 		if dist.length() < attackLimit:
 			attack()
@@ -83,7 +83,7 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 			state_machine.call_deferred("travel", "Idle")
 		else:
 			state_machine.call_deferred("travel", "Walk")
-			velocity = distanza.normalized() * speed
+			velocity.x = distanza.normalized().x * speed
 
 
 func _on_detection_area_body_entered(body: Node2D) -> void:

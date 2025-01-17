@@ -224,10 +224,15 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/AttackRun/blend_position = 0.00180507
 
 [node name="AreaAttacco" type="Area2D" parent="."]
-position = Vector2(10, -3)
+position = Vector2(0, -1)
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAttacco"]
-position = Vector2(1, 2)
+position = Vector2(11, 0)
 shape = SubResource("RectangleShape2D_adus2")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
+[connection signal="body_entered" from="AreaAttacco" to="." method="_on_area_attacco_body_entered"]
+[connection signal="body_exited" from="AreaAttacco" to="." method="_on_area_attacco_body_exited"]

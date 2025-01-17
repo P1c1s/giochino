@@ -15,11 +15,15 @@ var target: CharacterBody2D
 #variabile flag per capire quando è in riproduzione l'animazione dell'attacco
 var attackMode
 
+#variable for the life progress bar
+var life: int
+
 func _ready():
 	startPosition = position
 	endPosition = startPosition - Vector2(-120, 0)
 	state_machine.travel("Walk")
 	attackMode = false
+	life = 100
 
 func _physics_process(_delta):
 	#if the player isn't near the ghoul, the enemy moves with his default dynamic
@@ -28,6 +32,11 @@ func _physics_process(_delta):
 	elif player_chase:
 		chase()
 	move_and_slide()
+	
+	$GhoulLife.value = life
+	
+	if (life == 0):
+		state_machine.travel("Die")
 
 #swaps the coordinates of A and B and flips the sprite
 func changeDirection():
@@ -44,7 +53,7 @@ func move() -> void:
 		if $Movimento.is_stopped():
 			$Movimento.start()
 		state_machine.travel("Idle")
-	velocity = moveDirection.normalized() * speed
+	velocity.x = moveDirection.normalized().x * speed
 	$Sprite2D.flip_h = (moveDirection.x < -0.05)
 
 #if the ghoul is chasing the player, the player's position is set to be the endPosition
@@ -56,7 +65,7 @@ func chase():
 		endPosition = target.position
 		var dist = endPosition - position
 		#$Sprite2D.flip_h = (dist.x < 1)
-		velocity = dist.normalized() * speed
+		velocity.x = dist.normalized().x * speed
 		state_machine.travel("Walk")
 		if dist.length() < attackLimit:
 			attack()
@@ -65,14 +74,14 @@ func chase():
 #during the attack is played the attack animation and the cooldown timer is started
 func attack():
 	attackMode = true
-	print("ATTACK")
+	#print("ATTACK")
 	state_machine.travel("Attack")
 	
 		#cooldown()
 
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Attack":
-		print("ANIMAZIONE ATTACCO FINITA")
+		#print("ANIMAZIONE ATTACCO FINITA")
 		if $Cooldown.is_stopped():
 			$Cooldown.start()
 		var distanza = endPosition - position
@@ -80,7 +89,10 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 			state_machine.call_deferred("travel", "Idle")
 		else:
 			state_machine.call_deferred("travel", "Walk")
-			velocity = distanza.normalized() * speed
+			velocity.x = distanza.normalized().x * speed
+	
+	if anim_name == "Die":
+		self.queue_free()
 
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
@@ -92,20 +104,20 @@ func _on_detection_area_body_entered(body: Node2D) -> void:
 
 
 func _on_movimento_timeout() -> void:
-	print("TIMER SCADUTO CAMBIO DIREZIONE")
+	#print("TIMER SCADUTO CAMBIO DIREZIONE")
 	state_machine.travel("Walk")
 	changeDirection()
 
 #at the end of the cooldown the ghoul attaks again
 func _on_cooldown_timeout() -> void:
-	print("COOLDOWN ENDED ATTACK AGAIN")
+	#print("COOLDOWN ENDED ATTACK AGAIN")
 	attack()
 
 
 func _on_detection_area_body_exited(body: Node2D) -> void:
 	if body is Adventurer:
 		player_chase = false
-		attackMode = false
+		#attackMode = false
 		startPosition = position
 		endPosition = startPosition - Vector2(-120, 0)
 		state_machine.travel("Walk")
