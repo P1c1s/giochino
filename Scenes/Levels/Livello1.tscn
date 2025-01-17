@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://boqujcub1urp7" path="res://Assets/Landscapes/cielo.jpg" id="1_e6ws5"]
 [ext_resource type="PackedScene" uid="uid://4m0li4cvpxxb" path="res://Scenes/UI/MobileControls.tscn" id="1_j66bs"]
 [ext_resource type="Texture2D" uid="uid://cc14q5mwl8kig" path="res://Assets/Landscapes/Textures-16.png" id="3_nwygy"]
-[ext_resource type="PackedScene" uid="uid://8xtwxe1fifct" path="res://Scenes/Items/Props/Portale.tscn" id="4_8frh0"]
+[ext_resource type="PackedScene" uid="uid://8xtwxe1fifct" path="res://Scenes/Items/Props/portale.tscn" id="4_8frh0"]
 [ext_resource type="PackedScene" uid="uid://c4gtobtru7t2v" path="res://Scenes/Characters/Villains/Cocodaemon.tscn" id="5_3qhn1"]
 [ext_resource type="Script" path="res://Scripts/Items/Props/Portale.gd" id="5_56g3d"]
 [ext_resource type="PackedScene" uid="uid://btw6dl74bkjxs" path="res://Scenes/Characters/Heroes/Adventurer.tscn" id="8_4pyi7"]
