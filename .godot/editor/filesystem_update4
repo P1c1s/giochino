@@ -1,11 +1,7 @@
-res://Scenes/Levels/Livello1.tscn
-res://Props/Portale.gd
-res://Scenes/Levels/Livello2.tscn
 res://Scenes/Levels/Level1.tscn
+res://Scenes/Levels/Livello1.tscn
 res://Scenes/Items/Props/Portale.tscn
 res://Scenes/Characters/Heroes/Adventurer.tscn
-res://Scenes/Characters/Villains/Cocodaemon.tscn
-res://Scenes/UI/LifeBar_CoinNumber.tscn
 res://Scenes/Characters/Heroes/Fox.tscn
-res://Scenes/Characters/Villains/Ghoul.tscn
-res://Scenes/Items/Props/Coin.tscn
+res://Scripts/Characters/Heroes/Adventurer.gd
+res://Scenes/Levels/Level2.tscn
