@@ -12,6 +12,7 @@ var endPosition
 @onready var player_chase: bool = false
 
 var target: CharacterBody2D
+var life: int
 
 #variabile flag per capire quando è in riproduzione l'animazione dell'attacco
 var attackMode

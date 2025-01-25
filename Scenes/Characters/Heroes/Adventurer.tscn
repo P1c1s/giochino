@@ -225,10 +225,10 @@ parameters/AttackRun/blend_position = 0.00180507
 
 [node name="AreaAttacco" type="Area2D" parent="."]
 position = Vector2(0, -1)
-collision_layer = 2
-collision_mask = 2
+collision_layer = 4
+collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAttacco"]
+[node name="Sword" type="CollisionShape2D" parent="AreaAttacco"]
 position = Vector2(11, 0)
 shape = SubResource("RectangleShape2D_adus2")
 

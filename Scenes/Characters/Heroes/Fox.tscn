@@ -173,8 +173,8 @@ tree_root = SubResource("AnimationNodeStateMachine_nwidy")
 anim_player = NodePath("../AnimationPlayer")
 
 [node name="DetectionArea" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 16
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource("CircleShape2D_jcg8h")

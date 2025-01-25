@@ -137,6 +137,8 @@ radius = 88.0
 
 [node name="Cocodaemon" type="CharacterBody2D"]
 scale = Vector2(-1, 1)
+collision_layer = 13
+collision_mask = 13
 script = ExtResource("1_1xwuk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
