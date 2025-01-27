@@ -1,6 +1,59 @@
-[gd_scene load_steps=5 format=3 uid="uid://chwhfulyew35h"]
+[gd_scene load_steps=23 format=3 uid="uid://chwhfulyew35h"]
 
-[ext_resource type="Texture2D" uid="uid://bnkyjwvxy8ppl" path="res://Assets/Characters/Nuovi assets/Mostro/monster001eyes.png" id="1_ebxhk"]
+[ext_resource type="Texture2D" uid="uid://bnkyjwvxy8ppl" path="res://Assets/Characters/Villains/Mostro.png" id="1_ebxhk"]
+[ext_resource type="Script" path="res://Scripts/Characters/Villains/Mostro.gd" id="1_l0xmm"]
+
+[sub_resource type="Animation" id="Animation_262w0"]
+resource_name = "Attack"
+length = 0.8
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [24, 25, 26, 27, 28, 29, 30, 31]
+}
+
+[sub_resource type="Animation" id="Animation_brpke"]
+resource_name = "Die"
+length = 0.75
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [48, 49, 50, 51, 52, 53, 54, 55]
+}
+
+[sub_resource type="Animation" id="Animation_erenl"]
+resource_name = "Idle"
+length = 0.75
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
 
 [sub_resource type="Animation" id="Animation_b2716"]
 length = 0.001
@@ -17,9 +70,10 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_erenl"]
+[sub_resource type="Animation" id="Animation_oqvob"]
 resource_name = "Walk"
-length = 0.75
+length = 0.8
+loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -31,19 +85,68 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7]
+"values": [8, 9, 10, 11, 12, 13, 14, 15]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_txqao"]
 _data = {
+"Attack": SubResource("Animation_262w0"),
+"Die": SubResource("Animation_brpke"),
+"Idle": SubResource("Animation_erenl"),
 "RESET": SubResource("Animation_b2716"),
-"Walk": SubResource("Animation_erenl")
+"Walk": SubResource("Animation_oqvob")
 }
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l1s78"]
+radius = 4.0
+height = 18.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wa45w"]
+animation = &"Attack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ugqem"]
+animation = &"Die"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tf1lr"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bkw8n"]
+animation = &"Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_iy38v"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_thxhl"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mbuuk"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y7tj6"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xhyw1"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fxv4r"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4i6qd"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_p32af"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_anbgj"]
+states/Attack/node = SubResource("AnimationNodeAnimation_wa45w")
+states/Attack/position = Vector2(541.105, -38.875)
+states/Die/node = SubResource("AnimationNodeAnimation_ugqem")
+states/Die/position = Vector2(542.855, 243.625)
+states/Idle/node = SubResource("AnimationNodeAnimation_tf1lr")
+states/Idle/position = Vector2(694.105, 103.625)
+states/Walk/node = SubResource("AnimationNodeAnimation_bkw8n")
+states/Walk/position = Vector2(403.105, 98.5625)
+transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_iy38v"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_thxhl"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_mbuuk"), "Walk", "Attack", SubResource("AnimationNodeStateMachineTransition_y7tj6"), "Attack", "Walk", SubResource("AnimationNodeStateMachineTransition_xhyw1"), "Walk", "Die", SubResource("AnimationNodeStateMachineTransition_fxv4r"), "Attack", "Die", SubResource("AnimationNodeStateMachineTransition_4i6qd"), "Idle", "Die", SubResource("AnimationNodeStateMachineTransition_p32af")]
+graph_offset = Vector2(-84.225, -1.56)
 
 [node name="Mostro" type="CharacterBody2D"]
 position = Vector2(1, 0)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 8
+collision_mask = 11
+script = ExtResource("1_l0xmm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ebxhk")
@@ -54,3 +157,11 @@ vframes = 8
 libraries = {
 "": SubResource("AnimationLibrary_txqao")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -1)
+shape = SubResource("CapsuleShape2D_l1s78")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_anbgj")
+anim_player = NodePath("../AnimationPlayer")

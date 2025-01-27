@@ -1,9 +1,9 @@
-res://Scripts/Characters/Heroes
-res://Scenes/Characters/Villains
+res://Scripts/UI
 res://Scripts/Characters/Villains
+res://Scenes/Characters/Villains
+res://Scripts/Characters/Heroes
 res://Scenes/Levels
 res://Scenes/Items/Props
-res://Scripts/UI
 res://
 res://Assets/Landscapes/forest_tileset/Sprites/Tile
 res://Scenes/UI

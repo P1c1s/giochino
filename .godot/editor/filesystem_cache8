@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737818059
+::res://::1737995511
 icon.svg::CompressedTexture2D::8783545481028713336::1737555346::1737555368::1::::<><>::
 README.md::TextFile::-1::1737555346::0::1::::<><>::
 ::res://Assets/::1737555346
@@ -9,44 +9,13 @@ README.md::TextFile::-1::1737555346::0::1::::<><>::
 Adventurer Sprite Sheet v1.5.png::CompressedTexture2D::5685125591193178649::1737555346::1737555369::1::::<><>::
 ::res://Assets/Characters/Heroes/Fox/::1737555369
 Fox Sprite Sheet.png::CompressedTexture2D::6335744065569880275::1737555346::1737555369::1::::<><>::
-::res://Assets/Characters/Nuovi assets/::1737656058
-::res://Assets/Characters/Nuovi assets/Mostro/::1737555369
-monster001eyes.png::CompressedTexture2D::3320993897532656621::1737555346::1737555369::1::::<><>::
-::res://Assets/Characters/Nuovi assets/Necromancer/::1737655363
-::res://Assets/Characters/Nuovi assets/Necromancer/Necromancer/::1737655371
-Necromancer_creativekind-Sheet.png::CompressedTexture2D::7275133146611128966::1737555346::1737555369::1::::<><>::
-::res://Assets/Characters/Nuovi assets/Necromancer/Necromancer/Attack/::1737555369
-spr_NecromancerAttackEffectWithBkg_strip47.png::CompressedTexture2D::2647981375884589139::1737555346::1737555369::1::::<><>::
-spr_NecromancerAttackEffect_strip47.png::CompressedTexture2D::8549012936346630158::1737555346::1737555369::1::::<><>::
-spr_NecromancerAttackWithEffectWithBkg_strip47.png::CompressedTexture2D::1748234453481855307::1737555346::1737555369::1::::<><>::
-spr_NecromancerAttackWithEffect_strip47.png::CompressedTexture2D::8923015191827132505::1737555346::1737555369::1::::<><>::
-spr_NecromancerAttackWithoutEffectWithBkg_strip47.png::CompressedTexture2D::8639761815291979823::1737555346::1737555369::1::::<><>::
-spr_NecromancerAttackWithoutEffect_strip47.png::CompressedTexture2D::129462829990671669::1737555346::1737555369::1::::<><>::
-::res://Assets/Characters/Nuovi assets/Necromancer/Necromancer/Death/::1737555369
-spr_NecromancerDeathWithBkg_strip52.png::CompressedTexture2D::8698335743199561615::1737555346::1737555369::1::::<><>::
-spr_NecromancerDeath_strip52.png::CompressedTexture2D::2609464764453867767::1737555346::1737555369::1::::<><>::
-::res://Assets/Characters/Nuovi assets/Necromancer/Necromancer/GetHit/::1737555369
-spr_NecromancerGetHitEffectWithBkg_strip9.png::CompressedTexture2D::1049683612805791419::1737555346::1737555369::1::::<><>::
-spr_NecromancerGetHitEffect_strip9.png::CompressedTexture2D::170124136455094517::1737555346::1737555369::1::::<><>::
-spr_NecromancerGetHitWithBkg_strip9.png::CompressedTexture2D::282748282635642525::1737555346::1737555369::1::::<><>::
-spr_NecromancerGetHitWithoutEffectWithBkg_strip9.png::CompressedTexture2D::3740112521417768443::1737555346::1737555369::1::::<><>::
-spr_NecromancerGetHitWithoutEffect_strip9.png::CompressedTexture2D::5579452550632872516::1737555346::1737555369::1::::<><>::
-spr_NecromancerGetHit_strip9.png::CompressedTexture2D::491941004043497755::1737555346::1737555369::1::::<><>::
-::res://Assets/Characters/Nuovi assets/Necromancer/Necromancer/Idle/::1737555369
-spr_NecromancerIdleWithBkg_strip50.png::CompressedTexture2D::2746803732809302559::1737555346::1737555369::1::::<><>::
-spr_NecromancerIdle_strip50.png::CompressedTexture2D::6798451399364715731::1737555346::1737555369::1::::<><>::
-::res://Assets/Characters/Nuovi assets/Necromancer/Necromancer/Jump/::1737555368
-spr_NecromancerIdle_strip50.png::CompressedTexture2D::7392899081317243506::1737555346::1737555368::1::::<><>::
-spr_NecromancerJumpWithBkg_strip12.png::CompressedTexture2D::4468997603855654649::1737555346::1737555368::1::::<><>::
-::res://Assets/Characters/Nuovi assets/Necromancer/Necromancer/Spawn/::1737555369
-spr_NecromancerSpawnWithBkg_strip20.png::CompressedTexture2D::8142237384409338450::1737555346::1737555368::1::::<><>::
-spr_NecromancerSpawn_strip20.png::CompressedTexture2D::2127168227220516586::1737555346::1737555369::1::::<><>::
-::res://Assets/Characters/Nuovi assets/Necromancer/Necromancer/Walk/::1737555368
-spr_NecromancerWalkWithBkg_strip10.png::CompressedTexture2D::1212379400784408408::1737555346::1737555368::1::::<><>::
-spr_NecromancerWalk_strip10.png::CompressedTexture2D::8667717995837710847::1737555346::1737555368::1::::<><>::
-::res://Assets/Characters/Villains/::1737555369
-Cacodaemon Sprite Sheet.png::CompressedTexture2D::1177230750393304168::1737555346::1737555369::1::::<><>::
-Ghoul Sprite Sheet.png::CompressedTexture2D::8783982139006709190::1737555346::1737555369::1::::<><>::
+::res://Assets/Characters/Nuovi assets/::1737995421
+::res://Assets/Characters/Nuovi assets/Mostro/::1737995505
+::res://Assets/Characters/Villains/::1737995511
+Cacodaemon.png::CompressedTexture2D::1177230750393304168::1737555346::1737995459::1::::<><>::
+Ghoul.png::CompressedTexture2D::8783982139006709190::1737555346::1737995467::1::::<><>::
+Mostro.png::CompressedTexture2D::3320993897532656621::1737555346::1737995512::1::::<><>::
+Necromancer.png::CompressedTexture2D::7275133146611128966::1737555346::1737995476::1::::<><>::
 ::res://Assets/Characters/Villains/FireWorm/::1737555368
 Attack.png::CompressedTexture2D::4453625997658181052::1737555346::1737555368::1::::<><>::
 Death.png::CompressedTexture2D::674063758825251901::1737555346::1737555368::1::::<><>::
@@ -165,21 +134,22 @@ LifePotion.gd::GDScript::-1::1737555346::0::1::::LifePotion<>Area2D<>::
 Portale.gd::GDScript::-1::1737555346::0::1::::Portale<>Area2D<>::
 ::res://Scenes/::1737555346
 ::res://Scenes/Characters/::1737555346
-::res://Scenes/Characters/Heroes/::1737716649
-Adventurer.tscn::PackedScene::3767313236072467268::1737716649::0::1::::<><>::res://Scripts/Characters/Heroes/Adventurer.gd<>uid://cm86gngoogf26::::res://Assets/Characters/Heroes/Adventurer/Adventurer Sprite Sheet v1.5.png
-Fox.tscn::PackedScene::446854056385697614::1737716649::0::1::::<><>::res://Scripts/Characters/Heroes/Fox.gd<>uid://cwjc1qvuhuum2::::res://Assets/Characters/Heroes/Fox/Fox Sprite Sheet.png
-::res://Scenes/Characters/Villains/::1737716649
-Cocodaemon.tscn::PackedScene::6821882806065774871::1737716649::0::1::::<><>::res://Scripts/Characters/Villains/Cocodaemon.gd<>uid://q1i23e5egcbo::::res://Assets/Characters/Villains/Cacodaemon Sprite Sheet.png<>uid://ckd1mtuus8hmb::::res://Assets/Items/Props/healthbarProgress.png
-Ghoul.tscn::PackedScene::6099316537155037094::1737716649::0::1::::<><>::res://Scripts/Characters/Villains/Ghoul.gd<>uid://dxfa5xi27fjtu::::res://Assets/Characters/Villains/Ghoul Sprite Sheet.png<>uid://ckd1mtuus8hmb::::res://Assets/Items/Props/healthbarProgress.png
-Mostro.tscn::PackedScene::5310014599917178659::1737716649::0::1::::<><>::uid://bnkyjwvxy8ppl::::res://Assets/Characters/Nuovi assets/Mostro/monster001eyes.png
+::res://Scenes/Characters/Heroes/::1737994330
+Adventurer.tscn::PackedScene::3767313236072467268::1737994330::0::1::::<><>::res://Scripts/Characters/Heroes/Adventurer.gd<>uid://cm86gngoogf26::::res://Assets/Characters/Heroes/Adventurer/Adventurer Sprite Sheet v1.5.png
+Fox.tscn::PackedScene::446854056385697614::1737994330::0::1::::<><>::res://Scripts/Characters/Heroes/Fox.gd<>uid://cwjc1qvuhuum2::::res://Assets/Characters/Heroes/Fox/Fox Sprite Sheet.png
+::res://Scenes/Characters/Villains/::1737995511
+Cocodaemon.tscn::PackedScene::6821882806065774871::1737995458::0::1::::<><>::res://Scripts/Characters/Villains/Cocodaemon.gd<>uid://q1i23e5egcbo::::res://Assets/Characters/Villains/Cacodaemon.png<>uid://ckd1mtuus8hmb::::res://Assets/Items/Props/healthbarProgress.png
+Ghoul.tscn::PackedScene::6099316537155037094::1737995467::0::1::::<><>::res://Scripts/Characters/Villains/Ghoul.gd<>uid://dxfa5xi27fjtu::::res://Assets/Characters/Villains/Ghoul.png<>uid://ckd1mtuus8hmb::::res://Assets/Items/Props/healthbarProgress.png
+Mostro.tscn::PackedScene::5310014599917178659::1737995511::0::1::::<><>::uid://bnkyjwvxy8ppl::::res://Assets/Characters/Villains/Mostro.png<>res://Scripts/Characters/Villains/Mostro.gd
+Necromancer.tscn::PackedScene::3622850015102926357::1737995476::0::1::::<><>::uid://dbwem6kc708wo::::res://Assets/Characters/Villains/Necromancer.png
 ::res://Scenes/Items/::1737555346
-::res://Scenes/Items/Props/::1737716649
-Coin.tscn::PackedScene::4009919125711097779::1737711670::0::1::::<><>::res://Props/Coin.gd<>uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png
-LifePotion.tscn::PackedScene::424621294327064633::1737716649::0::1::::<><>::uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png<>res://Props/LifePotion.gd
-::res://Scenes/Levels/::1737716649
-Level1.tscn::PackedScene::2743154101021397324::1737716649::0::1::::<><>::uid://c1fypi6drcgph::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Grass&Ground.png<>uid://cqxjrdfwdaoga::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Rocks.png<>uid://dqyv44pj0xn15::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Bushes.png<>uid://do4qlab1v1hm6::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Trees.png<>uid://btw6dl74bkjxs::::res://Scenes/Characters/Heroes/Adventurer.tscn
-Level2.tscn::PackedScene::4705054563349086952::1737716649::0::1::::<><>::uid://86gt8x2tkk4i::::res://Assets/Landscapes/Possibili tileset/Dungeon Tile Set.png
-Livello1.tscn::PackedScene::8722623536425085856::1737716649::0::1::::<><>::uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg<>uid://4m0li4cvpxxb::::res://Scenes/UI/MobileControls.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://c4gtobtru7t2v::::res://Scenes/Characters/Villains/Cocodaemon.tscn<>uid://btw6dl74bkjxs::::res://Scenes/Characters/Heroes/Adventurer.tscn<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/Fox.tscn<>uid://bxeo1ufnd18nv::::res://Scenes/Items/Props/Coin.tscn<>uid://b1jxtxcbva7q2::::res://Scenes/UI/LifeBar_CoinNumber.tscn<>uid://gbxpk8rnuasf::::res://Scenes/Items/Props/LifePotion.tscn<>uid://cs5s38gwsh52a::::res://Scenes/Characters/Villains/Ghoul.tscn
+::res://Scenes/Items/Props/::1737989768
+Coin.tscn::PackedScene::4009919125711097779::1737989768::0::1::::<><>::res://Props/Coin.gd<>uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png
+LifePotion.tscn::PackedScene::424621294327064633::1737989732::0::1::::<><>::uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png<>res://Props/LifePotion.gd
+::res://Scenes/Levels/::1737994330
+Level1.tscn::PackedScene::2743154101021397324::1737994330::0::1::::<><>::uid://c1fypi6drcgph::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Grass&Ground.png<>uid://cqxjrdfwdaoga::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Rocks.png<>uid://dqyv44pj0xn15::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Bushes.png<>uid://do4qlab1v1hm6::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Trees.png<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/Fox.tscn<>uid://btw6dl74bkjxs::::res://Scenes/Characters/Heroes/Adventurer.tscn
+Level2.tscn::PackedScene::4705054563349086952::1737989445::0::1::::<><>::uid://86gt8x2tkk4i::::res://Assets/Landscapes/Possibili tileset/Dungeon Tile Set.png
+Livello1.tscn::PackedScene::8722623536425085856::1737994330::0::1::::<><>::uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg<>uid://4m0li4cvpxxb::::res://Scenes/UI/MobileControls.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://c4gtobtru7t2v::::res://Scenes/Characters/Villains/Cocodaemon.tscn<>uid://btw6dl74bkjxs::::res://Scenes/Characters/Heroes/Adventurer.tscn<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/Fox.tscn<>uid://bxeo1ufnd18nv::::res://Scenes/Items/Props/Coin.tscn<>uid://b1jxtxcbva7q2::::res://Scenes/UI/LifeBar_CoinNumber.tscn<>uid://gbxpk8rnuasf::::res://Scenes/Items/Props/LifePotion.tscn<>uid://cs5s38gwsh52a::::res://Scenes/Characters/Villains/Ghoul.tscn
 Livello2.tscn::PackedScene::463196220579163851::1737555346::0::1::::<><>::uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/Fox.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/Portale.tscn<>uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg
 Livello3.tscn::PackedScene::1394784066586757830::1737555346::0::1::::<><>::uid://cdipun5qj4lwb::::res://Assets/Landscapes/tileset.png<>uid://c4gtobtru7t2v::::res://Scenes/Characters/Villains/Cocodaemon.tscn<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/Portale.tscn<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/Fox.tscn
 Livello4.tscn::PackedScene::1061809212238019892::1737555346::0::1::::<><>::res://Assets/Landscapes/pixil-frame-0.png<>res://Assets/Landscapes/CaveG.png<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/Fox.tscn<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/Portale.tscn
@@ -189,16 +159,17 @@ LoginMenu.tscn::PackedScene::2181507695287045470::1737555346::0::1::::<><>::res:
 IconHeart.tscn::PackedScene::7253474686144039393::1737555346::0::1::::<><>::uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png
 LifeBar_CoinNumber.tscn::PackedScene::4231341650186500907::1737555346::0::1::::<><>::res://Scripts/UI/LifeBar_CoinNumber.gd<>uid://denp81t30edqp::::res://Assets/Items/Props/healthbarUnder.png<>uid://ckd1mtuus8hmb::::res://Assets/Items/Props/healthbarProgress.png<>uid://dblvwyuh7s3pd::::res://Scenes/UI/IconHeart.tscn<>uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png
 MobileControls.tscn::PackedScene::2061787032209451955::1737555346::0::1::::<><>::uid://cmfredef5lkjh::::res://Assets/UI/notPressed60.png<>uid://c2fe4yx6tjmxf::::res://Assets/UI/pressed60.png<>uid://cou8oof0d282n::::res://Assets/UI/notPressed.png<>uid://tlac7giehnpm::::res://Assets/UI/Pressed.png
-::res://Scripts/::1737715225
-GameManager.gd::GDScript::-1::1737715225::0::1::::<>Node2D<>::
+::res://Scripts/::1737992744
+GameManager.gd::GDScript::-1::1737992744::0::1::::<>Node2D<>::
 ::res://Scripts/Characters/::1737555346
-::res://Scripts/Characters/Heroes/::1737716296
-Adventurer.gd::GDScript::-1::1737716296::0::1::::Adventurer<>CharacterBody2D<>::
-Fox.gd::GDScript::-1::1737555346::0::1::::Fox<>CharacterBody2D<>::
-::res://Scripts/Characters/Villains/::1737716546
+::res://Scripts/Characters/Heroes/::1737994330
+Adventurer.gd::GDScript::-1::1737993301::0::1::::Adventurer<>CharacterBody2D<>::
+Fox.gd::GDScript::-1::1737994330::0::1::::Fox<>CharacterBody2D<>::
+::res://Scripts/Characters/Villains/::1737993202
 Cocodaemon.gd::GDScript::-1::1737715225::0::1::::Cocodaemon<>CharacterBody2D<>::
-Ghoul.gd::GDScript::-1::1737716546::0::1::::Ghoul<>CharacterBody2D<>::
+Ghoul.gd::GDScript::-1::1737993202::0::1::::Ghoul<>CharacterBody2D<>::
+Mostro.gd::GDScript::-1::1737824924::0::1::::Mostro<>CharacterBody2D<>::
 ::res://Scripts/Menus/::1737555346
 LoginMenu.gd::GDScript::-1::1737555346::0::1::::<>Control<>::
-::res://Scripts/UI/::1737555346
-LifeBar_CoinNumber.gd::GDScript::-1::1737555346::0::1::::LifeBar_CoinNumber<>CanvasLayer<>::
+::res://Scripts/UI/::1737992482
+LifeBar_CoinNumber.gd::GDScript::-1::1737992482::0::1::::LifeBar_CoinNumber<>CanvasLayer<>::

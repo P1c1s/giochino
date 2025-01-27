@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://bru62s4xew2a0"]
+
+[ext_resource type="Texture2D" uid="uid://dbwem6kc708wo" path="res://Assets/Characters/Villains/Necromancer.png" id="1_gncia"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lxxm7"]
+radius = 13.0
+height = 48.0
+
+[sub_resource type="Animation" id="Animation_lb1c7"]
+resource_name = "Die"
+length = 1.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [85, 86, 85, 102, 103, 104, 105, 106, 107, 108, 110]
+}
+
+[sub_resource type="Animation" id="Animation_one80"]
+resource_name = "Disappear"
+length = 0.85
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [102, 103, 104, 105, 106, 107, 108, 109, 110]
+}
+
+[sub_resource type="Animation" id="Animation_0mnnf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [102]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kjeag"]
+_data = {
+"Die": SubResource("Animation_lb1c7"),
+"Disappear": SubResource("Animation_one80"),
+"RESET": SubResource("Animation_0mnnf")
+}
+
+[node name="Necromancer" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 11
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -29)
+texture = ExtResource("1_gncia")
+hframes = 17
+vframes = 7
+frame = 102
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_lxxm7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kjeag")
+}

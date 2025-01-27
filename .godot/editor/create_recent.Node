@@ -1,11 +1,11 @@
+CollisionShape2D
+Area2D
 AnimationTree
 AnimationPlayer
 Sprite2D
 CharacterBody2D
 TileMapLayer
 Timer
-CollisionShape2D
-Area2D
 StaticBody2D
 Node2D
 CanvasLayer

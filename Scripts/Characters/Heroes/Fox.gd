@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 			state_machine.travel("Idle")
 			#idle deve partire anche quando il personaggio è fermo e la fox lo ha raggiunt
 		
-		if (position.y - player.position.y) > 50 and (position.y - player.position.y) < 200  or get_slide_collision_count() > 1: #se il personaggio sta più in alto la fox salta
+		if (position.y - player.position.y) > 50 and (position.y - player.position.y) < 250  or get_slide_collision_count() > 1: #se il personaggio sta più in alto la fox salta
 			velocity.y = JUMP_VELOCITY
 			state_machine.travel("Jump")
 			move_and_slide()

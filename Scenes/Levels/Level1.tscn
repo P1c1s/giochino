@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=4 uid="uid://bfc2l2o4m0eem"]
+[gd_scene load_steps=12 format=4 uid="uid://bfc2l2o4m0eem"]
 
 [ext_resource type="Texture2D" uid="uid://c1fypi6drcgph" path="res://Assets/Landscapes/forest_tileset/Sprites/Tile/Grass&Ground.png" id="1_kv4ou"]
 [ext_resource type="Texture2D" uid="uid://cqxjrdfwdaoga" path="res://Assets/Landscapes/forest_tileset/Sprites/Tile/Rocks.png" id="2_cvjvy"]
 [ext_resource type="Texture2D" uid="uid://dqyv44pj0xn15" path="res://Assets/Landscapes/forest_tileset/Sprites/Tile/Bushes.png" id="3_esgtp"]
 [ext_resource type="Texture2D" uid="uid://do4qlab1v1hm6" path="res://Assets/Landscapes/forest_tileset/Sprites/Tile/Trees.png" id="4_d0jo3"]
+[ext_resource type="PackedScene" uid="uid://gmpvd5wxub47" path="res://Scenes/Characters/Heroes/Fox.tscn" id="6_71ju5"]
 [ext_resource type="PackedScene" uid="uid://btw6dl74bkjxs" path="res://Scenes/Characters/Heroes/Adventurer.tscn" id="6_78qut"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuqlx"]
@@ -118,8 +119,8 @@ texture = ExtResource("4_d0jo3")
 8:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_xyi8k"]
-physics_layer_0/collision_layer = 3
-physics_layer_0/collision_mask = 3
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 31
 sources/14 = SubResource("TileSetAtlasSource_vuqlx")
 sources/17 = SubResource("TileSetAtlasSource_b53bq")
 sources/20 = SubResource("TileSetAtlasSource_byjuy")
@@ -135,3 +136,6 @@ tile_set = SubResource("TileSet_xyi8k")
 
 [node name="Adventurer" parent="." instance=ExtResource("6_78qut")]
 position = Vector2(22, -57)
+
+[node name="Fox" parent="." instance=ExtResource("6_71ju5")]
+position = Vector2(58, -49)

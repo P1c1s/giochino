@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://c4gtobtru7t2v"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/Villains/Cocodaemon.gd" id="1_1xwuk"]
-[ext_resource type="Texture2D" uid="uid://q1i23e5egcbo" path="res://Assets/Characters/Villains/Cacodaemon Sprite Sheet.png" id="1_cdsgd"]
+[ext_resource type="Texture2D" uid="uid://q1i23e5egcbo" path="res://Assets/Characters/Villains/Cacodaemon.png" id="1_cdsgd"]
 [ext_resource type="Texture2D" uid="uid://ckd1mtuus8hmb" path="res://Assets/Items/Props/healthbarProgress.png" id="2_s84fh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8277e"]
@@ -137,8 +137,8 @@ radius = 88.0
 
 [node name="Cocodaemon" type="CharacterBody2D"]
 scale = Vector2(-1, 1)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 8
+collision_mask = 11
 script = ExtResource("1_1xwuk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

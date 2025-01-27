@@ -9,7 +9,8 @@ func add_score():
 	score += 1
 
 func getDamage():
-	pass
+	adventurerLife -= 50
+	print("Adventurer ha preso danno")
 
 func giveDamage(enemy : CharacterBody2D):
 	print("Manager deve togliere vita a nemico")

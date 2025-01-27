@@ -148,7 +148,7 @@ radius = 71.007
 z_index = 1
 position = Vector2(1, 0)
 collision_layer = 4
-collision_mask = 4
+collision_mask = 17
 script = ExtResource("1_0jmt3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -173,8 +173,8 @@ tree_root = SubResource("AnimationNodeStateMachine_nwidy")
 anim_player = NodePath("../AnimationPlayer")
 
 [node name="DetectionArea" type="Area2D" parent="."]
-collision_layer = 16
-collision_mask = 16
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource("CircleShape2D_jcg8h")

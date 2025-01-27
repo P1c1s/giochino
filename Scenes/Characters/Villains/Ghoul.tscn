@@ -1,7 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://cs5s38gwsh52a"]
+[gd_scene load_steps=26 format=3 uid="uid://cs5s38gwsh52a"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/Villains/Ghoul.gd" id="1_0jjmv"]
-[ext_resource type="Texture2D" uid="uid://dxfa5xi27fjtu" path="res://Assets/Characters/Villains/Ghoul Sprite Sheet.png" id="1_b86sv"]
+[ext_resource type="Texture2D" uid="uid://dxfa5xi27fjtu" path="res://Assets/Characters/Villains/Ghoul.png" id="1_b86sv"]
 [ext_resource type="Texture2D" uid="uid://ckd1mtuus8hmb" path="res://Assets/Items/Props/healthbarProgress.png" id="2_jel3r"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5dwgj"]
@@ -135,10 +135,14 @@ graph_offset = Vector2(124.215, -6.36748)
 radius = 21.0
 height = 157.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l04h6"]
+radius = 14.0
+height = 35.0
+
 [node name="Ghoul" type="CharacterBody2D"]
 scale = Vector2(2, 2)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 8
+collision_mask = 3
 script = ExtResource("1_0jjmv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -146,7 +150,7 @@ scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_b86sv")
 hframes = 8
 vframes = 5
-frame = 10
+frame = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 3.5)
@@ -187,8 +191,18 @@ shape = SubResource("CapsuleShape2D_vnit5")
 wait_time = 4.0
 one_shot = true
 
+[node name="AttackArea" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(1, 4.5)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_l04h6")
+
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
 [connection signal="timeout" from="Movimento" to="." method="_on_movimento_timeout"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]

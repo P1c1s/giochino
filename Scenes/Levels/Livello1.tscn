@@ -874,8 +874,8 @@ texture = ExtResource("3_nwygy")
 13:31/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_6ngku"]
-physics_layer_0/collision_layer = 5
-physics_layer_0/collision_mask = 5
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 31
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_ttoqt")
 sources/0 = SubResource("TileSetAtlasSource_selx6")
 
@@ -927,8 +927,6 @@ collision_mask = 7
 [node name="Adventurer" parent="." instance=ExtResource("8_4pyi7")]
 position = Vector2(223, 278)
 scale = Vector2(2.5, 2.5)
-collision_layer = 3
-collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Adventurer"]
 z_index = 4

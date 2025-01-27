@@ -13,10 +13,15 @@ var endPosition
 var target: CharacterBody2D
 
 #variabile flag per capire quando è in riproduzione l'animazione dell'attacco
-var attackMode
+var attackMode : bool
+
+#flag used to check whether the enemey collided with the player or not
+var collisionPlayer : bool
 
 #variable for the life progress bar
 var life: int
+
+var numAttacks = 0;
 
 func _ready():
 	startPosition = position
@@ -25,6 +30,7 @@ func _ready():
 	attackMode = false
 	life = 100
 	print(self.get_class())
+	collisionPlayer = false
 
 func _physics_process(_delta):
 	#if the player isn't near the ghoul, the enemy moves with his default dynamic
@@ -78,6 +84,10 @@ func attack():
 	#print("ATTACK")
 	state_machine.travel("Attack")
 	
+	if collisionPlayer and numAttacks == 0:
+		GameManager.getDamage()
+		print("Ghoul ha fatto danno")
+	
 		#cooldown()
 
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
@@ -113,18 +123,21 @@ func _on_movimento_timeout() -> void:
 #at the end of the cooldown the ghoul attaks again
 func _on_cooldown_timeout() -> void:
 	#print("COOLDOWN ENDED ATTACK AGAIN")
+	numAttacks = 0;
 	attack()
 
 
 func _on_detection_area_body_exited(body: Node2D) -> void:
 	if body is Adventurer:
 		player_chase = false
-		#attackMode = false
+		attackMode = false
 		startPosition = position
 		endPosition = startPosition - Vector2(-120, 0)
 		state_machine.travel("Walk")
 		if not $Cooldown.is_stopped():
 			$Cooldown.stop()
+
+
 
 
 #METTERE ON ANIMATION FINISHED ATTACK --> attackmode = false e far partire il cooldown
@@ -140,3 +153,11 @@ func _on_detection_area_body_exited(body: Node2D) -> void:
 	#When gets damage and life is zero: he dies
 	#		animationPlayer plays dying animation, and then he removes himself from
 	#		node tree
+
+
+func _on_attack_area_body_entered(body: Node2D) -> void:
+	if body is Adventurer:
+		collisionPlayer = true;
+	#if body is Adventurer && attackMode && numAttacks == 0:
+		#GameManager.getDamage()
+		#print("Ghoul attacca")

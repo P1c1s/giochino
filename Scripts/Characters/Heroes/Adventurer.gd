@@ -3,14 +3,14 @@ class_name Adventurer extends CharacterBody2D
 #const SPEED =300.0
 const JUMP_VELOCITY = -400.0
 
-var run_speed = 180.0
+var run_speed = 220.0
 var attackMode			#flag variable to control attacks
 var collisionEnemy 
 var enemy : CharacterBody2D
 var attackNumbers : int = 0
 var posizione
 
-#var life: int
+var life: int
 
 # attack sounds
 @onready var state_machine = $AnimationTree["parameters/playback"]
