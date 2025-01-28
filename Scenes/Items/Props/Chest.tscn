@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://c2u8bclaj7nem"]
+
+[ext_resource type="Script" path="res://Scripts/Props/Chest.gd" id="1_dro3g"]
+[ext_resource type="Texture2D" uid="uid://c6bseqnvbfjch" path="res://Assets/Items/Props/coins-chests-etc-2-0.png" id="2_fk2vr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqb02"]
+atlas = ExtResource("2_fk2vr")
+region = Rect2(448, 656, 32, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvqi8"]
+atlas = ExtResource("2_fk2vr")
+region = Rect2(480, 656, 32, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1luvs"]
+atlas = ExtResource("2_fk2vr")
+region = Rect2(512, 656, 32, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rmet"]
+atlas = ExtResource("2_fk2vr")
+region = Rect2(544, 656, 32, 41)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l2hek"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqb02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvqi8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1luvs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rmet")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lq1gu"]
+size = Vector2(24, 14)
+
+[node name="Chest" type="Area2D"]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_dro3g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_l2hek")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_lq1gu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

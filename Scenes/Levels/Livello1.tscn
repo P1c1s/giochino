@@ -903,6 +903,7 @@ offset_bottom = 661.0
 texture = ExtResource("1_e6ws5")
 expand_mode = 2
 stretch_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = 1
@@ -951,7 +952,7 @@ position = Vector2(581, 181)
 [node name="Coin2" parent="Coins" instance=ExtResource("9_l2rtf")]
 position = Vector2(841, 263)
 
-[node name="CanvasLayer" parent="." instance=ExtResource("10_rf5s3")]
+[node name="LifeBar_CoinNumber" parent="." instance=ExtResource("10_rf5s3")]
 
 [node name="LifePotion" parent="." instance=ExtResource("11_ocm5g")]
 position = Vector2(1144, 139)

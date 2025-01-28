@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://p0sevv4h8qqu"]
+
+[ext_resource type="Texture2D" uid="uid://d3u3hy1f5t0mi" path="res://Assets/Characters/Villains/PROVA.png" id="1_yuj0n"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yuj0n")
+hframes = 8
+vframes = 5

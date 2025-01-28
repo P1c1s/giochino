@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/UI/LifeBar_CoinNumber.gd" id="1_grhr6"]
 [ext_resource type="Texture2D" uid="uid://denp81t30edqp" path="res://Assets/Items/Props/healthbarUnder.png" id="1_j44uh"]
 [ext_resource type="Texture2D" uid="uid://ckd1mtuus8hmb" path="res://Assets/Items/Props/healthbarProgress.png" id="2_juatb"]
-[ext_resource type="PackedScene" uid="uid://dblvwyuh7s3pd" path="res://Scenes/UI/IconHeart.tscn" id="3_515o7"]
+[ext_resource type="PackedScene" uid="uid://bh6u7247gmldn" path="res://Scenes/UI/IconHeart2.tscn" id="2_tjjki"]
 [ext_resource type="Texture2D" uid="uid://c6bseqnvbfjch" path="res://Assets/Items/Props/coins-chests-etc-2-0.png" id="5_6my45"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ik4gr"]
@@ -57,6 +57,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4rigs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ik4gr")
 }],
 "loop": true,
 "name": &"steadyCoin",
@@ -66,9 +69,9 @@ animations = [{
 [node name="LifeBar_CoinNumber" type="CanvasLayer"]
 script = ExtResource("1_grhr6")
 
-[node name="IconHeart" parent="." instance=ExtResource("3_515o7")]
-position = Vector2(40, 35)
-scale = Vector2(4, 4)
+[node name="IconHeart" parent="." instance=ExtResource("2_tjjki")]
+position = Vector2(42, 42)
+scale = Vector2(0.75, 0.75)
 
 [node name="LifeIndicator" type="TextureProgressBar" parent="."]
 offset_left = 78.0
@@ -101,3 +104,4 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_meguc")
 animation = &"steadyCoin"
 autoplay = "steadyCoin"
+frame_progress = 0.135328

@@ -1,21 +1,26 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737995511
+::res://::1738072592
 icon.svg::CompressedTexture2D::8783545481028713336::1737555346::1737555368::1::::<><>::
 README.md::TextFile::-1::1737555346::0::1::::<><>::
-::res://Assets/::1737555346
-::res://Assets/Characters/::1737555346
+::res://Assets/::1738077032
+patchLevel1.png::CompressedTexture2D::3654482204264738303::1738077032::1738077025::1::::<><>::
+::res://Assets/Characters/::1737995516
 ::res://Assets/Characters/Heroes/::1737555346
 ::res://Assets/Characters/Heroes/Adventurer/::1737555369
 Adventurer Sprite Sheet v1.5.png::CompressedTexture2D::5685125591193178649::1737555346::1737555369::1::::<><>::
 ::res://Assets/Characters/Heroes/Fox/::1737555369
 Fox Sprite Sheet.png::CompressedTexture2D::6335744065569880275::1737555346::1737555369::1::::<><>::
-::res://Assets/Characters/Nuovi assets/::1737995421
-::res://Assets/Characters/Nuovi assets/Mostro/::1737995505
-::res://Assets/Characters/Villains/::1737995511
+::res://Assets/Characters/Villains/::1738057143
+amberGoblin.png::CompressedTexture2D::7779652941638579139::1738011802::1738011812::1::::<><>::
+ATTACK.png::CompressedTexture2D::4027409370997722894::1738014888::1738014888::1::::<><>::
 Cacodaemon.png::CompressedTexture2D::1177230750393304168::1737555346::1737995459::1::::<><>::
+flyingDemon.png::CompressedTexture2D::487494066655222991::1738014663::1738014687::1::::<><>::
 Ghoul.png::CompressedTexture2D::8783982139006709190::1737555346::1737995467::1::::<><>::
 Mostro.png::CompressedTexture2D::3320993897532656621::1737555346::1737995512::1::::<><>::
 Necromancer.png::CompressedTexture2D::7275133146611128966::1737555346::1737995476::1::::<><>::
+PROVA.png::CompressedTexture2D::9167551105373562268::1738015175::1738015175::1::::<><>::
+Screenshot 2025-01-28 alle 10.32.12.png::CompressedTexture2D::8680868721868337519::1738056902::1738056903::1::::<><>::
+Screenshot 2025-01-28 alle 10.38.46.png::CompressedTexture2D::4742100073336508742::1738057142::1738057143::1::::<><>::
 ::res://Assets/Characters/Villains/FireWorm/::1737555368
 Attack.png::CompressedTexture2D::4453625997658181052::1737555346::1737555368::1::::<><>::
 Death.png::CompressedTexture2D::674063758825251901::1737555346::1737555368::1::::<><>::
@@ -24,27 +29,34 @@ Attack3.png::CompressedTexture2D::3802256265259117327::1737555346::1737555368::1
 projectile_sprite.png::CompressedTexture2D::2994137896160623465::1737555346::1737555369::1::::<><>::
 ::res://Assets/Characters/Villains/Goblin/::1737555369
 Attack3.png::CompressedTexture2D::5618876976672657850::1737555346::1737555369::1::::<><>::
-::res://Assets/Items/::1737555346
-::res://Assets/Items/Props/::1737555369
+::res://Assets/Items/::1738011233
+shinyHeart.png::CompressedTexture2D::1340781144702056281::1738011206::1738011233::1::::<><>::
+::res://Assets/Items/Props/::1738010508
 Bushes.png::CompressedTexture2D::330528905205482721::1737555346::1737555369::1::::<><>::
 coins-chests-etc-2-0.png::CompressedTexture2D::6951860808376428679::1737555346::1737555369::1::::<><>::
 Dimensional_Portal.png::CompressedTexture2D::1882729607973618888::1737555346::1737555369::1::::<><>::
 Flowers.png::CompressedTexture2D::2831886602237901757::1737555346::1737555369::1::::<><>::
 healthbarProgress.png::CompressedTexture2D::5482524038141301213::1737555346::1737555369::1::::<><>::
 healthbarUnder.png::CompressedTexture2D::7467825418788717483::1737555346::1737555369::1::::<><>::
+shinyHeart.png::CompressedTexture2D::1952172387773768244::1738010508::1738010508::1::::<><>::
 Trees.png::CompressedTexture2D::5965491067580502618::1737555346::1737555369::1::::<><>::
-::res://Assets/Landscapes/::1737555369
+::res://Assets/Landscapes/::1738077040
 2.png::CompressedTexture2D::5551405491216823957::1737555346::1737555368::1::::<><>::
 cielo.jpg::CompressedTexture2D::3403325086714759234::1737555346::1737555368::1::::<><>::
 deserto.png::CompressedTexture2D::2691799843714095751::1737555346::1737555368::1::::<><>::
 Isole.png::CompressedTexture2D::4224050991231634017::1737555346::1737555369::1::::<><>::
+LevelsWallpaper.png::CompressedTexture2D::5388391982026784951::1738065755::1738065756::1::::<><>::
 orig.png::CompressedTexture2D::4561275587715362785::1737555346::1737555368::1::::<><>::
 origbig.png::CompressedTexture2D::4842049071054266768::1737555346::1737555368::1::::<><>::
+patchLevel1.png::CompressedTexture2D::96508967844681743::1738077040::1738077040::1::::<><>::
+Screenshot 2025-01-28 alle 15.58.55.png::CompressedTexture2D::6204049202100568617::1738076348::1738076349::1::::<><>::
+sky.jpg::CompressedTexture2D::1113550622595855001::1738061454::1738061454::1::::<><>::
 Sprite-0004.jpg::CompressedTexture2D::4939278438319626631::1737555346::1737555369::1::::<><>::
 Sprite-0006.jpg::CompressedTexture2D::4886414942659057829::1737555346::1737555369::1::::<><>::
 Sprite-0007.jpg::CompressedTexture2D::2258302158796080333::1737555346::1737555369::1::::<><>::
 Textures-16.png::CompressedTexture2D::4968683837014272054::1737555346::1737555368::1::::<><>::
 tileset.png::CompressedTexture2D::5000870120990203793::1737555346::1737555368::1::::<><>::
+tramonto_pixel.jpg::CompressedTexture2D::9034691200229413910::1738061207::1738061218::1::::<><>::
 ::res://Assets/Landscapes/forest_tileset/::1737555346
 ::res://Assets/Landscapes/forest_tileset/Demo/::1737555369
 demo.jpg::CompressedTexture2D::4913044255210463724::1737555346::1737555369::1::::<><>::
@@ -117,7 +129,7 @@ rock_3.png::CompressedTexture2D::3715724724715601721::1737555346::1737555368::1:
 shop.png::CompressedTexture2D::7555363281052392906::1737555346::1737555368::1::::<><>::
 shop_anim.png::CompressedTexture2D::4327529370127484658::1737555346::1737555368::1::::<><>::
 sign.png::CompressedTexture2D::2361887745553196601::1737555346::1737555368::1::::<><>::
-::res://Assets/UI/::1737555368
+::res://Assets/UI/::1738065533
 frecce-removebg-preview.png::CompressedTexture2D::3332997219594459944::1737555346::1737555368::1::::<><>::
 freccia.png::CompressedTexture2D::6469323522592978423::1737555346::1737555368::1::::<><>::
 notPressed60.png::CompressedTexture2D::5626468875882518585::1737555346::1737555368::1::::<><>::
@@ -128,48 +140,78 @@ pressed70.png::CompressedTexture2D::79620749437863663::1737555346::1737555368::1
 Pressed.png::CompressedTexture2D::1356301446390233142::1737555346::1737555368::1::::<><>::
 SwordNotPressed.png::CompressedTexture2D::3348885172922975667::1737555346::1737555368::1::::<><>::
 SwordPressed.png::CompressedTexture2D::3627684391814875684::1737555346::1737555368::1::::<><>::
-::res://Props/::1737555346
-Coin.gd::GDScript::-1::1737555346::0::1::::Coin<>Node<>::
-LifePotion.gd::GDScript::-1::1737555346::0::1::::LifePotion<>Area2D<>::
-Portale.gd::GDScript::-1::1737555346::0::1::::Portale<>Area2D<>::
+::res://Assets/UI/LevelsButtons/::1738065534
+Button.png::CompressedTexture2D::4784953857085921080::1738065533::1738065534::1::::<><>::
+Level1.png::CompressedTexture2D::7292593436914581564::1738065533::1738065534::1::::<><>::
+Level2.png::CompressedTexture2D::7043611636713551062::1738065533::1738065534::1::::<><>::
+Level3.png::CompressedTexture2D::5678859049302821499::1738065533::1738065534::1::::<><>::
+Level4.png::CompressedTexture2D::6946645637369796532::1738065533::1738065534::1::::<><>::
+Level5.png::CompressedTexture2D::1678013475833341747::1738065533::1738065534::1::::<><>::
+Level6.png::CompressedTexture2D::4321960429563116813::1738065533::1738065534::1::::<><>::
+Level7.png::CompressedTexture2D::2853268706594983505::1738065533::1738065534::1::::<><>::
+Level8.png::CompressedTexture2D::4653839246526323741::1738065533::1738065534::1::::<><>::
+Level9.png::CompressedTexture2D::2993114739859903947::1738065533::1738065534::1::::<><>::
+PressedLevel1.png::CompressedTexture2D::3304245541488707090::1738065533::1738065534::1::::<><>::
+PressedLevel2.png::CompressedTexture2D::3854331569150145402::1738065533::1738065534::1::::<><>::
+PressedLevel3.png::CompressedTexture2D::1992886917531563523::1738065533::1738065534::1::::<><>::
+PressedLevel4.png::CompressedTexture2D::4258207664026791151::1738065533::1738065534::1::::<><>::
+PressedLevel5.png::CompressedTexture2D::8647056107791209421::1738065533::1738065534::1::::<><>::
+PressedLevel6.png::CompressedTexture2D::4996656643598224117::1738065533::1738065534::1::::<><>::
+PressedLevel7.png::CompressedTexture2D::3745158144579815692::1738065533::1738065534::1::::<><>::
+PressedLevel8.png::CompressedTexture2D::9064865719490392402::1738065533::1738065534::1::::<><>::
+PressedLevel9.png::CompressedTexture2D::1146303240476584633::1738065533::1738065534::1::::<><>::
 ::res://Scenes/::1737555346
 ::res://Scenes/Characters/::1737555346
-::res://Scenes/Characters/Heroes/::1737994330
-Adventurer.tscn::PackedScene::3767313236072467268::1737994330::0::1::::<><>::res://Scripts/Characters/Heroes/Adventurer.gd<>uid://cm86gngoogf26::::res://Assets/Characters/Heroes/Adventurer/Adventurer Sprite Sheet v1.5.png
-Fox.tscn::PackedScene::446854056385697614::1737994330::0::1::::<><>::res://Scripts/Characters/Heroes/Fox.gd<>uid://cwjc1qvuhuum2::::res://Assets/Characters/Heroes/Fox/Fox Sprite Sheet.png
-::res://Scenes/Characters/Villains/::1737995511
-Cocodaemon.tscn::PackedScene::6821882806065774871::1737995458::0::1::::<><>::res://Scripts/Characters/Villains/Cocodaemon.gd<>uid://q1i23e5egcbo::::res://Assets/Characters/Villains/Cacodaemon.png<>uid://ckd1mtuus8hmb::::res://Assets/Items/Props/healthbarProgress.png
-Ghoul.tscn::PackedScene::6099316537155037094::1737995467::0::1::::<><>::res://Scripts/Characters/Villains/Ghoul.gd<>uid://dxfa5xi27fjtu::::res://Assets/Characters/Villains/Ghoul.png<>uid://ckd1mtuus8hmb::::res://Assets/Items/Props/healthbarProgress.png
-Mostro.tscn::PackedScene::5310014599917178659::1737995511::0::1::::<><>::uid://bnkyjwvxy8ppl::::res://Assets/Characters/Villains/Mostro.png<>res://Scripts/Characters/Villains/Mostro.gd
+::res://Scenes/Characters/Heroes/::1738061373
+Adventurer.tscn::PackedScene::3767313236072467268::1738061373::0::1::::<><>::res://Scripts/Characters/Heroes/Adventurer.gd<>uid://cm86gngoogf26::::res://Assets/Characters/Heroes/Adventurer/Adventurer Sprite Sheet v1.5.png
+Fox.tscn::PackedScene::446854056385697614::1738013440::0::1::::<><>::res://Scripts/Characters/Heroes/Fox.gd<>uid://cwjc1qvuhuum2::::res://Assets/Characters/Heroes/Fox/Fox Sprite Sheet.png
+::res://Scenes/Characters/Villains/::1738078014
+AmberGoblin.tscn::PackedScene::8497555775669489946::1738013441::0::1::::<><>::uid://di3r0n57ljq5p::::res://Assets/Characters/Villains/amberGoblin.png
+Cocodaemon.tscn::PackedScene::6821882806065774871::1738013440::0::1::::<><>::res://Scripts/Characters/Villains/Cocodaemon.gd<>uid://q1i23e5egcbo::::res://Assets/Characters/Villains/Cacodaemon.png<>uid://ckd1mtuus8hmb::::res://Assets/Items/Props/healthbarProgress.png
+Flying demon.tscn::PackedScene::1105543284226939596::1738078014::0::1::::<><>::uid://d3u3hy1f5t0mi::::res://Assets/Characters/Villains/PROVA.png
+Ghoul.tscn::PackedScene::6099316537155037094::1738061373::0::1::::<><>::res://Scripts/Characters/Villains/Ghoul.gd<>uid://dxfa5xi27fjtu::::res://Assets/Characters/Villains/Ghoul.png<>uid://ckd1mtuus8hmb::::res://Assets/Items/Props/healthbarProgress.png
+Mostro.tscn::PackedScene::5310014599917178659::1738078014::0::1::::<><>::uid://bnkyjwvxy8ppl::::res://Assets/Characters/Villains/Mostro.png<>res://Scripts/Characters/Villains/Mostro.gd<>uid://ckd1mtuus8hmb::::res://Assets/Items/Props/healthbarProgress.png
 Necromancer.tscn::PackedScene::3622850015102926357::1737995476::0::1::::<><>::uid://dbwem6kc708wo::::res://Assets/Characters/Villains/Necromancer.png
-::res://Scenes/Items/::1737555346
-::res://Scenes/Items/Props/::1737989768
-Coin.tscn::PackedScene::4009919125711097779::1737989768::0::1::::<><>::res://Props/Coin.gd<>uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png
-LifePotion.tscn::PackedScene::424621294327064633::1737989732::0::1::::<><>::uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png<>res://Props/LifePotion.gd
-::res://Scenes/Levels/::1737994330
-Level1.tscn::PackedScene::2743154101021397324::1737994330::0::1::::<><>::uid://c1fypi6drcgph::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Grass&Ground.png<>uid://cqxjrdfwdaoga::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Rocks.png<>uid://dqyv44pj0xn15::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Bushes.png<>uid://do4qlab1v1hm6::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Trees.png<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/Fox.tscn<>uid://btw6dl74bkjxs::::res://Scenes/Characters/Heroes/Adventurer.tscn
-Level2.tscn::PackedScene::4705054563349086952::1737989445::0::1::::<><>::uid://86gt8x2tkk4i::::res://Assets/Landscapes/Possibili tileset/Dungeon Tile Set.png
-Livello1.tscn::PackedScene::8722623536425085856::1737994330::0::1::::<><>::uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg<>uid://4m0li4cvpxxb::::res://Scenes/UI/MobileControls.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://c4gtobtru7t2v::::res://Scenes/Characters/Villains/Cocodaemon.tscn<>uid://btw6dl74bkjxs::::res://Scenes/Characters/Heroes/Adventurer.tscn<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/Fox.tscn<>uid://bxeo1ufnd18nv::::res://Scenes/Items/Props/Coin.tscn<>uid://b1jxtxcbva7q2::::res://Scenes/UI/LifeBar_CoinNumber.tscn<>uid://gbxpk8rnuasf::::res://Scenes/Items/Props/LifePotion.tscn<>uid://cs5s38gwsh52a::::res://Scenes/Characters/Villains/Ghoul.tscn
+::res://Scenes/Items/::1738072592
+::res://Scenes/Items/Props/::1738078014
+Chest.tscn::PackedScene::6711233269302319000::1738078014::0::1::::<><>::res://Scripts/Props/Chest.gd<>uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png
+Coin.tscn::PackedScene::4009919125711097779::1738010469::0::1::::<><>::res://Scripts/Props/Coin.gd<>uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png
+LifePotion.tscn::PackedScene::424621294327064633::1738010469::0::1::::<><>::uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png<>res://Scripts/Props/LifePotion.gd
+Key.tscn::PackedScene::1943906522498606743::1738078014::0::1::::<><>::res://Scripts/Props/Key.gd<>uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png
+::res://Scenes/Levels/::1738078014
+Level1.tscn::PackedScene::2743154101021397324::1738078014::0::1::::<><>::uid://cunj1wh2pjxk8::::res://Assets/Landscapes/Screenshot 2025-01-28 alle 15.58.55.png<>uid://bm0qu27ehn2n::::res://Assets/Landscapes/patchLevel1.png<>uid://c1fypi6drcgph::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Grass&Ground.png<>uid://cqxjrdfwdaoga::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Rocks.png<>uid://dqyv44pj0xn15::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Bushes.png<>uid://do4qlab1v1hm6::::res://Assets/Landscapes/forest_tileset/Sprites/Tile/Trees.png<>uid://b1jxtxcbva7q2::::res://Scenes/UI/LifeBar_CoinNumber.tscn<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/Fox.tscn<>uid://btw6dl74bkjxs::::res://Scenes/Characters/Heroes/Adventurer.tscn<>uid://4m0li4cvpxxb::::res://Scenes/UI/MobileControls.tscn<>uid://chwhfulyew35h::::res://Scenes/Characters/Villains/Mostro.tscn<>uid://bxeo1ufnd18nv::::res://Scenes/Items/Props/Coin.tscn<>uid://2xv4eavhdcv4::::res://Scenes/Items/Props/Key.tscn<>uid://gbxpk8rnuasf::::res://Scenes/Items/Props/LifePotion.tscn<>uid://c2u8bclaj7nem::::res://Scenes/Items/Props/Chest.tscn
+Level2.tscn::PackedScene::4705054563349086952::1738063178::0::1::::<><>::uid://86gt8x2tkk4i::::res://Assets/Landscapes/Possibili tileset/Dungeon Tile Set.png
+Livello1.tscn::PackedScene::8722623536425085856::1738078014::0::1::::<><>::uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg<>uid://4m0li4cvpxxb::::res://Scenes/UI/MobileControls.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://c4gtobtru7t2v::::res://Scenes/Characters/Villains/Cocodaemon.tscn<>uid://btw6dl74bkjxs::::res://Scenes/Characters/Heroes/Adventurer.tscn<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/Fox.tscn<>uid://bxeo1ufnd18nv::::res://Scenes/Items/Props/Coin.tscn<>uid://b1jxtxcbva7q2::::res://Scenes/UI/LifeBar_CoinNumber.tscn<>uid://gbxpk8rnuasf::::res://Scenes/Items/Props/LifePotion.tscn<>uid://cs5s38gwsh52a::::res://Scenes/Characters/Villains/Ghoul.tscn
 Livello2.tscn::PackedScene::463196220579163851::1737555346::0::1::::<><>::uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/Fox.tscn<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/Portale.tscn<>uid://boqujcub1urp7::::res://Assets/Landscapes/cielo.jpg
 Livello3.tscn::PackedScene::1394784066586757830::1737555346::0::1::::<><>::uid://cdipun5qj4lwb::::res://Assets/Landscapes/tileset.png<>uid://c4gtobtru7t2v::::res://Scenes/Characters/Villains/Cocodaemon.tscn<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/Portale.tscn<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/Fox.tscn
 Livello4.tscn::PackedScene::1061809212238019892::1737555346::0::1::::<><>::res://Assets/Landscapes/pixil-frame-0.png<>res://Assets/Landscapes/CaveG.png<>uid://cc14q5mwl8kig::::res://Assets/Landscapes/Textures-16.png<>uid://gmpvd5wxub47::::res://Scenes/Characters/Heroes/Fox.tscn<>uid://8xtwxe1fifct::::res://Scenes/Items/Props/Portale.tscn
-::res://Scenes/Menus/::1737555346
+::res://Scenes/Menus/::1738071222
 LoginMenu.tscn::PackedScene::2181507695287045470::1737555346::0::1::::<><>::res://Scripts/Menus/LoginMenu.gd
-::res://Scenes/UI/::1737555346
-IconHeart.tscn::PackedScene::7253474686144039393::1737555346::0::1::::<><>::uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png
-LifeBar_CoinNumber.tscn::PackedScene::4231341650186500907::1737555346::0::1::::<><>::res://Scripts/UI/LifeBar_CoinNumber.gd<>uid://denp81t30edqp::::res://Assets/Items/Props/healthbarUnder.png<>uid://ckd1mtuus8hmb::::res://Assets/Items/Props/healthbarProgress.png<>uid://dblvwyuh7s3pd::::res://Scenes/UI/IconHeart.tscn<>uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png
+WorldTwo.tscn::PackedScene::4132457235817835891::1738078113::0::1::::<><>::uid://ci1ga8fvtbrvr::::res://Assets/Landscapes/LevelsWallpaper.png<>uid://db5t7inw4ixro::::res://Assets/UI/LevelsButtons/Level1.png<>uid://bncupafleae6e::::res://Assets/UI/LevelsButtons/PressedLevel1.png<>res://Scripts/Menus/LevelButton.gd<>uid://c7l8iwjx52l31::::res://Assets/UI/LevelsButtons/Level2.png<>uid://bu6cjpfnswlmg::::res://Assets/UI/LevelsButtons/PressedLevel2.png<>uid://cm548jsy6vnuh::::res://Assets/UI/LevelsButtons/Level3.png<>uid://3nms6fpxgmtn::::res://Assets/UI/LevelsButtons/PressedLevel3.png<>uid://c58aid8bkan85::::res://Assets/UI/LevelsButtons/Level4.png<>uid://b1wyb8fl5t0wh::::res://Assets/UI/LevelsButtons/PressedLevel4.png
+WorldOne.tscn::PackedScene::3700853631098760352::1738071222::0::1::::<><>::res://Scripts/Menus/LevelButton.gd<>uid://ci1ga8fvtbrvr::::res://Assets/Landscapes/LevelsWallpaper.png<>uid://db5t7inw4ixro::::res://Assets/UI/LevelsButtons/Level1.png<>uid://bncupafleae6e::::res://Assets/UI/LevelsButtons/PressedLevel1.png<>uid://c7l8iwjx52l31::::res://Assets/UI/LevelsButtons/Level2.png<>uid://bu6cjpfnswlmg::::res://Assets/UI/LevelsButtons/PressedLevel2.png<>uid://cm548jsy6vnuh::::res://Assets/UI/LevelsButtons/Level3.png<>uid://3nms6fpxgmtn::::res://Assets/UI/LevelsButtons/PressedLevel3.png<>uid://c58aid8bkan85::::res://Assets/UI/LevelsButtons/Level4.png<>uid://b1wyb8fl5t0wh::::res://Assets/UI/LevelsButtons/PressedLevel4.png
+::res://Scenes/UI/::1738078014
+IconHeart2.tscn::PackedScene::2943011249187684767::1738011737::0::1::::<><>::uid://tdqp72xq3dy4::::res://Assets/Items/shinyHeart.png
+IconHeart.tscn::PackedScene::7253474686144039393::1738013440::0::1::::<><>::uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png
+LifeBar_CoinNumber.tscn::PackedScene::4231341650186500907::1738078014::0::1::::<><>::res://Scripts/UI/LifeBar_CoinNumber.gd<>uid://denp81t30edqp::::res://Assets/Items/Props/healthbarUnder.png<>uid://ckd1mtuus8hmb::::res://Assets/Items/Props/healthbarProgress.png<>uid://bh6u7247gmldn::::res://Scenes/UI/IconHeart2.tscn<>uid://c6bseqnvbfjch::::res://Assets/Items/Props/coins-chests-etc-2-0.png
 MobileControls.tscn::PackedScene::2061787032209451955::1737555346::0::1::::<><>::uid://cmfredef5lkjh::::res://Assets/UI/notPressed60.png<>uid://c2fe4yx6tjmxf::::res://Assets/UI/pressed60.png<>uid://cou8oof0d282n::::res://Assets/UI/notPressed.png<>uid://tlac7giehnpm::::res://Assets/UI/Pressed.png
-::res://Scripts/::1737992744
-GameManager.gd::GDScript::-1::1737992744::0::1::::<>Node2D<>::
+::res://Scripts/::1738073088
+GameManager.gd::GDScript::-1::1738073088::0::1::::<>Node2D<>::
 ::res://Scripts/Characters/::1737555346
-::res://Scripts/Characters/Heroes/::1737994330
-Adventurer.gd::GDScript::-1::1737993301::0::1::::Adventurer<>CharacterBody2D<>::
+::res://Scripts/Characters/Heroes/::1738073114
+Adventurer.gd::GDScript::-1::1738073114::0::1::::Adventurer<>CharacterBody2D<>::
 Fox.gd::GDScript::-1::1737994330::0::1::::Fox<>CharacterBody2D<>::
-::res://Scripts/Characters/Villains/::1737993202
+::res://Scripts/Characters/Villains/::1738065080
 Cocodaemon.gd::GDScript::-1::1737715225::0::1::::Cocodaemon<>CharacterBody2D<>::
-Ghoul.gd::GDScript::-1::1737993202::0::1::::Ghoul<>CharacterBody2D<>::
-Mostro.gd::GDScript::-1::1737824924::0::1::::Mostro<>CharacterBody2D<>::
-::res://Scripts/Menus/::1737555346
+Ghoul.gd::GDScript::-1::1738062535::0::1::::Ghoul<>CharacterBody2D<>::
+Mostro.gd::GDScript::-1::1738065080::0::1::::Mostro<>CharacterBody2D<>::
+::res://Scripts/Menus/::1738065702
+LevelButton.gd::GDScript::-1::1738065702::0::1::::LevelButton<>TouchScreenButton<>::
 LoginMenu.gd::GDScript::-1::1737555346::0::1::::<>Control<>::
+::res://Scripts/Props/::1738073526
+Coin.gd::GDScript::-1::1737555346::0::1::::Coin<>Node<>::
+LifePotion.gd::GDScript::-1::1737555346::0::1::::LifePotion<>Area2D<>::
+Portale.gd::GDScript::-1::1737555346::0::1::::Portale<>Area2D<>::
+Key.gd::GDScript::-1::1738073526::0::1::::Key<>Area2D<>::
+Chest.gd::GDScript::-1::1738073400::0::1::::Chest<>Area2D<>::
 ::res://Scripts/UI/::1737992482
 LifeBar_CoinNumber.gd::GDScript::-1::1737992482::0::1::::LifeBar_CoinNumber<>CanvasLayer<>::

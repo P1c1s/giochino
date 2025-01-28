@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://bh6u7247gmldn"]
+
+[ext_resource type="Texture2D" uid="uid://tdqp72xq3dy4" path="res://Assets/Items/shinyHeart.png" id="1_r1g0y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g31dg"]
+atlas = ExtResource("1_r1g0y")
+region = Rect2(14, 0, 104, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dvin"]
+atlas = ExtResource("1_r1g0y")
+region = Rect2(118, 0, 104, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gevh2"]
+atlas = ExtResource("1_r1g0y")
+region = Rect2(222, 0, 104, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jj4fq"]
+atlas = ExtResource("1_r1g0y")
+region = Rect2(326, 0, 104, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayi70"]
+atlas = ExtResource("1_r1g0y")
+region = Rect2(430, 0, 104, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onl7f"]
+atlas = ExtResource("1_r1g0y")
+region = Rect2(534, 0, 104, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eaphk"]
+atlas = ExtResource("1_r1g0y")
+region = Rect2(638, 0, 104, 116)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xbqd8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g31dg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dvin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gevh2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jj4fq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayi70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onl7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eaphk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g31dg")
+}],
+"loop": true,
+"name": &"Shining",
+"speed": 5.0
+}]
+
+[node name="IconHeart" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xbqd8")
+animation = &"Shining"
+autoplay = "Shining"
+frame_progress = 0.65798

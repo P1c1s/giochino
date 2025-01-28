@@ -1,7 +1,12 @@
-[gd_scene load_steps=23 format=3 uid="uid://chwhfulyew35h"]
+[gd_scene load_steps=26 format=3 uid="uid://chwhfulyew35h"]
 
 [ext_resource type="Texture2D" uid="uid://bnkyjwvxy8ppl" path="res://Assets/Characters/Villains/Mostro.png" id="1_ebxhk"]
 [ext_resource type="Script" path="res://Scripts/Characters/Villains/Mostro.gd" id="1_l0xmm"]
+[ext_resource type="Texture2D" uid="uid://ckd1mtuus8hmb" path="res://Assets/Items/Props/healthbarProgress.png" id="3_lnrob"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l1s78"]
+radius = 4.0
+height = 18.0
 
 [sub_resource type="Animation" id="Animation_262w0"]
 resource_name = "Attack"
@@ -97,10 +102,6 @@ _data = {
 "Walk": SubResource("Animation_oqvob")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l1s78"]
-radius = 4.0
-height = 18.0
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wa45w"]
 animation = &"Attack"
 
@@ -140,7 +141,15 @@ states/Idle/position = Vector2(694.105, 103.625)
 states/Walk/node = SubResource("AnimationNodeAnimation_bkw8n")
 states/Walk/position = Vector2(403.105, 98.5625)
 transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_iy38v"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_thxhl"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_mbuuk"), "Walk", "Attack", SubResource("AnimationNodeStateMachineTransition_y7tj6"), "Attack", "Walk", SubResource("AnimationNodeStateMachineTransition_xhyw1"), "Walk", "Die", SubResource("AnimationNodeStateMachineTransition_fxv4r"), "Attack", "Die", SubResource("AnimationNodeStateMachineTransition_4i6qd"), "Idle", "Die", SubResource("AnimationNodeStateMachineTransition_p32af")]
-graph_offset = Vector2(-84.225, -1.56)
+graph_offset = Vector2(-359.625, 10.0725)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dtobo"]
+radius = 11.5
+height = 114.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3w1h4"]
+radius = 8.0
+height = 18.0
 
 [node name="Mostro" type="CharacterBody2D"]
 position = Vector2(1, 0)
@@ -153,15 +162,54 @@ texture = ExtResource("1_ebxhk")
 hframes = 8
 vframes = 8
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -1)
+shape = SubResource("CapsuleShape2D_l1s78")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_txqao")
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -1)
-shape = SubResource("CapsuleShape2D_l1s78")
-
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_anbgj")
 anim_player = NodePath("../AnimationPlayer")
+
+[node name="MostroLife" type="TextureProgressBar" parent="."]
+offset_left = -11.0
+offset_top = -15.0
+offset_right = 53.0
+offset_bottom = -5.0
+scale = Vector2(0.4, 0.4)
+value = 100.0
+texture_progress = ExtResource("3_lnrob")
+
+[node name="Cooldown" type="Timer" parent="."]
+
+[node name="Movimento" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+position = Vector2(3, -1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_dtobo")
+
+[node name="AttackArea" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(1, -1)
+shape = SubResource("CapsuleShape2D_3w1h4")
+
+[connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="timeout" from="Movimento" to="." method="_on_movimento_timeout"]
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]

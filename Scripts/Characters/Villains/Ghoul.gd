@@ -21,7 +21,7 @@ var collisionPlayer : bool
 #variable for the life progress bar
 var life: int
 
-var numAttacks = 0;
+var numAttacks;
 
 func _ready():
 	startPosition = position
@@ -31,6 +31,7 @@ func _ready():
 	life = 100
 	print(self.get_class())
 	collisionPlayer = false
+	numAttacks = 0
 
 func _physics_process(_delta):
 	#if the player isn't near the ghoul, the enemy moves with his default dynamic

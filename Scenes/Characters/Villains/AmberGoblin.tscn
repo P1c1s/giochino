@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtcjrcpg2scrq"]
+
+[ext_resource type="Texture2D" uid="uid://di3r0n57ljq5p" path="res://Assets/Characters/Villains/amberGoblin.png" id="1_b8gja"]
+
+[node name="AmberGoblin" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_b8gja")
+hframes = 13
+vframes = 8
