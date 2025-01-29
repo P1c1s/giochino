@@ -69,14 +69,14 @@ func chase():
 #during the attack is played the attack animation and the cooldown timer is started
 func attack():
 	attackMode = true
-	print("ATTACK")
+	#print("ATTACK")
 	state_machine.travel("Attack")
 	
 		#cooldown()
 
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Attack":
-		print("ANIMAZIONE ATTACCO FINITA")
+		#print("ANIMAZIONE ATTACCO FINITA")
 		if $Cooldown.is_stopped():
 			$Cooldown.start()
 		var distanza = endPosition - position
@@ -102,7 +102,7 @@ func _on_detection_area_body_entered(body: Node2D) -> void:
 
 #at the end of the cooldown the ghoul attaks again
 func _on_cooldown_timeout() -> void:
-	print("COOLDOWN ENDED ATTACK AGAIN")
+	#print("COOLDOWN ENDED ATTACK AGAIN")
 	attack()
 
 

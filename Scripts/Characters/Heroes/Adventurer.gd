@@ -10,14 +10,13 @@ var enemy : CharacterBody2D
 var attackNumbers : int = 0
 var posizione
 
-var life: int
-
 var keyCollected : bool
 
-var enemies := {
-	Ghoul : null,
-	Cocodaemon : null,
-	Mostro : null
+const enemies := {
+	"Ghoul" : null,
+	"Cocodaemon" : null,
+	"Mostro" : null, 
+	"Cyclop" : null
 	#Necromancer : null
 }
 
@@ -31,6 +30,7 @@ func _ready() -> void:
 	collisionEnemy = false
 	posizione = $AreaAttacco/Sword.position.x
 	GameManager.initKeyCollected()
+	self.get_script()
 
 func _physics_process(delta: float) -> void:
 	var _current_anim = state_machine.get_current_node()
@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 	#is played
 	else:
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-			print("SALTO")		#stampa di prova
+			#print("SALTO")		#stampa di prova
 			velocity.y = JUMP_VELOCITY
 			move_and_slide()
 			state_machine.travel("Jump")
@@ -84,13 +84,16 @@ func _physics_process(delta: float) -> void:
 	else:
 		state_machine.travel("Idle")
 	move_and_slide()
+	
+	if GameManager.checkLife() <= 0:
+		state_machine.travel("Die");
 
 #the signal detects whether someone has entered the sword's collisionbox. Then it is checked if the
 #body entered is an enemy, if so the flag collisionEnemy is updated and the variable enemy too
 #(it's essential to giving damage through the GameManager)
 func _on_area_attacco_body_entered(body: CharacterBody2D) -> void:
 	#if enemies.has(body.get_class()):
-	if (body is Cocodaemon) or (body is Ghoul) or (body is Mostro):				#poi inserire anche gli altri nemici
+	if (body is Cyclop) or (body is Ghoul) or (body is Mostro):				#poi inserire anche gli altri nemici
 		collisionEnemy = true
 		enemy = body
 
@@ -99,7 +102,7 @@ func _on_area_attacco_body_entered(body: CharacterBody2D) -> void:
 func _on_area_attacco_body_exited(body: CharacterBody2D) -> void:
 	#print("SOMEONE EXITED FROM THE SWORD")
 	#if enemies.has(body.get_class()):
-	if (body is Cocodaemon) or (body is Ghoul) or (body is Mostro):
+	if (body is Cyclop) or (body is Ghoul) or (body is Mostro):
 		collisionEnemy = false
 
 #if the attack is finished the adventurer is no longer in the attack mode and the attackNumbers is
@@ -108,6 +111,9 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Attack" or anim_name == "AttackRun":
 		attackMode = false
 		attackNumbers = 0
+	
+	if anim_name == "Die":
+		self.hide()
 
 
 

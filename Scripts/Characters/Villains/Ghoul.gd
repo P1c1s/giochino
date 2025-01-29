@@ -21,7 +21,7 @@ var collisionPlayer : bool
 #variable for the life progress bar
 var life: int
 
-var numAttacks;
+var numAttacks
 
 func _ready():
 	startPosition = position
@@ -29,7 +29,6 @@ func _ready():
 	state_machine.travel("Walk")
 	attackMode = false
 	life = 100
-	print(self.get_class())
 	collisionPlayer = false
 	numAttacks = 0
 
@@ -87,7 +86,7 @@ func attack():
 	
 	if collisionPlayer and numAttacks == 0:
 		GameManager.getDamage()
-		print("Ghoul ha fatto danno")
+		#print("Ghoul ha fatto danno")
 	
 		#cooldown()
 
@@ -108,7 +107,7 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
-	print(body is Adventurer)
+	#print(body is Adventurer)
 	if body is Adventurer:
 		target = body
 		player_chase = true

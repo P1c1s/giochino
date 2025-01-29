@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://bfc2l2o4m0eem"]
+[gd_scene load_steps=26 format=4 uid="uid://bfc2l2o4m0eem"]
 
 [ext_resource type="Texture2D" uid="uid://cunj1wh2pjxk8" path="res://Assets/Landscapes/Screenshot 2025-01-28 alle 15.58.55.png" id="1_0ppl0"]
 [ext_resource type="Texture2D" uid="uid://bm0qu27ehn2n" path="res://Assets/Landscapes/patchLevel1.png" id="1_2nkfx"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://2xv4eavhdcv4" path="res://Scenes/Items/Props/Key.tscn" id="11_6hve3"]
 [ext_resource type="PackedScene" uid="uid://gbxpk8rnuasf" path="res://Scenes/Items/Props/LifePotion.tscn" id="11_n5yf6"]
 [ext_resource type="PackedScene" uid="uid://c2u8bclaj7nem" path="res://Scenes/Items/Props/Chest.tscn" id="12_u3swt"]
+[ext_resource type="PackedScene" uid="uid://ccpjpyhwc2rj" path="res://Scenes/Characters/Villains/Cyclop.tscn" id="16_f6gri"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuqlx"]
 texture = ExtResource("1_kv4ou")
@@ -221,6 +222,10 @@ position = Vector2(1100, -47)
 scale = Vector2(3.2, 3.2)
 speed = 10
 
+[node name="Cyclop" parent="." instance=ExtResource("16_f6gri")]
+position = Vector2(2136, -62)
+scale = Vector2(2, 2)
+
 [node name="Coins" type="Node2D" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("10_3x7ve")]
@@ -242,14 +247,6 @@ scale = Vector2(2, 2)
 [node name="Coin5" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(2314, -40)
 scale = Vector2(2, 2)
-
-[node name="Key" parent="Coins" instance=ExtResource("11_6hve3")]
-position = Vector2(3065, -124)
-scale = Vector2(2, 2)
-
-[node name="Chest" parent="Coins" instance=ExtResource("12_u3swt")]
-position = Vector2(2795, -172)
-scale = Vector2(2.3, 2.3)
 
 [node name="Coin6" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(5018, -240)
@@ -301,6 +298,16 @@ scale = Vector2(2, 2)
 
 [node name="Potions" type="Node2D" parent="."]
 
-[node name="LifePotion" parent="." instance=ExtResource("11_n5yf6")]
+[node name="LifePotion" parent="Potions" instance=ExtResource("11_n5yf6")]
 position = Vector2(1626, -43)
+scale = Vector2(2.3, 2.3)
+
+[node name="KeysChests" type="Node2D" parent="."]
+
+[node name="Key" parent="KeysChests" instance=ExtResource("11_6hve3")]
+position = Vector2(3065, -124)
+scale = Vector2(2, 2)
+
+[node name="Chest" parent="KeysChests" instance=ExtResource("12_u3swt")]
+position = Vector2(2795, -172)
 scale = Vector2(2.3, 2.3)

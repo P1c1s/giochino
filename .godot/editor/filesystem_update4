@@ -1,14 +1,9 @@
-res://Scenes/Levels/Livello1.tscn
+res://Scenes/Levels/Level3.tscn
+res://Scenes/Characters/Villains/Cyclop.tscn
 res://Scenes/Levels/Level1.tscn
-res://Scenes/Characters/Villains/Mostro.tscn
-res://Scenes/Characters/Villains/Flying demon.tscn
-res://Scenes/UI/LifeBar_CoinNumber.tscn
-res://Scripts/Characters/Villains/Mostro.gd
+res://Scenes/Characters/Villains/Ghoul.tscn
+res://Scenes/Characters/Heroes/Adventurer.tscn
+res://Scenes/Characters/Heroes/Fox.tscn
+res://Scripts/Characters/Heroes/Fox.gd
+res://Scenes/Characters/Villains/BrainMole.tscn
 res://Scripts/Characters/Heroes/Adventurer.gd
-res://Scripts/GameManager.gd
-res://Scenes/Menus/WorldOne.tscn
-res://Scripts/Props/Key.gd
-res://Scenes/Items/Props/Key.tscn
-res://Scripts/Props/Chest.gd
-res://Scenes/Items/Props/Chest.tscn
-res://Scenes/Menus/LoginMenu.tscn

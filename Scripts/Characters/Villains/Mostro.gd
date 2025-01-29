@@ -31,7 +31,7 @@ func _ready():
 	life = 100
 	collisionPlayer = false
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	#if the player isn't near the mostro, the enemy moves with his default dynamic
 	
 	#if not is_on_floor():
@@ -47,6 +47,10 @@ func _physics_process(delta):
 	
 	if (life == 0):
 		state_machine.travel("Die")
+
+@warning_ignore("native_method_override")
+func get_class() -> String:
+	return "Mostro"
 
 #swaps the coordinates of A and B and flips the sprite
 func changeDirection():
@@ -67,7 +71,7 @@ func move() -> void:
 	$Sprite2D.flip_h = !(moveDirection.x < -0.05)
 
 #if the mostro is chasing the player, the player's position is set to be the endPosition
-#if the distance betweem the player and the ghoul is under a limit, he starts to attack
+#if the distance betweem the player and the Mostro is under a limit, he starts to attack
 func chase():
 	var direzione = endPosition - position
 	$Sprite2D.flip_h = !(direzione.x < 1)
@@ -89,7 +93,7 @@ func attack():
 	
 	if collisionPlayer and numAttacks == 0:
 		GameManager.getDamage()
-		print("Mostro ha fatto danno")
+		#print("Mostro ha fatto danno")
 	
 		#cooldown()
 
@@ -110,7 +114,7 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
-	print(body is Adventurer)
+	#print(body is Adventurer)
 	if body is Adventurer:
 		target = body
 		player_chase = true
@@ -146,7 +150,7 @@ func _on_attack_area_body_entered(body: Node2D) -> void:
 		collisionPlayer = true;
 	#if body is Adventurer && attackMode && numAttacks == 0:
 		#GameManager.getDamage()
-		#print("Ghoul attacca")
+		#print("Mostro attacca")
 
 
 #CHARACTER BEHAVIOUR:

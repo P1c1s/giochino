@@ -7,19 +7,22 @@ var adventurerLife : int = 100
 var keyCollected : bool 
 
 # Adds 1 to score variable
-func add_score():
+func addOneScore():
 	score += 1
 
 func getDamage():
 	adventurerLife -= 5
-	print("Adventurer ha preso danno")
+	#print("Adventurer ha preso danno")
 
 func giveDamage(enemy : CharacterBody2D):
-	print("Manager deve togliere vita a nemico")
+	#print("Manager deve togliere vita a nemico")
 	enemy.life -= 20
 
 func restoreLife():
 	adventurerLife = 100
+
+func checkLife() -> int:
+	return adventurerLife
 
 # Loads next level
 func load_next_level(next_scene : PackedScene):

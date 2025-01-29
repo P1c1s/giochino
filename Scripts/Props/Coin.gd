@@ -10,5 +10,5 @@ func _process(_delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if (body is Adventurer) or (body is Fox):
-		GameManager.add_score()
+		GameManager.addOneScore()
 		self.queue_free()
