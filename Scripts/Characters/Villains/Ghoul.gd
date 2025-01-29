@@ -92,6 +92,7 @@ func attack():
 
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Attack":
+		collisionPlayer = false
 		#print("ANIMAZIONE ATTACCO FINITA")
 		if $Cooldown.is_stopped():
 			$Cooldown.start()

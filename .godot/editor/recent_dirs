@@ -1,3 +1,4 @@
+res://Scripts/Characters/Villains
 res://Scenes/Characters/Villains
 res://Scripts/Props
 res://Scenes/Items/Props
@@ -7,7 +8,6 @@ res://Scenes/Menus
 res://Assets/Items
 res://Scenes/UI
 res://Scripts/UI
-res://Scripts/Characters/Villains
 res://Scripts/Characters/Heroes
 res://Scenes/Levels
 res://

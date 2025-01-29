@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://bfc2l2o4m0eem"]
+[gd_scene load_steps=28 format=4 uid="uid://bfc2l2o4m0eem"]
 
 [ext_resource type="Texture2D" uid="uid://cunj1wh2pjxk8" path="res://Assets/Landscapes/Screenshot 2025-01-28 alle 15.58.55.png" id="1_0ppl0"]
 [ext_resource type="Texture2D" uid="uid://bm0qu27ehn2n" path="res://Assets/Landscapes/patchLevel1.png" id="1_2nkfx"]
@@ -15,7 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://2xv4eavhdcv4" path="res://Scenes/Items/Props/Key.tscn" id="11_6hve3"]
 [ext_resource type="PackedScene" uid="uid://gbxpk8rnuasf" path="res://Scenes/Items/Props/LifePotion.tscn" id="11_n5yf6"]
 [ext_resource type="PackedScene" uid="uid://c2u8bclaj7nem" path="res://Scenes/Items/Props/Chest.tscn" id="12_u3swt"]
-[ext_resource type="PackedScene" uid="uid://ccpjpyhwc2rj" path="res://Scenes/Characters/Villains/Cyclop.tscn" id="16_f6gri"]
+[ext_resource type="PackedScene" uid="uid://dexj8pl1i4ad" path="res://Scenes/Characters/Villains/BrainMoleMonarch.tscn" id="16_eoyj2"]
+[ext_resource type="PackedScene" uid="uid://blt6opwvhf7d8" path="res://Scenes/Characters/Villains/Cobra.tscn" id="17_8db5l"]
+[ext_resource type="PackedScene" uid="uid://cs5s38gwsh52a" path="res://Scenes/Characters/Villains/Ghoul.tscn" id="18_xm5a5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuqlx"]
 texture = ExtResource("1_kv4ou")
@@ -222,10 +224,6 @@ position = Vector2(1100, -47)
 scale = Vector2(3.2, 3.2)
 speed = 10
 
-[node name="Cyclop" parent="." instance=ExtResource("16_f6gri")]
-position = Vector2(2136, -62)
-scale = Vector2(2, 2)
-
 [node name="Coins" type="Node2D" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("10_3x7ve")]
@@ -311,3 +309,12 @@ scale = Vector2(2, 2)
 [node name="Chest" parent="KeysChests" instance=ExtResource("12_u3swt")]
 position = Vector2(2795, -172)
 scale = Vector2(2.3, 2.3)
+
+[node name="BrainMoleMonarch" parent="." instance=ExtResource("16_eoyj2")]
+position = Vector2(606, -151)
+
+[node name="Cobra" parent="." instance=ExtResource("17_8db5l")]
+position = Vector2(1999, -59)
+
+[node name="Ghoul" parent="." instance=ExtResource("18_xm5a5")]
+position = Vector2(3459, -98)

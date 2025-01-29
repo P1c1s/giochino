@@ -93,7 +93,7 @@ func _physics_process(delta: float) -> void:
 #(it's essential to giving damage through the GameManager)
 func _on_area_attacco_body_entered(body: CharacterBody2D) -> void:
 	#if enemies.has(body.get_class()):
-	if (body is Cyclop) or (body is Ghoul) or (body is Mostro):				#poi inserire anche gli altri nemici
+	if (body is Cyclop) or (body is Ghoul) or (body is Mostro) or (body is BrainMole):				#poi inserire anche gli altri nemici
 		collisionEnemy = true
 		enemy = body
 
@@ -102,7 +102,7 @@ func _on_area_attacco_body_entered(body: CharacterBody2D) -> void:
 func _on_area_attacco_body_exited(body: CharacterBody2D) -> void:
 	#print("SOMEONE EXITED FROM THE SWORD")
 	#if enemies.has(body.get_class()):
-	if (body is Cyclop) or (body is Ghoul) or (body is Mostro):
+	if (body is Cyclop) or (body is Ghoul) or (body is Mostro) or (body is BrainMole):
 		collisionEnemy = false
 
 #if the attack is finished the adventurer is no longer in the attack mode and the attackNumbers is
