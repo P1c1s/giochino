@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q1i23e5egcbo"
-path="res://.godot/imported/Cacodaemon.png-3697444c7f168c8f69dc7e452cef059f.ctex"
+uid="uid://evajpb1amtev"
+path="res://.godot/imported/NightBorne.png-1ab445e221b6185118092d4be3d329e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Villains/Cacodaemon.png"
-dest_files=["res://.godot/imported/Cacodaemon.png-3697444c7f168c8f69dc7e452cef059f.ctex"]
+source_file="res://Assets/Characters/Villains/NightBorne.png"
+dest_files=["res://.godot/imported/NightBorne.png-1ab445e221b6185118092d4be3d329e5.ctex"]
 
 [params]
 

@@ -1,0 +1,20 @@
+res://Scenes/Characters/Villains/Monster.tscn
+res://Scenes/Characters/Villains/Cacodaemon.tscn
+res://Scenes/Characters/Villains/Flying demon.tscn
+res://Scenes/Characters/Villains/Necromancer.tscn
+res://Scripts/Characters/Villains/BrainMole.gd
+res://Scripts/Characters/Villains/Cobra.gd
+res://Scripts/Characters/Villains/Cyclop.gd
+res://Scripts/Characters/Villains/Ghoul.gd
+res://Scripts/Characters/Villains/Monster.gd
+res://Scenes/Characters/Villains/Cyclop.tscn
+res://Scenes/Characters/Villains/Imp.tscn
+res://Scenes/Characters/Villains/Incubus.tscn
+res://Scenes/Characters/Villains/NightBorne.tscn
+res://Scenes/Characters/Villains/ShardsoulSlayer.tscn
+res://Scenes/Characters/Villains/Cobra.tscn
+res://Scenes/Levels/Level1.tscn
+res://Scripts/GameManager.gd
+res://Scripts/Characters/Heroes/Adventurer.gd
+res://Scenes/Characters/Villains/Ghoul.tscn
+res://Scripts/Characters/Villains/ShardsoulSlayer.gd

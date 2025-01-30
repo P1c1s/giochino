@@ -2,7 +2,7 @@ class_name Fox extends CharacterBody2D
 
 const JUMP_VELOCITY = -300.0
 
-@export var limit = 50
+@export var limit = 30
 
 var run_speed = 50.0
 var gravita = 800.0

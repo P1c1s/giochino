@@ -3,6 +3,7 @@ class_name Cyclop extends CharacterBody2D
 @export var speed = 40
 @export var limit = 0.5
 @export var attackLimit = 60
+@export var space = 120
 
 @onready var state_machine = $AnimationTree["parameters/playback"]
 
@@ -12,7 +13,7 @@ var endPosition
 
 var target: CharacterBody2D
 
-#flag used to check whether the attack animation is playing or not
+#variabile flag per capire quando è in riproduzione l'animazione dell'attacco
 var attackMode : bool
 
 #flag used to check whether the enemey collided with the player or not
@@ -21,19 +22,22 @@ var collisionPlayer : bool
 #variable for the life progress bar
 var life: int
 
-var numAttacks
+var numAttacks = 0;
 
 func _ready():
 	startPosition = position
-	endPosition = startPosition - Vector2(-120, 0)
+	endPosition = startPosition - Vector2(-space, 0)
 	state_machine.travel("Walk")
 	attackMode = false
 	life = 100
 	collisionPlayer = false
-	numAttacks = 0
 
 func _physics_process(_delta):
 	#if the player isn't near the cyclop, the enemy moves with his default dynamic
+	
+	#if not is_on_floor():
+		#velocity.y += get_gravity().y * delta
+	
 	if not player_chase:
 		move()
 	elif player_chase:
@@ -42,7 +46,7 @@ func _physics_process(_delta):
 	
 	$CyclopLife.value = life
 	
-	if (life == 0):
+	if (life <= 0):
 		state_machine.travel("Die")
 
 #swaps the coordinates of A and B and flips the sprite
@@ -61,7 +65,8 @@ func move() -> void:
 			$Movimento.start()
 		state_machine.travel("Idle")
 	velocity.x = moveDirection.normalized().x * speed
-	$Sprite2D.flip_h = (moveDirection.x < -0.05)
+	#$Sprite2D.flip.h = sign(velocity.x)
+	#$Sprite2D.flip_h = !(moveDirection.x < -0.1)
 
 #if the cyclop is chasing the player, the player's position is set to be the endPosition
 #if the distance betweem the player and the cyclop is under a limit, he starts to attack
@@ -86,7 +91,7 @@ func attack():
 	
 	if collisionPlayer and numAttacks == 0:
 		GameManager.getDamage()
-		#print("Cyclop ha fatto danno")
+		#print("cyclop ha fatto danno")
 	
 		#cooldown()
 
@@ -119,6 +124,7 @@ func _on_movimento_timeout() -> void:
 	#print("TIMER SCADUTO CAMBIO DIREZIONE")
 	state_machine.travel("Walk")
 	changeDirection()
+	$Sprite2D.flip_h = !$Sprite2D.flip_h 
 
 #at the end of the cooldown the cyclop attaks again
 func _on_cooldown_timeout() -> void:
@@ -132,17 +138,16 @@ func _on_detection_area_body_exited(body: Node2D) -> void:
 		player_chase = false
 		attackMode = false
 		startPosition = position
-		endPosition = startPosition - Vector2(-120, 0)
+		endPosition = startPosition - Vector2(-space, 0)
 		state_machine.travel("Walk")
 		if not $Cooldown.is_stopped():
 			$Cooldown.stop()
+		$Sprite2D.flip_h = false
 
 
-
-
-#METTERE ON ANIMATION FINISHED ATTACK --> attackmode = false e far partire il cooldown
-
-
+func _on_attack_area_body_entered(body: Node2D) -> void:
+	if body is Adventurer:
+		collisionPlayer = true;
 
 
 #CHARACTER BEHAVIOUR:
@@ -153,11 +158,3 @@ func _on_detection_area_body_exited(body: Node2D) -> void:
 	#When gets damage and life is zero: he dies
 	#		animationPlayer plays dying animation, and then he removes himself from
 	#		node tree
-
-
-func _on_attack_area_body_entered(body: Node2D) -> void:
-	if body is Adventurer:
-		collisionPlayer = true;
-	#if body is Adventurer && attackMode && numAttacks == 0:
-		#GameManager.getDamage()
-		#print("Cyclop attacca")

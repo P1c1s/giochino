@@ -1,9 +1,9 @@
-class_name Cocodaemon extends CharacterBody2D
-
+class_name ShardsoulSlayer extends CharacterBody2D
 
 @export var speed = 40
 @export var limit = 0.5
 @export var attackLimit = 60
+@export var space = 120
 
 @onready var state_machine = $AnimationTree["parameters/playback"]
 
@@ -12,25 +12,42 @@ var endPosition
 @onready var player_chase: bool = false
 
 var target: CharacterBody2D
-var life: int
 
 #variabile flag per capire quando è in riproduzione l'animazione dell'attacco
-var attackMode
+var attackMode : bool
+
+#flag used to check whether the enemey collided with the player or not
+var collisionPlayer : bool
+
+#variable for the life progress bar
+var life: int
+
+var numAttacks = 0;
 
 func _ready():
 	startPosition = position
-	endPosition = startPosition - Vector2(-120, 0)
+	endPosition = startPosition - Vector2(-space, 0)
 	state_machine.travel("Walk")
-	#attackMode = false
+	attackMode = false
+	life = 100
+	collisionPlayer = false
 
 func _physics_process(_delta):
-	#if the player isn't near the ghoul, the enemy moves with his default dynamic
+	#if the player isn't near the ShardsoulSlayer, the enemy moves with his default dynamic
+	
+	#if not is_on_floor():
+		#velocity.y += get_gravity().y * delta
+	
 	if not player_chase:
 		move()
 	elif player_chase:
-		pass
-		#chase()
+		chase()
 	move_and_slide()
+	
+	$ShardsoulSlayerLife.value = life
+	
+	if (life <= 0):
+		state_machine.travel("Die")
 
 #swaps the coordinates of A and B and flips the sprite
 func changeDirection():
@@ -39,20 +56,20 @@ func changeDirection():
 	startPosition = tempEnd
 	#$Sprite2D.flip_h = !$Sprite2D.flip_h
 
-#if the ghoul doesn't chase the player, he moves back and forth between two points A and B
+#if the ShardsoulSlayer doesn't chase the player, he moves back and forth between two points A and B
 #when he gets to A and B he stops there for 4 seconds in the Idle state
 func move() -> void:
 	var moveDirection = endPosition - position
 	if moveDirection.length() < limit:
-		changeDirection()
-		#if $Movimento.is_stopped():
-			#$Movimento.start()
-		#state_machine.travel("Idle")
+		if $Movimento.is_stopped():
+			$Movimento.start()
+		state_machine.travel("Idle")
 	velocity.x = moveDirection.normalized().x * speed
-	$Sprite2D.flip_h = (moveDirection.x < -0.05)
+	#$Sprite2D.flip.h = sign(velocity.x)
+	#$Sprite2D.flip_h = !(moveDirection.x < -0.1)
 
-#if the ghoul is chasing the player, the player's position is set to be the endPosition
-#if the distance betweem the player and the ghoul is under a limit, he starts to attack
+#if the ShardsoulSlayer is chasing the player, the player's position is set to be the endPosition
+#if the distance betweem the player and the ShardsoulSlayer is under a limit, he starts to attack
 func chase():
 	var direzione = endPosition - position
 	$Sprite2D.flip_h = (direzione.x < 1)
@@ -72,6 +89,10 @@ func attack():
 	#print("ATTACK")
 	state_machine.travel("Attack")
 	
+	if collisionPlayer and numAttacks == 0:
+		GameManager.getDamage()
+		#print("ShardsoulSlayer ha fatto danno")
+	
 		#cooldown()
 
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
@@ -85,24 +106,30 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 		else:
 			state_machine.call_deferred("travel", "Walk")
 			velocity.x = distanza.normalized().x * speed
+	
+	if anim_name == "Die":
+		self.queue_free()
 
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
+	#print(body is Adventurer)
 	if body is Adventurer:
 		target = body
 		player_chase = true
-	#if not $Movimento.is_stopped():
-		#$Movimento.stop()
+	if not $Movimento.is_stopped():
+		$Movimento.stop()
 
 
-#func _on_movimento_timeout() -> void:
+func _on_movimento_timeout() -> void:
 	#print("TIMER SCADUTO CAMBIO DIREZIONE")
-	#state_machine.travel("Walk")
-	#changeDirection()
+	state_machine.travel("Walk")
+	changeDirection()
+	$Sprite2D.flip_h = !$Sprite2D.flip_h 
 
-#at the end of the cooldown the ghoul attaks again
+#at the end of the cooldown the ShardsoulSlayer attaks again
 func _on_cooldown_timeout() -> void:
 	#print("COOLDOWN ENDED ATTACK AGAIN")
+	numAttacks = 0;
 	attack()
 
 
@@ -111,18 +138,23 @@ func _on_detection_area_body_exited(body: Node2D) -> void:
 		player_chase = false
 		attackMode = false
 		startPosition = position
-		endPosition = startPosition - Vector2(-120, 0)
+		endPosition = startPosition - Vector2(-space, 0)
 		state_machine.travel("Walk")
-		#if not $Cooldown.is_stopped():
-			#$Cooldown.stop()
+		if not $Cooldown.is_stopped():
+			$Cooldown.stop()
+		$Sprite2D.flip_h = false
 
 
+func _on_attack_area_body_entered(body: Node2D) -> void:
+	if body is Adventurer:
+		collisionPlayer = true;
 
-#CHARACTER BEHAVIOUR
-#First: autoplay animation walk. Limited movement between two coordinates
-		#when endPosition reached, exchange startPosition and endPosition, flip sprite
-#When detect player: chase him and attack
-		#detect player with area2d, set adventurer position as endPosition
-		#attack every x seconds, where x is the cooldown time
-#If he gets damage and his life is 0: he dies
-		#AnimationPlayer play die animation, when finished it gets removed from node tree
+
+#CHARACTER BEHAVIOUR:
+	#First: autoplay animation. Walk to right for x seconds, then idle for x seconds
+	#		then walk to the left for x seconds
+	#When Adventurer detected: chase player and attacks every y seconds, where y is
+	#		the cooldown time
+	#When gets damage and life is zero: he dies
+	#		animationPlayer plays dying animation, and then he removes himself from
+	#		node tree

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1cbsxr86120f"
-path="res://.godot/imported/Minotaur - Sprite Sheet.png-a066b074dcd22344b739dd7dac3397af.ctex"
+uid="uid://cp0tg14o76tjt"
+path="res://.godot/imported/Cyclop.png-3c15f22d875d8522d7277385bb83719d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Villains/Minotaur - Sprite Sheet.png"
-dest_files=["res://.godot/imported/Minotaur - Sprite Sheet.png-a066b074dcd22344b739dd7dac3397af.ctex"]
+source_file="res://Assets/Characters/Villains/Cyclop.png"
+dest_files=["res://.godot/imported/Cyclop.png-3c15f22d875d8522d7277385bb83719d.ctex"]
 
 [params]
 

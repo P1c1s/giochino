@@ -4,7 +4,8 @@
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["Enemies"]]
+position = Vector2(-1, 0)
 texture = ExtResource("1_yuj0n")
 hframes = 8
 vframes = 5

@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=4 uid="uid://t4v5iusw1ptu"]
 
 [ext_resource type="Texture2D" uid="uid://cdipun5qj4lwb" path="res://Assets/Landscapes/tileset.png" id="2_8d6kc"]
-[ext_resource type="PackedScene" uid="uid://c4gtobtru7t2v" path="res://Scenes/Characters/Villains/Cocodaemon.tscn" id="3_kfgcy"]
-[ext_resource type="PackedScene" uid="uid://8xtwxe1fifct" path="res://Scenes/Items/Props/Portale.tscn" id="5_3fd8e"]
+[ext_resource type="PackedScene" uid="uid://c4gtobtru7t2v" path="res://Scenes/Characters/Villains/Cacodaemon.tscn" id="3_kfgcy"]
+[ext_resource type="PackedScene" path="res://Scenes/Items/Props/Portale.tscn" id="5_3fd8e"]
 [ext_resource type="PackedScene" uid="uid://gmpvd5wxub47" path="res://Scenes/Characters/Heroes/Fox.tscn" id="5_tsby0"]
 
 

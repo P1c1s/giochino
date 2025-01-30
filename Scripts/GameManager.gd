@@ -11,7 +11,7 @@ func addOneScore():
 	score += 1
 
 func getDamage():
-	adventurerLife -= 5
+	adventurerLife -= 50
 	#print("Adventurer ha preso danno")
 
 func giveDamage(enemy : CharacterBody2D):

@@ -12,14 +12,6 @@ var posizione
 
 var keyCollected : bool
 
-const enemies := {
-	"Ghoul" : null,
-	"Cocodaemon" : null,
-	"Mostro" : null, 
-	"Cyclop" : null
-	#Necromancer : null
-}
-
 # attack sounds
 @onready var state_machine = $AnimationTree["parameters/playback"]
 
@@ -92,8 +84,8 @@ func _physics_process(delta: float) -> void:
 #body entered is an enemy, if so the flag collisionEnemy is updated and the variable enemy too
 #(it's essential to giving damage through the GameManager)
 func _on_area_attacco_body_entered(body: CharacterBody2D) -> void:
-	#if enemies.has(body.get_class()):
-	if (body is Cyclop) or (body is Ghoul) or (body is Mostro) or (body is BrainMole):				#poi inserire anche gli altri nemici
+	if body.is_in_group("Enemies"):
+	#if (body is Cyclop) or (body is Ghoul) or (body is Mostro) or (body is BrainMole):				#poi inserire anche gli altri nemici
 		collisionEnemy = true
 		enemy = body
 
@@ -101,8 +93,8 @@ func _on_area_attacco_body_entered(body: CharacterBody2D) -> void:
 #the flag collisionEnemy cause it's no longer possible to give damage to the enemy
 func _on_area_attacco_body_exited(body: CharacterBody2D) -> void:
 	#print("SOMEONE EXITED FROM THE SWORD")
-	#if enemies.has(body.get_class()):
-	if (body is Cyclop) or (body is Ghoul) or (body is Mostro) or (body is BrainMole):
+	if body.is_in_group("Enemies"):
+	#if (body is Cyclop) or (body is Ghoul) or (body is Mostro) or (body is BrainMole):
 		collisionEnemy = false
 
 #if the attack is finished the adventurer is no longer in the attack mode and the attackNumbers is

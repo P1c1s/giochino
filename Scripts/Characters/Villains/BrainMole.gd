@@ -43,8 +43,11 @@ func _physics_process(_delta):
 	
 	$BrainMoleLife.value = life
 	
-	if (life == 0):
+	if (life <= 0):
 		state_machine.travel("Die")
+	
+	if GameManager.checkLife() >= 0:
+		player_chase = false
 
 func stand():
 	state_machine.travel("Idle")

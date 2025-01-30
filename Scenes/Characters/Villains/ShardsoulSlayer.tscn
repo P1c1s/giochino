@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://habe81kermie"]
 
-[ext_resource type="Script" path="res://Scripts/Characters/Villains/Ghoul.gd" id="1_s6ahs"]
+[ext_resource type="Script" path="res://Scripts/Characters/Villains/ShardsoulSlayer.gd" id="1_v5g6m"]
 [ext_resource type="Texture2D" uid="uid://khe6qiwlqmak" path="res://Assets/Characters/Villains/ShardsoulSlayer.png" id="2_pbkdn"]
 [ext_resource type="Texture2D" uid="uid://ckd1mtuus8hmb" path="res://Assets/Items/Props/healthbarProgress.png" id="3_78a1p"]
 
@@ -156,11 +156,11 @@ height = 157.0
 radius = 20.5
 height = 51.0
 
-[node name="ShardsoulSlayer" type="CharacterBody2D"]
-scale = Vector2(2, 2)
+[node name="ShardsoulSlayer" type="CharacterBody2D" groups=["Enemies"]]
+scale = Vector2(2, 1.92337)
 collision_layer = 8
 collision_mask = 3
-script = ExtResource("1_s6ahs")
+script = ExtResource("1_v5g6m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1.2, 1.2)
@@ -218,10 +218,3 @@ collision_mask = 2
 position = Vector2(-0.5, 19)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_l04h6")
-
-[connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
-[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
-[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
-[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
-[connection signal="timeout" from="Movimento" to="." method="_on_movimento_timeout"]
-[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
