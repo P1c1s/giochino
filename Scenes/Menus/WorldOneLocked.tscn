@@ -1,0 +1,114 @@
+[gd_scene load_steps=18 format=3 uid="uid://ctrik3j2l8u1h"]
+
+[ext_resource type="Script" path="res://Scripts/Menus/WorldOneLocked.gd" id="1_cks4e"]
+[ext_resource type="Texture2D" uid="uid://ci1ga8fvtbrvr" path="res://Assets/Landscapes/LevelsWallpaper.png" id="1_i37dg"]
+[ext_resource type="Texture2D" uid="uid://db5t7inw4ixro" path="res://Assets/UI/LevelsButtons/Level1.png" id="2_nnlgb"]
+[ext_resource type="Texture2D" uid="uid://bncupafleae6e" path="res://Assets/UI/Menu/PressedLevel1.png" id="3_vw5f8"]
+[ext_resource type="Texture2D" uid="uid://bkki0y3tsdb86" path="res://Assets/UI/Menu/WorldOne/Level4.png" id="9_v6tyg"]
+[ext_resource type="Texture2D" uid="uid://du8ueojblwmc2" path="res://Assets/UI/Menu/WorldOne/Level5.png" id="10_3x8mu"]
+[ext_resource type="Texture2D" uid="uid://drvotfsu2p6m8" path="res://Assets/UI/Menu/WorldOne/Level6.png" id="11_wobdg"]
+[ext_resource type="Texture2D" uid="uid://c3gaqpatakh42" path="res://Assets/UI/Menu/WorldOne/Level7.png" id="12_8fdcl"]
+[ext_resource type="Texture2D" uid="uid://cmet2x8svbrdf" path="res://Assets/UI/Menu/WorldOne/Level8.png" id="13_5eo36"]
+[ext_resource type="Texture2D" uid="uid://b1wyb8fl5t0wh" path="res://Assets/UI/LevelsButtons/PressedLevel4.png" id="14_y8lg3"]
+[ext_resource type="Texture2D" uid="uid://cad3ymm10fb4g" path="res://Assets/UI/Menu/NextRight.png" id="15_kbld2"]
+[ext_resource type="Texture2D" uid="uid://cgbrin4qh7rst" path="res://Assets/UI/Menu/PressedNextRight.png" id="16_w0u5l"]
+[ext_resource type="Texture2D" uid="uid://wwpwwebice8s" path="res://Assets/UI/Menu/Home.png" id="17_n643d"]
+[ext_resource type="Texture2D" uid="uid://cooocgrycxj3h" path="res://Assets/UI/Menu/PressedHome.png" id="18_ecr8a"]
+[ext_resource type="Texture2D" uid="uid://svmyh215xtjk" path="res://Assets/UI/Menu/Stats.png" id="19_etnf7"]
+[ext_resource type="Texture2D" uid="uid://7qvicwb42vfd" path="res://Assets/UI/Menu/Settings.png" id="20_8dro6"]
+[ext_resource type="Texture2D" uid="uid://dms06v1gfmkny" path="res://Assets/UI/Menu/PressedSettings.png" id="21_6k1ck"]
+
+[node name="WorldOneLocked" type="CanvasLayer"]
+script = ExtResource("1_cks4e")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_i37dg")
+expand_mode = 1
+
+[node name="GridContainer" type="Node2D" parent="."]
+
+[node name="Level 1" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(111, 148)
+scale = Vector2(0.38, 0.38)
+texture_normal = ExtResource("2_nnlgb")
+texture_pressed = ExtResource("3_vw5f8")
+action = "ui_right"
+
+[node name="Level 2" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(361, 148)
+scale = Vector2(0.38, 0.38)
+texture_normal = ExtResource("11_wobdg")
+action = "ui_right"
+
+[node name="Level 3" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(611, 148)
+scale = Vector2(0.38, 0.38)
+texture_normal = ExtResource("11_wobdg")
+action = "ui_right"
+
+[node name="Level 4" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(861, 148)
+scale = Vector2(0.38, 0.38)
+texture_normal = ExtResource("9_v6tyg")
+action = "ui_right"
+
+[node name="Level 5" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(111, 364)
+scale = Vector2(0.38, 0.38)
+texture_normal = ExtResource("10_3x8mu")
+action = "ui_right"
+
+[node name="Level 6" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(361, 364)
+scale = Vector2(0.38, 0.38)
+texture_normal = ExtResource("11_wobdg")
+action = "ui_right"
+
+[node name="Level 7" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(611, 364)
+scale = Vector2(0.38, 0.38)
+texture_normal = ExtResource("12_8fdcl")
+action = "ui_right"
+
+[node name="Level 8" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(861, 364)
+scale = Vector2(0.38, 0.38)
+texture_normal = ExtResource("13_5eo36")
+texture_pressed = ExtResource("14_y8lg3")
+action = "ui_right"
+
+[node name="Next" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(1058, 569)
+scale = Vector2(0.157277, 0.157277)
+texture_normal = ExtResource("15_kbld2")
+texture_pressed = ExtResource("16_w0u5l")
+action = "ui_right"
+
+[node name="Home" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(24, 15)
+scale = Vector2(0.157277, 0.157277)
+texture_normal = ExtResource("17_n643d")
+texture_pressed = ExtResource("18_ecr8a")
+action = "ui_right"
+
+[node name="Stats" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(1037, 18)
+scale = Vector2(0.157277, 0.157277)
+texture_normal = ExtResource("19_etnf7")
+action = "ui_right"
+
+[node name="Settings" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(938, 21)
+scale = Vector2(0.157277, 0.157277)
+texture_normal = ExtResource("20_8dro6")
+texture_pressed = ExtResource("21_6k1ck")
+action = "ui_right"
+
+[connection signal="pressed" from="GridContainer/Level 1" to="." method="_on_level1_pressed"]
+[connection signal="pressed" from="GridContainer/Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="GridContainer/Home" to="." method="_on_home_pressed"]

@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Prova"
-run/main_scene="res://Scenes/Menus/WorldOne.tscn"
+run/main_scene="res://Scenes/Menus/Home.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Cover1.png"
 
 [autoload]
 

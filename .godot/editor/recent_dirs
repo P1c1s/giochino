@@ -1,3 +1,6 @@
+res://Scripts/Menus
+res://Scenes/Levels
+res://
 res://Scripts/Characters/Villains
 res://Scenes/Characters/Villains
 res://Scripts/Props
@@ -9,7 +12,5 @@ res://Assets/Items
 res://Scenes/UI
 res://Scripts/UI
 res://Scripts/Characters/Heroes
-res://Scenes/Levels
-res://
 res://Assets/Landscapes/forest_tileset/Sprites/Tile
 res://Scenes/Characters/Heroes
