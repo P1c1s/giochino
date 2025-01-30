@@ -1,7 +1,6 @@
 class_name BrainMole extends CharacterBody2D
 
 @export var speed = 40
-@export var limit = 0.5
 @export var attackLimit = 60
 
 @onready var state_machine = $AnimationTree["parameters/playback"]

@@ -105,6 +105,7 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 		attackNumbers = 0
 	
 	if anim_name == "Die":
+		$GameOver.start()
 		self.hide()
 
 
@@ -118,3 +119,7 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 #When he collides with lifepotion: the life is restored entirely. The progressbar is set to the value 100
 #When he attacks an enemy: if the sword box collides with the hitbox of the enemy, he gives damage
 #		to the enemy, whose lifebar decreases gradually. 
+
+
+func _on_game_over_timeout() -> void:
+	GameManager.gameover()

@@ -1,13 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwifcws5ea26c"]
+[gd_scene load_steps=8 format=3 uid="uid://bwifcws5ea26c"]
 
-[ext_resource type="Texture2D" uid="uid://bhbfqqelwqs3p" path="res://Assets/UI/GameOver.png" id="1_q2uqp"]
+[ext_resource type="Script" path="res://Scripts/Menus/GameOver.gd" id="1_6v8o2"]
+[ext_resource type="Texture2D" uid="uid://cmpsav6kux1h7" path="res://Assets/UI/GameOver.png" id="1_q2uqp"]
 [ext_resource type="Texture2D" uid="uid://wwpwwebice8s" path="res://Assets/UI/Menu/Home.png" id="15_2i7he"]
 [ext_resource type="Texture2D" uid="uid://cooocgrycxj3h" path="res://Assets/UI/Menu/PressedHome.png" id="16_cf5yu"]
 [ext_resource type="Texture2D" uid="uid://svmyh215xtjk" path="res://Assets/UI/Menu/Stats.png" id="17_ayl08"]
-[ext_resource type="Texture2D" uid="uid://7qvicwb42vfd" path="res://Assets/UI/Menu/Settings.png" id="18_rabb0"]
-[ext_resource type="Texture2D" uid="uid://dms06v1gfmkny" path="res://Assets/UI/Menu/PressedSettings.png" id="19_w4fsa"]
+[ext_resource type="Texture2D" uid="uid://3sibxqrldr1x" path="res://Assets/UI/Menu/Settings.png" id="18_rabb0"]
+[ext_resource type="Texture2D" uid="uid://dausqwxpxhkao" path="res://Assets/UI/Menu/PressedSettings.png" id="19_w4fsa"]
 
-[node name="MobileControls" type="CanvasLayer"]
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_6v8o2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -21,6 +23,7 @@ expand_mode = 1
 [node name="GridContainer" type="Node2D" parent="."]
 
 [node name="Home" type="TouchScreenButton" parent="GridContainer"]
+z_index = 999
 position = Vector2(24, 15)
 scale = Vector2(0.157277, 0.157277)
 texture_normal = ExtResource("15_2i7he")
@@ -46,3 +49,7 @@ scale = Vector2(0.157277, 0.157277)
 texture_normal = ExtResource("15_2i7he")
 texture_pressed = ExtResource("16_cf5yu")
 action = "ui_right"
+
+[connection signal="pressed" from="GridContainer/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="GridContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="GridContainer/Levels" to="." method="_on_levels_pressed"]

@@ -225,7 +225,6 @@ shape = SubResource("WorldBoundaryShape2D_bfod8")
 [node name="LifeBar_CoinNumber" parent="." instance=ExtResource("3_rfko6")]
 
 [node name="MobileControls" parent="." instance=ExtResource("4_rl7k7")]
-visible = false
 
 [node name="Coins" type="Node2D" parent="."]
 position = Vector2(0, -7)

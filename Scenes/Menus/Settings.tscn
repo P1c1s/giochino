@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqcwqf3qcgvb"]
+
+[ext_resource type="Script" path="res://Scripts/Menus/WorldFour.gd" id="1_o6x6o"]
+[ext_resource type="Texture2D" uid="uid://d0d6jrftacxuj" path="res://Assets/UI/Menu/SettingsMenu.png" id="2_xkgtn"]
+[ext_resource type="Texture2D" uid="uid://wwpwwebice8s" path="res://Assets/UI/Menu/Home.png" id="13_qe6i3"]
+[ext_resource type="Texture2D" uid="uid://cooocgrycxj3h" path="res://Assets/UI/Menu/PressedHome.png" id="14_f080l"]
+
+[node name="WorldFour" type="CanvasLayer"]
+script = ExtResource("1_o6x6o")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xkgtn")
+expand_mode = 1
+
+[node name="GridContainer" type="Node2D" parent="."]
+
+[node name="Home" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(332, 303)
+scale = Vector2(0.262911, 0.262911)
+texture_normal = ExtResource("13_qe6i3")
+texture_pressed = ExtResource("14_f080l")
+action = "ui_right"
+
+[connection signal="pressed" from="GridContainer/Home" to="." method="_on_home_pressed"]

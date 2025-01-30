@@ -18,8 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://wwpwwebice8s" path="res://Assets/UI/Menu/Home.png" id="17_afqva"]
 [ext_resource type="Texture2D" uid="uid://cooocgrycxj3h" path="res://Assets/UI/Menu/PressedHome.png" id="18_ves2l"]
 [ext_resource type="Texture2D" uid="uid://svmyh215xtjk" path="res://Assets/UI/Menu/Stats.png" id="19_6oxx1"]
-[ext_resource type="Texture2D" uid="uid://7qvicwb42vfd" path="res://Assets/UI/Menu/Settings.png" id="20_78v0o"]
-[ext_resource type="Texture2D" uid="uid://dms06v1gfmkny" path="res://Assets/UI/Menu/PressedSettings.png" id="21_0brnj"]
+[ext_resource type="Texture2D" uid="uid://3sibxqrldr1x" path="res://Assets/UI/Menu/Settings.png" id="20_78v0o"]
+[ext_resource type="Texture2D" uid="uid://dausqwxpxhkao" path="res://Assets/UI/Menu/PressedSettings.png" id="21_0brnj"]
 
 [node name="WorldTwo" type="CanvasLayer"]
 script = ExtResource("1_adypp")
@@ -122,3 +122,4 @@ action = "ui_right"
 [connection signal="pressed" from="GridContainer/Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="GridContainer/Prec" to="." method="_on_prec_pressed"]
 [connection signal="pressed" from="GridContainer/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="GridContainer/Settings" to="." method="_on_settings_pressed"]

@@ -232,6 +232,7 @@ graph_offset = Vector2(-5.485, -222.785)
 size = Vector2(10, 9.5)
 
 [node name="Adventurer" type="CharacterBody2D"]
+scale = Vector2(2.5, 2.5)
 collision_layer = 2
 collision_mask = 27
 script = ExtResource("1_2s2le")
@@ -265,7 +266,11 @@ collision_mask = 8
 position = Vector2(11, 0)
 shape = SubResource("RectangleShape2D_adus2")
 
+[node name="GameOver" type="Timer" parent="."]
+wait_time = 2.0
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 [connection signal="body_entered" from="AreaAttacco" to="." method="_on_area_attacco_body_entered"]
 [connection signal="body_exited" from="AreaAttacco" to="." method="_on_area_attacco_body_exited"]
+[connection signal="timeout" from="GameOver" to="." method="_on_game_over_timeout"]

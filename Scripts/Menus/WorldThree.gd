@@ -11,3 +11,6 @@ func _on_level_1_pressed() -> void:
 
 func _on_prec_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Menus/WorldTwo.tscn")
+
+func _on_settings_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Menus/Settings.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://cl68fby4mn77s"]
+[gd_scene load_steps=14 format=4 uid="uid://cl68fby4mn77s"]
 
 [ext_resource type="Texture2D" uid="uid://mx1mjedsyu5q" path="res://Assets/PatchLevel3.png" id="1_3u7g2"]
 [ext_resource type="Texture2D" uid="uid://cq2c2nr7it782" path="res://Assets/Landscapes/SnowTileset.png" id="1_mvojn"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bxeo1ufnd18nv" path="res://Scenes/Items/Props/Coin.tscn" id="6_lvf78"]
 [ext_resource type="PackedScene" uid="uid://2xv4eavhdcv4" path="res://Scenes/Items/Props/Key.tscn" id="7_w84i1"]
 [ext_resource type="PackedScene" uid="uid://b1jxtxcbva7q2" path="res://Scenes/UI/LifeBar_CoinNumber.tscn" id="8_jy7un"]
+[ext_resource type="PackedScene" uid="uid://ciav30gy7r4ut" path="res://Scenes/Characters/Villains/NightBorne.tscn" id="10_oeydp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vxmdh"]
 texture = ExtResource("1_mvojn")
@@ -153,7 +154,6 @@ tile_set = SubResource("TileSet_erxjb")
 
 [node name="LeftLimit" type="StaticBody2D" parent="."]
 position = Vector2(6.10352e-05, 3.05176e-05)
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftLimit"]
 position = Vector2(0, 333)
@@ -162,7 +162,6 @@ shape = SubResource("WorldBoundaryShape2D_jivy8")
 
 [node name="Adventurer" parent="." instance=ExtResource("3_1v3a0")]
 position = Vector2(283, 137)
-scale = Vector2(2.5, 2.5)
 
 [node name="Camera2D" type="Camera2D" parent="Adventurer"]
 limit_left = 0
@@ -174,7 +173,6 @@ limit_bottom = 610
 
 [node name="Fox" parent="." instance=ExtResource("4_robds")]
 position = Vector2(160, 96)
-scale = Vector2(2, 2)
 
 [node name="Chest" parent="." instance=ExtResource("5_f7d0y")]
 position = Vector2(205, 535)
@@ -196,3 +194,7 @@ position = Vector2(966, 266)
 position = Vector2(1496, 227)
 
 [node name="LifeBar_CoinNumber" parent="." instance=ExtResource("8_jy7un")]
+
+[node name="NightBorne" parent="." instance=ExtResource("10_oeydp")]
+position = Vector2(4267, 449)
+scale = Vector2(4, 4)

@@ -15,8 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://wwpwwebice8s" path="res://Assets/UI/Menu/Home.png" id="13_y6rwd"]
 [ext_resource type="Texture2D" uid="uid://cooocgrycxj3h" path="res://Assets/UI/Menu/PressedHome.png" id="14_dgweu"]
 [ext_resource type="Texture2D" uid="uid://svmyh215xtjk" path="res://Assets/UI/Menu/Stats.png" id="15_ytck8"]
-[ext_resource type="Texture2D" uid="uid://7qvicwb42vfd" path="res://Assets/UI/Menu/Settings.png" id="16_iqtqm"]
-[ext_resource type="Texture2D" uid="uid://dms06v1gfmkny" path="res://Assets/UI/Menu/PressedSettings.png" id="17_1k133"]
+[ext_resource type="Texture2D" uid="uid://3sibxqrldr1x" path="res://Assets/UI/Menu/Settings.png" id="16_iqtqm"]
+[ext_resource type="Texture2D" uid="uid://dausqwxpxhkao" path="res://Assets/UI/Menu/PressedSettings.png" id="17_1k133"]
 
 [node name="WorldOne" type="CanvasLayer"]
 script = ExtResource("1_40sb6")
@@ -108,3 +108,5 @@ scale = Vector2(0.157277, 0.157277)
 texture_normal = ExtResource("16_iqtqm")
 texture_pressed = ExtResource("17_1k133")
 action = "ui_right"
+
+[connection signal="pressed" from="GridContainer/Settings" to="." method="_on_settings_pressed"]

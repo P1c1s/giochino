@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://4m0li4cvpxxb"]
+[gd_scene load_steps=7 format=3 uid="uid://4m0li4cvpxxb"]
 
 [ext_resource type="Texture2D" uid="uid://cmfredef5lkjh" path="res://Assets/UI/notPressed60.png" id="1_yqf8t"]
 [ext_resource type="Texture2D" uid="uid://c2fe4yx6tjmxf" path="res://Assets/UI/pressed60.png" id="2_nhvuo"]
 [ext_resource type="Texture2D" uid="uid://cou8oof0d282n" path="res://Assets/UI/notPressed.png" id="3_3sw5o"]
 [ext_resource type="Texture2D" uid="uid://tlac7giehnpm" path="res://Assets/UI/Pressed.png" id="4_23apb"]
+[ext_resource type="Texture2D" uid="uid://cjyywt082agm4" path="res://Assets/UI/UnpressedPause.png" id="5_5fgf7"]
+[ext_resource type="Texture2D" uid="uid://dkl57sjxxoq2a" path="res://Assets/UI/PressedPause.png" id="6_vrhbo"]
 
 [node name="MobileControls" type="CanvasLayer"]
 
@@ -28,7 +30,7 @@ texture_pressed = ExtResource("2_nhvuo")
 action = "ui_left"
 
 [node name="Jump" type="TouchScreenButton" parent="GridContainer"]
-position = Vector2(971, 593)
+position = Vector2(1007, 593)
 rotation = -1.5708
 scale = Vector2(0.223, 0.223)
 texture_normal = ExtResource("1_yqf8t")
@@ -36,8 +38,15 @@ texture_pressed = ExtResource("2_nhvuo")
 action = "ui_accept"
 
 [node name="Attack" type="TouchScreenButton" parent="GridContainer"]
-position = Vector2(971, 358)
+position = Vector2(1007, 358)
 scale = Vector2(0.223, 0.223)
 texture_normal = ExtResource("3_3sw5o")
 texture_pressed = ExtResource("4_23apb")
 action = "ui_attack"
+
+[node name="Pause" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(1067, 14)
+scale = Vector2(0.18, 0.18)
+texture_normal = ExtResource("5_5fgf7")
+texture_pressed = ExtResource("6_vrhbo")
+action = "ui_right"

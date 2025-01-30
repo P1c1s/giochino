@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf46ek115m6g4"]
+
+[ext_resource type="Script" path="res://Scripts/Menus/WorldFour.gd" id="1_5l23k"]
+[ext_resource type="Texture2D" uid="uid://bop6gk0ruyors" path="res://Assets/UI/Win.png" id="2_eowlj"]
+
+[node name="Win" type="CanvasLayer"]
+script = ExtResource("1_5l23k")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_eowlj")
+expand_mode = 1
+
+[node name="GridContainer" type="Node2D" parent="."]

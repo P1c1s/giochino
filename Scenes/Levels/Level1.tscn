@@ -201,7 +201,6 @@ shape = SubResource("WorldBoundaryShape2D_nujaa")
 
 [node name="Adventurer" parent="." instance=ExtResource("6_78qut")]
 position = Vector2(93, -257)
-scale = Vector2(2.5, 2.5)
 
 [node name="Camera2D" type="Camera2D" parent="Adventurer"]
 z_index = 4
@@ -215,77 +214,59 @@ editor_draw_limits = true
 
 [node name="Fox" parent="." instance=ExtResource("6_71ju5")]
 position = Vector2(50, -250)
-scale = Vector2(2, 2)
 
 [node name="Coins" type="Node2D" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(381, -121)
-scale = Vector2(2, 2)
 
 [node name="Coin2" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(627, -75)
-scale = Vector2(2, 2)
 
 [node name="Coin3" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(1301, -80)
-scale = Vector2(2, 2)
 
 [node name="Coin4" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(1482, -238)
-scale = Vector2(2, 2)
 
 [node name="Coin5" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(2314, -40)
-scale = Vector2(2, 2)
 
 [node name="Coin6" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(5018, -240)
-scale = Vector2(2, 2)
 
 [node name="Coin7" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(7992, 273)
-scale = Vector2(2, 2)
 
 [node name="Coin8" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(11710, -241)
-scale = Vector2(2, 2)
 
 [node name="Coin9" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(12515, -82)
-scale = Vector2(2, 2)
 
 [node name="Coin10" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(13119, -47)
-scale = Vector2(2, 2)
 
 [node name="Coin11" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(14861, -43)
-scale = Vector2(2, 2)
 
 [node name="Coin12" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(15225, -366)
-scale = Vector2(2, 2)
 
 [node name="Coin13" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(15225, -366)
-scale = Vector2(2, 2)
 
 [node name="Coin14" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(19578, -42)
-scale = Vector2(2, 2)
 
 [node name="Coin15" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(20164, 239)
-scale = Vector2(2, 2)
 
 [node name="Coin16" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(19383, 271)
-scale = Vector2(2, 2)
 
 [node name="Coin17" parent="Coins" instance=ExtResource("10_3x7ve")]
 position = Vector2(19912, 192)
-scale = Vector2(2, 2)
 
 [node name="Potions" type="Node2D" parent="."]
 
@@ -297,7 +278,6 @@ scale = Vector2(2.3, 2.3)
 
 [node name="Key" parent="KeysChests" instance=ExtResource("11_6hve3")]
 position = Vector2(3065, -124)
-scale = Vector2(2, 2)
 
 [node name="Chest" parent="KeysChests" instance=ExtResource("12_u3swt")]
 position = Vector2(2795, -172)

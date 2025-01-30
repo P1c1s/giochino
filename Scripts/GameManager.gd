@@ -11,7 +11,7 @@ func addOneScore():
 	score += 1
 
 func getDamage():
-	adventurerLife -= 50
+	adventurerLife -= 10
 	#print("Adventurer ha preso danno")
 
 func giveDamage(enemy : CharacterBody2D):
@@ -20,6 +20,10 @@ func giveDamage(enemy : CharacterBody2D):
 
 func restoreLife():
 	adventurerLife = 100
+
+#last level's character damage
+func deathAttack():
+	adventurerLife = 0
 
 func checkLife() -> int:
 	return adventurerLife
@@ -36,3 +40,7 @@ func isKeyCollected() -> bool:
 
 func initKeyCollected():
 	keyCollected = false
+
+func gameover():
+	get_tree().change_scene_to_file("res://Scenes/Menus/GameOver.tscn")
+	
