@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://nmxmjn74m57l"]
 
-[ext_resource type="Script" path="res://Scripts/Characters/Villains/Ghoul.gd" id="1_5bn2b"]
+[ext_resource type="Script" path="res://Scripts/Characters/Villains/Cyclop.gd" id="1_gpko5"]
 [ext_resource type="Texture2D" uid="uid://cp0tg14o76tjt" path="res://Assets/Characters/Villains/Cyclop.png" id="2_1tpge"]
 [ext_resource type="Texture2D" uid="uid://ckd1mtuus8hmb" path="res://Assets/Items/Props/healthbarProgress.png" id="3_b0k3y"]
 
@@ -156,13 +156,13 @@ height = 157.0
 radius = 25.0
 height = 50.9999
 
-[node name="Cyclop" type="CharacterBody2D"]
+[node name="Cyclop" type="CharacterBody2D" groups=["Enemies"]]
 scale = Vector2(2, 2)
 collision_layer = 8
 collision_mask = 3
-script = ExtResource("1_5bn2b")
+script = ExtResource("1_gpko5")
 
-[node name="Sprite2D" type="Sprite2D" parent="." groups=["Enemies"]]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("2_1tpge")
 hframes = 15
@@ -190,14 +190,14 @@ offset_top = -16.0
 offset_right = 45.0
 offset_bottom = -6.0
 scale = Vector2(0.6, 0.6)
-value = 100.0
+max_value = 150.0
+value = 150.0
 texture_progress = ExtResource("3_b0k3y")
 
 [node name="Cooldown" type="Timer" parent="."]
 wait_time = 2.0
 
 [node name="DetectionArea" type="Area2D" parent="."]
-visible = false
 collision_layer = 8
 collision_mask = 2
 

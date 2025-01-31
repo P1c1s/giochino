@@ -3,3 +3,15 @@ res://Scenes/Levels/Level2.tscn
 res://Scenes/Levels/Level3.tscn
 res://Scripts/Levels/Level3.gd
 res://Scripts/GameManager.gd
+res://Scenes/Characters/Villains/Cyclop.tscn
+res://Scenes/Characters/Villains/Imp.tscn
+res://Scripts/Characters/Villains/Imp.gd
+res://Scripts/Characters/Villains/Cyclop.gd
+res://Scenes/Characters/Villains/Monster.tscn
+res://Scenes/Menus/GameOver.tscn
+res://Scenes/Menus/Win.tscn
+res://Scenes/Items/Props/Portale.tscn
+res://Scenes/Menus/Pause.tscn
+res://Scenes/Characters/Villains/Necromancer.tscn
+res://Scenes/Characters/Villains/Incubus.tscn
+res://Scenes/Items/Props/LifePotion.tscn

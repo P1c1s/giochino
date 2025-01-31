@@ -29,7 +29,7 @@ func _ready():
 	endPosition = startPosition - Vector2(-space, 0)
 	state_machine.travel("Walk")
 	attackMode = false
-	life = 100
+	life = 150
 	collisionPlayer = false
 
 func _physics_process(_delta):

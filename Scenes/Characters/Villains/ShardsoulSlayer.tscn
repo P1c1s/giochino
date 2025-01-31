@@ -153,11 +153,11 @@ radius = 21.0
 height = 157.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l04h6"]
-radius = 20.5
+radius = 19.2357
 height = 51.0
 
 [node name="ShardsoulSlayer" type="CharacterBody2D" groups=["Enemies"]]
-scale = Vector2(2, 1.92337)
+scale = Vector2(3, 2.885)
 collision_layer = 8
 collision_mask = 3
 script = ExtResource("1_v5g6m")
@@ -171,6 +171,7 @@ frame = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 17)
+scale = Vector2(1, 0.899667)
 shape = SubResource("CapsuleShape2D_5dwgj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -201,7 +202,7 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
-position = Vector2(3, 18)
+position = Vector2(3, 12.3333)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_vnit5")
 
@@ -214,6 +215,14 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(-0.5, 19)
+position = Vector2(-0.499999, 13)
 rotation = 1.5708
+scale = Vector2(0.988099, 1.31584)
 shape = SubResource("CapsuleShape2D_l04h6")
+
+[connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="timeout" from="Movimento" to="." method="_on_movimento_timeout"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
