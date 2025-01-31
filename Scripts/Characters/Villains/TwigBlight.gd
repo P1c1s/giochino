@@ -1,6 +1,6 @@
-class_name NightBorne extends CharacterBody2D
+class_name TwigBlight extends CharacterBody2D
 
-@export var speed = 60
+@export var speed = 80
 @export var attackLimit = 250
 
 @onready var state_machine = $AnimationTree["parameters/playback"]
@@ -20,6 +20,7 @@ var collisionPlayer : bool
 #variable for the life progress bar
 var life: int
 
+
 func _ready():
 	startPosition = position
 	endPosition = position
@@ -27,6 +28,8 @@ func _ready():
 	attackMode = false
 	life = 500
 	collisionPlayer = false
+	$Movimento.start()
+
 		
 func _physics_process(_delta):
 	if not player_chase && not collisionPlayer:
@@ -35,7 +38,7 @@ func _physics_process(_delta):
 		chase()
 	move_and_slide()
 	
-	$NightBorneLife.value = life
+	$TwigBlightLife.value = life
 	
 	if GameManager.checkLife() <= 0:
 		player_chase = false
@@ -52,7 +55,11 @@ func chase():
 	state_machine.travel("Walk")
 	
 	if collisionPlayer && dist.x < 100:
-		state_machine.travel("Attack")
+		state_machine.travel("Die")
+
+func _on_movimento_timeout() -> void:
+	$Sprite2D.flip_h = !$Sprite2D.flip_h
+	$Movimento.start()
 
 #func attack():
 	#attackMode = true
@@ -60,11 +67,9 @@ func chase():
 	#if collisionPlayer and numAttacks == 0:
 
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
-	if anim_name == "Attack":
-		GameManager.deathAttack()
+	if anim_name == "Die":
+		GameManager.getDamage()
 		player_chase = false
-		state_machine.travel("Death")
-	if anim_name == "Death":
 		self.queue_free()
 		
 		#---SCHERMATA GAME OVER ---   da gestire o nell'Adventurer o inserire script

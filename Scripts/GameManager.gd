@@ -10,6 +10,9 @@ var keyCollected : bool
 func addOneScore():
 	score += 1
 
+func addChestScore():
+	score += 20
+
 func getDamage():
 	adventurerLife -= 10
 	#print("Adventurer ha preso danno")

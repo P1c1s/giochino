@@ -1,4 +1,4 @@
-class_name ShardsoulSlayer extends CharacterBody2D
+class_name Incubus extends CharacterBody2D
 
 @export var speed = 40
 @export var limit = 0.5
@@ -29,11 +29,11 @@ func _ready():
 	endPosition = startPosition - Vector2(-space, 0)
 	state_machine.travel("Walk")
 	attackMode = false
-	life = 160
+	life = 100
 	collisionPlayer = false
 
 func _physics_process(_delta):
-	#if the player isn't near the ShardsoulSlayer, the enemy moves with his default dynamic
+	#if the player isn't near the incubus, the enemy moves with his default dynamic
 	
 	#if not is_on_floor():
 		#velocity.y += get_gravity().y * delta
@@ -44,7 +44,7 @@ func _physics_process(_delta):
 		chase()
 	move_and_slide()
 	
-	$ShardsoulSlayerLife.value = life
+	$IncubusLife.value = life
 	
 	if (life <= 0):
 		state_machine.travel("Die")
@@ -56,7 +56,7 @@ func changeDirection():
 	startPosition = tempEnd
 	#$Sprite2D.flip_h = !$Sprite2D.flip_h
 
-#if the ShardsoulSlayer doesn't chase the player, he moves back and forth between two points A and B
+#if the incubus doesn't chase the player, he moves back and forth between two points A and B
 #when he gets to A and B he stops there for 4 seconds in the Idle state
 func move() -> void:
 	var moveDirection = endPosition - position
@@ -68,8 +68,8 @@ func move() -> void:
 	#$Sprite2D.flip.h = sign(velocity.x)
 	#$Sprite2D.flip_h = !(moveDirection.x < -0.1)
 
-#if the ShardsoulSlayer is chasing the player, the player's position is set to be the endPosition
-#if the distance betweem the player and the ShardsoulSlayer is under a limit, he starts to attack
+#if the incubus is chasing the player, the player's position is set to be the endPosition
+#if the distance betweem the player and the incubus is under a limit, he starts to attack
 func chase():
 	var direzione = endPosition - position
 	$Sprite2D.flip_h = (direzione.x < 1)
@@ -91,7 +91,7 @@ func attack():
 	
 	if collisionPlayer and numAttacks == 0:
 		GameManager.getDamage()
-		#print("ShardsoulSlayer ha fatto danno")
+		#print("incubus ha fatto danno")
 	
 		#cooldown()
 
@@ -126,7 +126,7 @@ func _on_movimento_timeout() -> void:
 	changeDirection()
 	$Sprite2D.flip_h = !$Sprite2D.flip_h 
 
-#at the end of the cooldown the ShardsoulSlayer attaks again
+#at the end of the cooldown the ghoul attaks again
 func _on_cooldown_timeout() -> void:
 	#print("COOLDOWN ENDED ATTACK AGAIN")
 	numAttacks = 0;

@@ -1,12 +1,12 @@
 [gd_scene load_steps=28 format=3 uid="uid://djs8xs7k6mfk5"]
 
-[ext_resource type="Script" path="res://Scripts/Characters/Villains/Ghoul.gd" id="1_ehlqi"]
+[ext_resource type="Script" path="res://Scripts/Characters/Villains/Imp.gd" id="1_rwg50"]
 [ext_resource type="Texture2D" uid="uid://b5u8g78vdsd8t" path="res://Assets/Characters/Villains/Imp.png" id="2_3aipa"]
 [ext_resource type="Texture2D" uid="uid://ckd1mtuus8hmb" path="res://Assets/Items/Props/healthbarProgress.png" id="3_8h5h5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5dwgj"]
-radius = 14.5
-height = 43.0
+radius = 13.5
+height = 28.0
 
 [sub_resource type="Animation" id="Animation_6g1bw"]
 resource_name = "Attack"
@@ -21,7 +21,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
+"update": 0,
 "values": [16, 17, 18, 19, 20, 21]
 }
 
@@ -38,7 +38,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
+"update": 0,
 "values": [32, 33, 34, 35, 36, 37]
 }
 
@@ -56,7 +56,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
+"update": 0,
 "values": [0, 1, 2, 3, 4, 5, 6]
 }
 
@@ -71,7 +71,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
+"update": 0,
 "values": [0]
 }
 
@@ -89,7 +89,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
+"update": 0,
 "values": [8, 9, 10, 11, 12, 13, 14, 15]
 }
 
@@ -114,9 +114,6 @@ animation = &"Idle"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r215o"]
 animation = &"Walk"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_76nmq"]
-advance_mode = 2
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vqxrs"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7pyya"]
@@ -137,18 +134,22 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1pkjv"]
 switch_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f7ej2"]
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nuuly"]
 states/Attack/node = SubResource("AnimationNodeAnimation_tr0k8")
 states/Attack/position = Vector2(548, 243)
 states/Die/node = SubResource("AnimationNodeAnimation_temsi")
 states/Die/position = Vector2(553, 433)
-states/End/position = Vector2(807, 336)
+states/End/position = Vector2(999.5, 337)
 states/Idle/node = SubResource("AnimationNodeAnimation_y5742")
-states/Idle/position = Vector2(709, 336)
+states/Idle/position = Vector2(355, 345)
 states/Start/position = Vector2(208, 336)
 states/Walk/node = SubResource("AnimationNodeAnimation_r215o")
-states/Walk/position = Vector2(387, 336)
-transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_76nmq"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_vqxrs"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_7pyya"), "Walk", "Die", SubResource("AnimationNodeStateMachineTransition_qowct"), "Idle", "Die", SubResource("AnimationNodeStateMachineTransition_ifg5i"), "Walk", "Attack", SubResource("AnimationNodeStateMachineTransition_7te40"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_ls70r"), "Attack", "Die", SubResource("AnimationNodeStateMachineTransition_e87w3"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_blemj"), "Attack", "Walk", SubResource("AnimationNodeStateMachineTransition_1pkjv")]
+states/Walk/position = Vector2(729, 343.25)
+transitions = ["Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_vqxrs"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_7pyya"), "Walk", "Die", SubResource("AnimationNodeStateMachineTransition_qowct"), "Idle", "Die", SubResource("AnimationNodeStateMachineTransition_ifg5i"), "Walk", "Attack", SubResource("AnimationNodeStateMachineTransition_7te40"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_ls70r"), "Attack", "Die", SubResource("AnimationNodeStateMachineTransition_e87w3"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_blemj"), "Attack", "Walk", SubResource("AnimationNodeStateMachineTransition_1pkjv"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_f7ej2")]
+graph_offset = Vector2(-17.25, 217.14)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vnit5"]
 radius = 21.0
@@ -157,22 +158,22 @@ height = 157.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pktee"]
 radius = 12.5
 
-[node name="Incubus" type="CharacterBody2D" groups=["Enemies"]]
+[node name="Imp" type="CharacterBody2D" groups=["Enemies"]]
+position = Vector2(-1, 0)
 scale = Vector2(2, 2)
-collision_layer = 13
-collision_mask = 13
-script = ExtResource("1_ehlqi")
+collision_layer = 8
+collision_mask = 3
+script = ExtResource("1_rwg50")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1.5, 1.5)
+position = Vector2(-1.3, -39.3)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("2_3aipa")
 hframes = 8
 vframes = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, 5)
+position = Vector2(-2.8, -28.3)
 shape = SubResource("CapsuleShape2D_5dwgj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -186,25 +187,27 @@ tree_root = SubResource("AnimationNodeStateMachine_nuuly")
 anim_player = NodePath("../AnimationPlayer")
 
 [node name="ImpLife" type="TextureProgressBar" parent="."]
-offset_left = -19.0
-offset_top = -16.0
-offset_right = 45.0
-offset_bottom = -6.0
+offset_left = -19.3
+offset_top = -46.8
+offset_right = 44.7
+offset_bottom = -36.8
 scale = Vector2(0.6, 0.6)
-value = 100.0
+max_value = 10.0
+value = 10.0
 texture_progress = ExtResource("3_8h5h5")
 
 [node name="Cooldown" type="Timer" parent="."]
 wait_time = 2.0
 
 [node name="DetectionArea" type="Area2D" parent="."]
-visible = false
-collision_layer = 2
+position = Vector2(-0.799999, -18.3)
+collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 position = Vector2(1.5, 4.5)
 rotation = 1.5708
+scale = Vector2(1.86329, 0.863528)
 shape = SubResource("CapsuleShape2D_vnit5")
 
 [node name="Movimento" type="Timer" parent="."]
@@ -212,13 +215,17 @@ wait_time = 4.0
 one_shot = true
 
 [node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(-1.5, -32.5)
+collision_layer = 8
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-visible = false
 position = Vector2(18.5, 10.5)
 shape = SubResource("CapsuleShape2D_pktee")
 
+[connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
 [connection signal="timeout" from="Movimento" to="." method="_on_movimento_timeout"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]

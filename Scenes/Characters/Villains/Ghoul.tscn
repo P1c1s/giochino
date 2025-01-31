@@ -179,7 +179,7 @@ texture_progress = ExtResource("2_jel3r")
 wait_time = 2.0
 
 [node name="DetectionArea" type="Area2D" parent="."]
-collision_layer = 2
+collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]

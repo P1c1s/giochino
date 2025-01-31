@@ -1,12 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://brr0c3xl05nib"]
+[gd_scene load_steps=22 format=3 uid="uid://brr0c3xl05nib"]
 
-[ext_resource type="Script" path="res://Scripts/Characters/Villains/Ghoul.gd" id="1_hqo2e"]
-[ext_resource type="Texture2D" uid="uid://dqiv1jqb5ciej" path="res://Assets/Characters/Villains/TwigBlightSprite.png" id="2_ksial"]
-[ext_resource type="Texture2D" uid="uid://ckd1mtuus8hmb" path="res://Assets/Items/Props/healthbarProgress.png" id="3_4mkc2"]
+[ext_resource type="Script" path="res://Scripts/Characters/Villains/TwigBlight.gd" id="1_r0jyh"]
+[ext_resource type="Texture2D" uid="uid://dqiv1jqb5ciej" path="res://Assets/Characters/Villains/TwigBlightSprite.png" id="2_jxkgx"]
+[ext_resource type="Texture2D" uid="uid://ckd1mtuus8hmb" path="res://Assets/Items/Props/healthbarProgress.png" id="3_osa30"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5dwgj"]
-radius = 8.5
-height = 17.0
+height = 20.0
 
 [sub_resource type="Animation" id="Animation_6g1bw"]
 resource_name = "Attack"
@@ -102,9 +101,6 @@ _data = {
 "Walk": SubResource("Animation_a02sg")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gr1pf"]
-animation = &"Attack"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nrle1"]
 animation = &"Die"
 
@@ -117,55 +113,42 @@ animation = &"Walk"
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f63pb"]
 advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fbyk4"]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_07e25"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lybu5"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_s1jmg"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bcp16"]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_s5g54"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kja2k"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vw3o4"]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2s7kk"]
-switch_mode = 2
-
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_coxkl"]
-states/Attack/node = SubResource("AnimationNodeAnimation_gr1pf")
-states/Attack/position = Vector2(538, 46)
 states/Die/node = SubResource("AnimationNodeAnimation_nrle1")
 states/Die/position = Vector2(538, 178)
 states/Idle/node = SubResource("AnimationNodeAnimation_ns86h")
 states/Idle/position = Vector2(395, 100)
 states/Walk/node = SubResource("AnimationNodeAnimation_twhuo")
 states/Walk/position = Vector2(689, 100)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_f63pb"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_fbyk4"), "Idle", "Die", SubResource("AnimationNodeStateMachineTransition_07e25"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_lybu5"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_s1jmg"), "Walk", "Attack", SubResource("AnimationNodeStateMachineTransition_bcp16"), "Walk", "Die", SubResource("AnimationNodeStateMachineTransition_s5g54"), "Attack", "Die", SubResource("AnimationNodeStateMachineTransition_kja2k"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_vw3o4"), "Attack", "Walk", SubResource("AnimationNodeStateMachineTransition_2s7kk")]
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_f63pb"), "Idle", "Die", SubResource("AnimationNodeStateMachineTransition_07e25"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_lybu5"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_s1jmg"), "Walk", "Die", SubResource("AnimationNodeStateMachineTransition_s5g54")]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vnit5"]
 radius = 8.0
 height = 113.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l04h6"]
-radius = 9.0
-height = 29.0
+radius = 17.0
+height = 36.0
 
-[node name="Cobra" type="CharacterBody2D" groups=["Enemies"]]
-scale = Vector2(2, 2)
+[node name="TwigBlight" type="CharacterBody2D" groups=["Enemies"]]
+position = Vector2(85, 51)
+scale = Vector2(2.2, 2.2)
 collision_layer = 8
 collision_mask = 3
-script = ExtResource("1_hqo2e")
+script = ExtResource("1_r0jyh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1.5, -10)
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("2_ksial")
+texture = ExtResource("2_jxkgx")
 hframes = 8
 vframes = 5
 frame = 16
@@ -184,29 +167,27 @@ autoplay = "Walk"
 tree_root = SubResource("AnimationNodeStateMachine_coxkl")
 anim_player = NodePath("../AnimationPlayer")
 
-[node name="Cobra" type="TextureProgressBar" parent="."]
+[node name="TwigBlightLife" type="TextureProgressBar" parent="."]
 offset_left = -19.0
 offset_top = -16.0
 offset_right = 45.0
 offset_bottom = -6.0
 scale = Vector2(0.6, 0.6)
 value = 100.0
-texture_progress = ExtResource("3_4mkc2")
-
-[node name="Cooldown" type="Timer" parent="."]
-wait_time = 2.0
+texture_progress = ExtResource("3_osa30")
 
 [node name="DetectionArea" type="Area2D" parent="."]
-collision_layer = 2
+collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
-position = Vector2(2.5, 1.5)
+position = Vector2(3, -7)
 rotation = 1.5708
+scale = Vector2(2.62337, 1.20213)
 shape = SubResource("CapsuleShape2D_vnit5")
 
 [node name="Movimento" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 2.0
 one_shot = true
 
 [node name="AttackArea" type="Area2D" parent="."]
@@ -219,8 +200,6 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_l04h6")
 
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
-[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
-[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
 [connection signal="timeout" from="Movimento" to="." method="_on_movimento_timeout"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]

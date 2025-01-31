@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://dixhf3f0na1q8"]
 
-[ext_resource type="Script" path="res://Scripts/Characters/Villains/Ghoul.gd" id="1_dl5sb"]
+[ext_resource type="Script" path="res://Scripts/Characters/Villains/Incubus.gd" id="1_sgs2l"]
 [ext_resource type="Texture2D" uid="uid://bsv1khng7yjy0" path="res://Assets/Characters/Villains/Incubus Sprite Sheet.png" id="2_avrcb"]
 [ext_resource type="Texture2D" uid="uid://ckd1mtuus8hmb" path="res://Assets/Items/Props/healthbarProgress.png" id="3_y0raj"]
 
@@ -155,13 +155,14 @@ radius = 21.0
 height = 157.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pktee"]
-radius = 12.5
+radius = 26.0
+height = 52.0
 
 [node name="Incubus" type="CharacterBody2D" groups=["Enemies"]]
 scale = Vector2(2, 2)
-collision_layer = 13
-collision_mask = 13
-script = ExtResource("1_dl5sb")
+collision_layer = 8
+collision_mask = 3
+script = ExtResource("1_sgs2l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, -15)
@@ -171,7 +172,6 @@ hframes = 8
 vframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, 5)
 shape = SubResource("CapsuleShape2D_5dwgj")
 
@@ -185,10 +185,10 @@ tree_root = SubResource("AnimationNodeStateMachine_7imy3")
 anim_player = NodePath("../AnimationPlayer")
 
 [node name="IncubusLife" type="TextureProgressBar" parent="."]
-offset_left = -19.0
-offset_top = -16.0
-offset_right = 45.0
-offset_bottom = -6.0
+offset_left = -19.5
+offset_top = -26.5
+offset_right = 44.5
+offset_bottom = -16.5
 scale = Vector2(0.6, 0.6)
 value = 100.0
 texture_progress = ExtResource("3_y0raj")
@@ -197,8 +197,7 @@ texture_progress = ExtResource("3_y0raj")
 wait_time = 2.0
 
 [node name="DetectionArea" type="Area2D" parent="."]
-visible = false
-collision_layer = 2
+collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
@@ -211,13 +210,15 @@ wait_time = 4.0
 one_shot = true
 
 [node name="AttackArea" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-visible = false
-position = Vector2(18.5, 10.5)
 shape = SubResource("CapsuleShape2D_pktee")
 
+[connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
 [connection signal="timeout" from="Movimento" to="." method="_on_movimento_timeout"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
