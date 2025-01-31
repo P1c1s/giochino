@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwifcws5ea26c"]
+[gd_scene load_steps=10 format=3 uid="uid://bwifcws5ea26c"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/GameOver.gd" id="1_6v8o2"]
 [ext_resource type="Texture2D" uid="uid://cmpsav6kux1h7" path="res://Assets/UI/GameOver.png" id="1_q2uqp"]
+[ext_resource type="Texture2D" uid="uid://bl31ruycsjn4m" path="res://Assets/UI/Menu/Map.png" id="8_50aut"]
+[ext_resource type="AudioStream" uid="uid://cl81155buvq0k" path="res://Assets/Music/GameOver.mp3" id="8_b4ns3"]
 [ext_resource type="Texture2D" uid="uid://wwpwwebice8s" path="res://Assets/UI/Menu/Home.png" id="15_2i7he"]
 [ext_resource type="Texture2D" uid="uid://cooocgrycxj3h" path="res://Assets/UI/Menu/PressedHome.png" id="16_cf5yu"]
 [ext_resource type="Texture2D" uid="uid://svmyh215xtjk" path="res://Assets/UI/Menu/Stats.png" id="17_ayl08"]
@@ -24,14 +26,14 @@ expand_mode = 1
 
 [node name="Home" type="TouchScreenButton" parent="GridContainer"]
 z_index = 999
-position = Vector2(24, 15)
+position = Vector2(24, 21)
 scale = Vector2(0.157277, 0.157277)
 texture_normal = ExtResource("15_2i7he")
 texture_pressed = ExtResource("16_cf5yu")
 action = "ui_right"
 
 [node name="Stats" type="TouchScreenButton" parent="GridContainer"]
-position = Vector2(1037, 18)
+position = Vector2(1037, 21)
 scale = Vector2(0.157277, 0.157277)
 texture_normal = ExtResource("17_ayl08")
 action = "ui_right"
@@ -44,11 +46,13 @@ texture_pressed = ExtResource("19_w4fsa")
 action = "ui_right"
 
 [node name="Levels" type="TouchScreenButton" parent="GridContainer"]
-position = Vector2(129, 15)
+position = Vector2(129, 21)
 scale = Vector2(0.157277, 0.157277)
-texture_normal = ExtResource("15_2i7he")
-texture_pressed = ExtResource("16_cf5yu")
+texture_normal = ExtResource("8_50aut")
 action = "ui_right"
+
+[node name="Sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_b4ns3")
 
 [connection signal="pressed" from="GridContainer/Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="GridContainer/Settings" to="." method="_on_settings_pressed"]

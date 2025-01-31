@@ -1,12 +1,2 @@
-res://Scenes/Levels/Level3.tscn
-res://Scenes/Characters/Villains/Imp.tscn
-res://Scenes/Levels/Level1.tscn
-res://Scenes/Characters/Villains/Incubus.tscn
-res://Scripts/Characters/Villains/Incubus.gd
-res://Scenes/Characters/Villains/BrainMoleMonarch.tscn
-res://Scenes/Characters/Villains/Cyclop.tscn
-res://Scenes/Characters/Villains/Ghoul.tscn
-res://Scenes/Characters/Villains/Monster.tscn
-res://Scenes/Characters/Villains/Necromancer.tscn
-res://Scenes/Characters/Villains/ShardsoulSlayer.tscn
-res://Scenes/Characters/Villains/TwigBlight.tscn
+res://Scenes/Menus/GameOver.tscn
+res://Scripts/Menus/GameOver.gd

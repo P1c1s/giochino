@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=4 uid="uid://drjh0ca2uoyuw"]
+[gd_scene load_steps=13 format=4 uid="uid://drjh0ca2uoyuw"]
 
+[ext_resource type="Script" path="res://Scripts/Levels/Level2.gd" id="1_ixkdm"]
 [ext_resource type="Texture2D" uid="uid://86gt8x2tkk4i" path="res://Assets/Landscapes/Possibili tileset/Dungeon Tile Set.png" id="1_rlp10"]
 [ext_resource type="PackedScene" uid="uid://btw6dl74bkjxs" path="res://Scenes/Characters/Heroes/Adventurer.tscn" id="2_qldg7"]
 [ext_resource type="PackedScene" uid="uid://b1jxtxcbva7q2" path="res://Scenes/UI/LifeBar_CoinNumber.tscn" id="3_rfko6"]
@@ -7,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bxeo1ufnd18nv" path="res://Scenes/Items/Props/Coin.tscn" id="5_kxki0"]
 [ext_resource type="PackedScene" uid="uid://gbxpk8rnuasf" path="res://Scenes/Items/Props/LifePotion.tscn" id="6_4e8xt"]
 [ext_resource type="Texture2D" uid="uid://chqjcpkqm1n3x" path="res://Assets/Landscapes/Background layers/sfondoLevel2.jpg" id="7_1g2o0"]
+[ext_resource type="AudioStream" uid="uid://basodb8itluek" path="res://Assets/Music/Level2.mp3" id="9_8pyt4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mbbb1"]
 texture = ExtResource("1_rlp10")
@@ -186,6 +188,7 @@ normal = Vector2(1, 0)
 distance = 1.0
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_ixkdm")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 12042.0
@@ -208,7 +211,6 @@ tile_set = SubResource("TileSet_qkxdy")
 
 [node name="Adventurer" parent="." instance=ExtResource("2_qldg7")]
 position = Vector2(29, 233)
-scale = Vector2(2.5, 2.5)
 
 [node name="Camera2D" type="Camera2D" parent="Adventurer"]
 limit_left = 0
@@ -294,3 +296,6 @@ position = Vector2(231, -186)
 
 [node name="LifePotion" parent="Potions" instance=ExtResource("6_4e8xt")]
 position = Vector2(-13, 6)
+
+[node name="Enviroment" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_8pyt4")

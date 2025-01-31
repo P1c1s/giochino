@@ -1,7 +1,8 @@
-[gd_scene load_steps=27 format=4 uid="uid://bfc2l2o4m0eem"]
+[gd_scene load_steps=28 format=4 uid="uid://bfc2l2o4m0eem"]
 
 [ext_resource type="Texture2D" uid="uid://cunj1wh2pjxk8" path="res://Assets/Landscapes/Screenshot 2025-01-28 alle 15.58.55.png" id="1_0ppl0"]
 [ext_resource type="Texture2D" uid="uid://bm0qu27ehn2n" path="res://Assets/Landscapes/patchLevel1.png" id="1_2nkfx"]
+[ext_resource type="Script" path="res://Scripts/Levels/Level1.gd" id="1_iw0d3"]
 [ext_resource type="Texture2D" uid="uid://c1fypi6drcgph" path="res://Assets/Landscapes/forest_tileset/Sprites/Tile/Grass&Ground.png" id="1_kv4ou"]
 [ext_resource type="Texture2D" uid="uid://cqxjrdfwdaoga" path="res://Assets/Landscapes/forest_tileset/Sprites/Tile/Rocks.png" id="2_cvjvy"]
 [ext_resource type="Texture2D" uid="uid://dqyv44pj0xn15" path="res://Assets/Landscapes/forest_tileset/Sprites/Tile/Bushes.png" id="3_esgtp"]
@@ -15,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://gbxpk8rnuasf" path="res://Scenes/Items/Props/LifePotion.tscn" id="11_n5yf6"]
 [ext_resource type="PackedScene" uid="uid://c2u8bclaj7nem" path="res://Scenes/Items/Props/Chest.tscn" id="12_u3swt"]
 [ext_resource type="PackedScene" uid="uid://blt6opwvhf7d8" path="res://Scenes/Characters/Villains/Cobra.tscn" id="17_8db5l"]
-[ext_resource type="PackedScene" uid="uid://dexj8pl1i4ad" path="res://Scenes/Characters/Villains/BrainMoleMonarch.tscn" id="17_s31li"]
+[ext_resource type="AudioStream" uid="uid://cohm80uycrpsf" path="res://Assets/Music/Level1.mp3" id="17_celua"]
 [ext_resource type="PackedScene" uid="uid://cs5s38gwsh52a" path="res://Scenes/Characters/Villains/Ghoul.tscn" id="18_xm5a5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuqlx"]
@@ -152,6 +153,7 @@ distance = -3.0
 
 [node name="Level1" type="Node2D"]
 position = Vector2(0, 423)
+script = ExtResource("1_iw0d3")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 2.0
@@ -291,5 +293,6 @@ space = 90
 [node name="Ghoul" parent="." instance=ExtResource("18_xm5a5")]
 position = Vector2(1451, -62)
 
-[node name="BrainMoleMonarch" parent="." instance=ExtResource("17_s31li")]
-position = Vector2(588, -164)
+[node name="Enviroment" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -423)
+stream = ExtResource("17_celua")
