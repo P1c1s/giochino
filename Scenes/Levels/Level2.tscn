@@ -297,5 +297,5 @@ position = Vector2(231, -186)
 [node name="LifePotion" parent="Potions" instance=ExtResource("6_4e8xt")]
 position = Vector2(-13, 6)
 
-[node name="Enviroment" type="AudioStreamPlayer2D" parent="."]
+[node name="Enviroment" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_8pyt4")

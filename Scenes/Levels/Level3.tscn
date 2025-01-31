@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://cl68fby4mn77s"]
+[gd_scene load_steps=18 format=4 uid="uid://cl68fby4mn77s"]
 
 [ext_resource type="Texture2D" uid="uid://mx1mjedsyu5q" path="res://Assets/PatchLevel3.png" id="1_3u7g2"]
 [ext_resource type="Script" path="res://Scripts/Levels/Level3.gd" id="1_govwd"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ciav30gy7r4ut" path="res://Scenes/Characters/Villains/NightBorne.tscn" id="10_oeydp"]
 [ext_resource type="PackedScene" uid="uid://dexj8pl1i4ad" path="res://Scenes/Characters/Villains/BrainMoleMonarch.tscn" id="12_a2mag"]
 [ext_resource type="PackedScene" uid="uid://dixhf3f0na1q8" path="res://Scenes/Characters/Villains/Incubus.tscn" id="13_ko4ms"]
+[ext_resource type="AudioStream" uid="uid://bypc2x3bhaitp" path="res://Assets/Music/Level3.mp3" id="14_ejb51"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vxmdh"]
 texture = ExtResource("1_mvojn")
@@ -208,3 +209,6 @@ position = Vector2(980, 459)
 
 [node name="Incubus" parent="." instance=ExtResource("13_ko4ms")]
 position = Vector2(2205, 516)
+
+[node name="Environment" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_ejb51")

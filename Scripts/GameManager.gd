@@ -1,7 +1,8 @@
 # This script is an autoload, that can be accessed from any other script!
 extends Node2D
 
-var sound = load("res://Assets/Music/Coin.mp3")
+var coin = load("res://Assets/Music/Coin.mp3")
+var potion = load("res://Assets/Music/LifePotion.mp3")
 var audio_player = AudioStreamPlayer.new()
 
 
@@ -14,13 +15,13 @@ var keyCollected : bool
 func addOneScore():
 	score += 1
 	add_child(audio_player)
-	audio_player.stream = sound
+	audio_player.stream = coin
 	audio_player.play()
 
 func addChestScore():
 	score += 20
 	add_child(audio_player)
-	audio_player.stream = sound
+	audio_player.stream = coin
 	audio_player.play()
 
 func getDamage():
@@ -33,6 +34,9 @@ func giveDamage(enemy : CharacterBody2D):
 
 func restoreLife():
 	adventurerLife = 100
+	add_child(audio_player)
+	audio_player.stream = potion
+	audio_player.play()
 
 #last level's character damage
 func deathAttack():

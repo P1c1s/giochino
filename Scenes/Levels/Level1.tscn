@@ -294,8 +294,7 @@ space = 90
 [node name="Ghoul" parent="." instance=ExtResource("18_xm5a5")]
 position = Vector2(1451, -62)
 
-[node name="Enviroment" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(0, -423)
+[node name="Enviroment" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_celua")
 
 [node name="Portale" parent="." instance=ExtResource("19_juid1")]
