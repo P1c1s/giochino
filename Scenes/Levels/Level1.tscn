@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://bfc2l2o4m0eem"]
+[gd_scene load_steps=29 format=4 uid="uid://bfc2l2o4m0eem"]
 
 [ext_resource type="Texture2D" uid="uid://cunj1wh2pjxk8" path="res://Assets/Landscapes/Screenshot 2025-01-28 alle 15.58.55.png" id="1_0ppl0"]
 [ext_resource type="Texture2D" uid="uid://bm0qu27ehn2n" path="res://Assets/Landscapes/patchLevel1.png" id="1_2nkfx"]
@@ -16,8 +16,9 @@
 [ext_resource type="PackedScene" uid="uid://gbxpk8rnuasf" path="res://Scenes/Items/Props/LifePotion.tscn" id="11_n5yf6"]
 [ext_resource type="PackedScene" uid="uid://c2u8bclaj7nem" path="res://Scenes/Items/Props/Chest.tscn" id="12_u3swt"]
 [ext_resource type="PackedScene" uid="uid://blt6opwvhf7d8" path="res://Scenes/Characters/Villains/Cobra.tscn" id="17_8db5l"]
-[ext_resource type="AudioStream" uid="uid://cohm80uycrpsf" path="res://Assets/Music/Level1.mp3" id="17_celua"]
+[ext_resource type="AudioStream" uid="uid://cb3blh26xrdii" path="res://Assets/Music/Level1.mp3" id="17_celua"]
 [ext_resource type="PackedScene" uid="uid://cs5s38gwsh52a" path="res://Scenes/Characters/Villains/Ghoul.tscn" id="18_xm5a5"]
+[ext_resource type="PackedScene" uid="uid://8xtwxe1fifct" path="res://Scenes/Items/Props/Portale.tscn" id="19_juid1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuqlx"]
 texture = ExtResource("1_kv4ou")
@@ -203,7 +204,7 @@ shape = SubResource("WorldBoundaryShape2D_nujaa")
 [node name="MobileControls" parent="." instance=ExtResource("6_q45de")]
 
 [node name="Adventurer" parent="." instance=ExtResource("6_78qut")]
-position = Vector2(93, -257)
+position = Vector2(3135, -135)
 
 [node name="Camera2D" type="Camera2D" parent="Adventurer"]
 z_index = 4
@@ -296,3 +297,6 @@ position = Vector2(1451, -62)
 [node name="Enviroment" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(0, -423)
 stream = ExtResource("17_celua")
+
+[node name="Portale" parent="." instance=ExtResource("19_juid1")]
+position = Vector2(3311, -67)

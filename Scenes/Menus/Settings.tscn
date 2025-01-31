@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqcwqf3qcgvb"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/WorldFour.gd" id="1_o6x6o"]
-[ext_resource type="Texture2D" uid="uid://d0d6jrftacxuj" path="res://Assets/UI/Menu/SettingsMenu.png" id="2_xkgtn"]
+[ext_resource type="Texture2D" uid="uid://d2p70bfoof7ig" path="res://Assets/UI/Menu/SettingsMenu.png" id="2_xkgtn"]
 [ext_resource type="Texture2D" uid="uid://wwpwwebice8s" path="res://Assets/UI/Menu/Home.png" id="13_qe6i3"]
 [ext_resource type="Texture2D" uid="uid://cooocgrycxj3h" path="res://Assets/UI/Menu/PressedHome.png" id="14_f080l"]
 

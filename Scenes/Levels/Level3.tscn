@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=4 uid="uid://cl68fby4mn77s"]
+[gd_scene load_steps=17 format=4 uid="uid://cl68fby4mn77s"]
 
 [ext_resource type="Texture2D" uid="uid://mx1mjedsyu5q" path="res://Assets/PatchLevel3.png" id="1_3u7g2"]
+[ext_resource type="Script" path="res://Scripts/Levels/Level3.gd" id="1_govwd"]
 [ext_resource type="Texture2D" uid="uid://cq2c2nr7it782" path="res://Assets/Landscapes/SnowTileset.png" id="1_mvojn"]
 [ext_resource type="PackedScene" uid="uid://btw6dl74bkjxs" path="res://Scenes/Characters/Heroes/Adventurer.tscn" id="3_1v3a0"]
 [ext_resource type="PackedScene" uid="uid://4m0li4cvpxxb" path="res://Scenes/UI/MobileControls.tscn" id="4_4arbp"]
@@ -142,6 +143,7 @@ sources/0 = SubResource("TileSetAtlasSource_vxmdh")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jivy8"]
 
 [node name="Level3" type="Node2D"]
+script = ExtResource("1_govwd")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 5960.0
@@ -162,6 +164,8 @@ position = Vector2(0, 333)
 rotation = 1.5708
 shape = SubResource("WorldBoundaryShape2D_jivy8")
 
+[node name="MobileControls" parent="." instance=ExtResource("4_4arbp")]
+
 [node name="Adventurer" parent="." instance=ExtResource("3_1v3a0")]
 position = Vector2(3428, 507)
 
@@ -170,8 +174,6 @@ limit_left = 0
 limit_top = 0
 limit_right = 5000
 limit_bottom = 610
-
-[node name="MobileControls" parent="Adventurer" instance=ExtResource("4_4arbp")]
 
 [node name="Fox" parent="." instance=ExtResource("4_robds")]
 position = Vector2(3305, 466)

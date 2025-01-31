@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bxeo1ufnd18nv" path="res://Scenes/Items/Props/Coin.tscn" id="5_kxki0"]
 [ext_resource type="PackedScene" uid="uid://gbxpk8rnuasf" path="res://Scenes/Items/Props/LifePotion.tscn" id="6_4e8xt"]
 [ext_resource type="Texture2D" uid="uid://chqjcpkqm1n3x" path="res://Assets/Landscapes/Background layers/sfondoLevel2.jpg" id="7_1g2o0"]
-[ext_resource type="AudioStream" uid="uid://basodb8itluek" path="res://Assets/Music/Level2.mp3" id="9_8pyt4"]
+[ext_resource type="AudioStream" uid="uid://dj3uj68ym1m88" path="res://Assets/Music/Level2.mp3" id="9_8pyt4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mbbb1"]
 texture = ExtResource("1_rlp10")
@@ -187,7 +187,7 @@ sources/0 = SubResource("TileSetAtlasSource_mbbb1")
 normal = Vector2(1, 0)
 distance = 1.0
 
-[node name="Node2D" type="Node2D"]
+[node name="Level2" type="Node2D"]
 script = ExtResource("1_ixkdm")
 
 [node name="TextureRect" type="TextureRect" parent="."]
