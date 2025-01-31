@@ -15,3 +15,5 @@ res://Scripts/Props/Portale.gd
 res://Scripts/Menus/Win.gd
 res://Scripts/Menus/WorldOne.gd
 res://Scenes/Menus/WorldOne.tscn
+res://Scripts/GameManager.gd
+res://Scenes/Menus/WorldOneLocked.tscn
