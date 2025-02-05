@@ -162,6 +162,7 @@ sources/0 = SubResource("TileSetAtlasSource_vxmdh")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jivy8"]
 
 [node name="Level3" type="Node2D"]
+position = Vector2(7, 0)
 script = ExtResource("1_govwd")
 
 [node name="TextureRect" type="TextureRect" parent="."]
