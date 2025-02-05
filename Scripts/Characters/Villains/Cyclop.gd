@@ -2,7 +2,7 @@ class_name Cyclop extends CharacterBody2D
 
 @export var speed = 40
 @export var limit = 0.5
-@export var attackLimit = 60
+@export var attackLimit = 80
 @export var space = 120
 
 @onready var state_machine = $AnimationTree["parameters/playback"]

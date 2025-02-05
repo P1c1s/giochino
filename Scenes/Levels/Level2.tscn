@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://drjh0ca2uoyuw"]
+[gd_scene load_steps=22 format=4 uid="uid://drjh0ca2uoyuw"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Level2.gd" id="1_ixkdm"]
 [ext_resource type="Texture2D" uid="uid://86gt8x2tkk4i" path="res://Assets/Landscapes/Possibili tileset/Dungeon Tile Set.png" id="1_rlp10"]
@@ -9,7 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://bxeo1ufnd18nv" path="res://Scenes/Items/Props/Coin.tscn" id="5_kxki0"]
 [ext_resource type="PackedScene" uid="uid://gbxpk8rnuasf" path="res://Scenes/Items/Props/LifePotion.tscn" id="6_4e8xt"]
 [ext_resource type="Texture2D" uid="uid://chqjcpkqm1n3x" path="res://Assets/Landscapes/Background layers/sfondoLevel2.jpg" id="7_1g2o0"]
+[ext_resource type="PackedScene" uid="uid://c2u8bclaj7nem" path="res://Scenes/Items/Props/Chest.tscn" id="8_1qwn8"]
 [ext_resource type="AudioStream" uid="uid://dj3uj68ym1m88" path="res://Assets/Music/Level2.mp3" id="9_8pyt4"]
+[ext_resource type="PackedScene" uid="uid://2xv4eavhdcv4" path="res://Scenes/Items/Props/Key.tscn" id="9_rjaet"]
 [ext_resource type="PackedScene" uid="uid://blt6opwvhf7d8" path="res://Scenes/Characters/Villains/Cobra.tscn" id="10_qs6ka"]
 [ext_resource type="PackedScene" uid="uid://djs8xs7k6mfk5" path="res://Scenes/Characters/Villains/Imp.tscn" id="11_isw7g"]
 [ext_resource type="PackedScene" uid="uid://dixhf3f0na1q8" path="res://Scenes/Characters/Villains/Incubus.tscn" id="12_fmbiv"]
@@ -238,6 +240,15 @@ shape = SubResource("WorldBoundaryShape2D_bfod8")
 
 [node name="MobileControls" parent="." instance=ExtResource("4_rl7k7")]
 
+[node name="KeysChests" type="Node2D" parent="."]
+
+[node name="Chest" parent="KeysChests" instance=ExtResource("8_1qwn8")]
+position = Vector2(11322, 271)
+scale = Vector2(2.3, 2.3)
+
+[node name="Key" parent="KeysChests" instance=ExtResource("9_rjaet")]
+position = Vector2(10357, 385)
+
 [node name="Coins" type="Node2D" parent="."]
 position = Vector2(0, -7)
 
@@ -295,20 +306,41 @@ position = Vector2(4696, 389)
 [node name="Coin19" parent="Coins" instance=ExtResource("5_kxki0")]
 position = Vector2(6032, 508)
 
-[node name="Coin20" parent="Coins" instance=ExtResource("5_kxki0")]
-position = Vector2(11463, 228)
-
 [node name="Coin21" parent="Coins" instance=ExtResource("5_kxki0")]
 position = Vector2(11899, 418)
 
-[node name="Potions" type="Node2D" parent="."]
-position = Vector2(231, -186)
+[node name="LifePotions" type="Node2D" parent="."]
 
-[node name="LifePotion" parent="Potions" instance=ExtResource("6_4e8xt")]
-position = Vector2(-13, 6)
+[node name="LifePotion" parent="LifePotions" instance=ExtResource("6_4e8xt")]
+position = Vector2(1982, 517)
+
+[node name="LifePotion2" parent="LifePotions" instance=ExtResource("6_4e8xt")]
+position = Vector2(3742, 556)
+
+[node name="LifePotion3" parent="LifePotions" instance=ExtResource("6_4e8xt")]
+position = Vector2(4921, 477)
+
+[node name="LifePotion4" parent="LifePotions" instance=ExtResource("6_4e8xt")]
+position = Vector2(6380, 357)
+
+[node name="LifePotion5" parent="LifePotions" instance=ExtResource("6_4e8xt")]
+position = Vector2(6683, 557)
+
+[node name="LifePotion6" parent="LifePotions" instance=ExtResource("6_4e8xt")]
+position = Vector2(8248, 557)
+
+[node name="LifePotion7" parent="LifePotions" instance=ExtResource("6_4e8xt")]
+position = Vector2(9775, 476)
+
+[node name="LifePotion8" parent="LifePotions" instance=ExtResource("6_4e8xt")]
+position = Vector2(11457, 275)
+
+[node name="LifePotion10" parent="LifePotions" instance=ExtResource("6_4e8xt")]
+position = Vector2(11529, 477)
 
 [node name="Enviroment" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_8pyt4")
+parameters/looping = true
 
 [node name="Cobra" parent="." instance=ExtResource("10_qs6ka")]
 position = Vector2(308, 536)
@@ -332,7 +364,7 @@ position = Vector2(4311, 612)
 position = Vector2(2452, 406)
 
 [node name="Ghoul" parent="." instance=ExtResource("14_y7u73")]
-position = Vector2(4098, 536)
+position = Vector2(3981, 535)
 
 [node name="Imp6" parent="." instance=ExtResource("11_isw7g")]
 position = Vector2(4793, 491)
@@ -387,33 +419,3 @@ position = Vector2(11950, 573)
 
 [node name="Cobra4" parent="." instance=ExtResource("10_qs6ka")]
 position = Vector2(11776, 418)
-
-[node name="LifePotion" parent="." instance=ExtResource("6_4e8xt")]
-position = Vector2(1982, 517)
-
-[node name="LifePotion2" parent="." instance=ExtResource("6_4e8xt")]
-position = Vector2(3742, 556)
-
-[node name="LifePotion3" parent="." instance=ExtResource("6_4e8xt")]
-position = Vector2(4921, 477)
-
-[node name="LifePotion4" parent="." instance=ExtResource("6_4e8xt")]
-position = Vector2(6380, 357)
-
-[node name="LifePotion5" parent="." instance=ExtResource("6_4e8xt")]
-position = Vector2(6683, 557)
-
-[node name="LifePotion6" parent="." instance=ExtResource("6_4e8xt")]
-position = Vector2(8248, 557)
-
-[node name="LifePotion7" parent="." instance=ExtResource("6_4e8xt")]
-position = Vector2(9775, 476)
-
-[node name="LifePotion8" parent="." instance=ExtResource("6_4e8xt")]
-position = Vector2(11457, 275)
-
-[node name="LifePotion9" parent="." instance=ExtResource("6_4e8xt")]
-position = Vector2(10507, 358)
-
-[node name="LifePotion10" parent="." instance=ExtResource("6_4e8xt")]
-position = Vector2(11529, 477)

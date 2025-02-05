@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ckd1mtuus8hmb" path="res://Assets/Items/Props/healthbarProgress.png" id="3_b0k3y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5dwgj"]
-radius = 13.0
+radius = 15.0
 height = 56.0
 
 [sub_resource type="Animation" id="Animation_6g1bw"]
@@ -149,17 +149,16 @@ states/Walk/position = Vector2(377, 100)
 transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_w6c6n"), "Walk", "Attack", SubResource("AnimationNodeStateMachineTransition_hsn3p"), "Walk", "Die", SubResource("AnimationNodeStateMachineTransition_yssvl"), "Attack", "Die", SubResource("AnimationNodeStateMachineTransition_y4wtb"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_fypp1"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_2phn0"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_ir4yc"), "Idle", "Die", SubResource("AnimationNodeStateMachineTransition_xi22u"), "Attack", "Walk", SubResource("AnimationNodeStateMachineTransition_24raj"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_n0e5x")]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vnit5"]
-radius = 24.0
+radius = 29.5
 height = 157.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l04h6"]
-radius = 25.0
-height = 50.9999
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evp80"]
+size = Vector2(48, 50.5)
 
 [node name="Cyclop" type="CharacterBody2D" groups=["Enemies"]]
 scale = Vector2(2, 2)
 collision_layer = 8
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("1_gpko5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -170,7 +169,6 @@ vframes = 20
 frame = 45
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-0.5, 12.5)
 shape = SubResource("CapsuleShape2D_5dwgj")
 
@@ -179,6 +177,7 @@ libraries = {
 "": SubResource("AnimationLibrary_1ibi1")
 }
 autoplay = "Walk"
+speed_scale = 2.5
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_lghob")
@@ -215,9 +214,9 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(0, 14.5)
+position = Vector2(-0.749993, 15)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_l04h6")
+shape = SubResource("RectangleShape2D_evp80")
 
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
