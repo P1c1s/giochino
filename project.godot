@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Prova"
+config/name="Adventurer's Adventure"
 run/main_scene="res://Scenes/Menus/Home.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://Cover.svg"
