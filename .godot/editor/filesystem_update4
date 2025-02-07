@@ -1,1 +1,7 @@
+res://Scenes/Levels/Level1.tscn
+res://Scenes/Levels/Level2.tscn
 res://Scenes/Levels/Level3.tscn
+res://Scenes/Characters/Villains/Monster.tscn
+res://Scenes/Characters/Villains/ShardsoulSlayer.tscn
+res://Scenes/UI/LifeBar_CoinNumber.tscn
+res://Scenes/Characters/Villains/TwigBlight.tscn

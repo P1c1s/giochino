@@ -20,6 +20,7 @@ var collisionPlayer : bool
 #variable for the life progress bar
 var life: int
 
+var numDamage: int
 
 func _ready():
 	startPosition = position
@@ -29,6 +30,7 @@ func _ready():
 	life = 500
 	collisionPlayer = false
 	$Movimento.start()
+	numDamage = 0;
 
 		
 func _physics_process(_delta):

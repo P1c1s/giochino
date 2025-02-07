@@ -145,7 +145,7 @@ graph_offset = Vector2(-359.625, 10.0725)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dtobo"]
 radius = 11.5
-height = 114.0
+height = 61.5
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3w1h4"]
 radius = 8.0

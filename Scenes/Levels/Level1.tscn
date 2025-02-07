@@ -333,7 +333,7 @@ position = Vector2(3340, -42)
 position = Vector2(6200, -44)
 
 [node name="ShardsoulSlayer" parent="." instance=ExtResource("21_uk3mu")]
-position = Vector2(7917, -130)
+position = Vector2(7917, -126)
 
 [node name="ShardsoulSlayer2" parent="." instance=ExtResource("21_uk3mu")]
 position = Vector2(9531, -132)
