@@ -231,7 +231,7 @@ scale = Vector2(4, 4)
 position = Vector2(980, 459)
 
 [node name="ShardsoulSlayer" parent="." instance=ExtResource("13_ldn01")]
-position = Vector2(2265, 458)
+position = Vector2(2434, 459)
 
 [node name="Environment" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_ejb51")

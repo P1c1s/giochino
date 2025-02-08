@@ -64,6 +64,8 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 		GameManager.deathAttack()
 		player_chase = false
 		state_machine.travel("Death")
+		GameManager.bossDeath()				
+	
 	if anim_name == "Death":
 		self.queue_free()
 		

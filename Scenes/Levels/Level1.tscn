@@ -210,10 +210,11 @@ shape = SubResource("WorldBoundaryShape2D_nujaa")
 position = Vector2(101, -411)
 
 [node name="Camera2D" type="Camera2D" parent="Adventurer"]
+scale = Vector2(2.5, 2.5)
 limit_left = 0
 limit_top = 0
-limit_right = 12035
-limit_bottom = 400
+limit_right = 23000
+limit_bottom = 830
 
 [node name="Fox" parent="." instance=ExtResource("6_71ju5")]
 position = Vector2(48, -417)

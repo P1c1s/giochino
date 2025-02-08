@@ -50,6 +50,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_attack"):
 		$AreaAttacco/Sword.disabled = false
 		attackMode = true
+		#GameManager.wavingSword()	#vediamo se tenerla
 		if velocity.x:
 			state_machine.travel("AttackRun")
 		else:

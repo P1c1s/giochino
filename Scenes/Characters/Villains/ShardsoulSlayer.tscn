@@ -190,8 +190,7 @@ offset_top = -11.0
 offset_right = 46.0
 offset_bottom = -1.0
 scale = Vector2(0.6, 0.6)
-max_value = 160.0
-value = 160.0
+value = 100.0
 texture_progress = ExtResource("3_78a1p")
 
 [node name="Cooldown" type="Timer" parent="."]

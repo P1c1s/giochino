@@ -5,6 +5,8 @@ var coin = load("res://Assets/Music/Coin.mp3")
 var potion = load("res://Assets/Music/LifePotion.mp3")
 var attack = load("res://Assets/Music/Attack.mp3")
 var treasure = load("res://Assets/Music/Treasure.mp3")
+var expl = load("res://Assets/Music/BossExplosion.mp3")
+var click = load("res://Assets/Music/Click.mp3")
 var audio_player = AudioStreamPlayer.new()
 
 var score : int = 0
@@ -41,6 +43,10 @@ func giveDamage(enemy : CharacterBody2D):
 	audio_player.stream = attack
 	audio_player.play()
 
+#func wavingSword():
+	#audio_player.stream = attack
+	#audio_player.play()
+
 func restoreLife():
 	adventurerLife = 100
 	audio_player.stream = potion
@@ -49,6 +55,10 @@ func restoreLife():
 #last level's character damage
 func deathAttack():
 	adventurerLife = 0
+
+func bossDeath():
+	audio_player.stream = expl
+	audio_player.play()
 
 func checkLife() -> int:
 	return adventurerLife
@@ -65,6 +75,10 @@ func isKeyCollected() -> bool:
 
 func initKeyCollected():
 	keyCollected = false
+
+func iconClick():
+	audio_player.stream = click
+	audio_player.play()
 
 func gameover():
 	get_tree().change_scene_to_file("res://Scenes/Menus/GameOver.tscn")
