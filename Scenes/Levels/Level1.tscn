@@ -207,20 +207,16 @@ shape = SubResource("WorldBoundaryShape2D_nujaa")
 [node name="MobileControls" parent="." instance=ExtResource("6_q45de")]
 
 [node name="Adventurer" parent="." instance=ExtResource("6_78qut")]
-position = Vector2(111, -299)
+position = Vector2(101, -411)
 
 [node name="Camera2D" type="Camera2D" parent="Adventurer"]
-z_index = 4
-position = Vector2(2, 0)
-scale = Vector2(0.666667, 0.666667)
 limit_left = 0
 limit_top = 0
-limit_right = 23000
-limit_bottom = 830
-editor_draw_limits = true
+limit_right = 12035
+limit_bottom = 400
 
 [node name="Fox" parent="." instance=ExtResource("6_71ju5")]
-position = Vector2(52, -303)
+position = Vector2(48, -417)
 
 [node name="Coins" type="Node2D" parent="."]
 
@@ -300,7 +296,7 @@ scale = Vector2(2.3, 2.3)
 position = Vector2(8497, 244)
 
 [node name="Cobra" parent="." instance=ExtResource("17_8db5l")]
-position = Vector2(1933, -61)
+position = Vector2(1938, -59)
 space = 90
 
 [node name="Cobra2" parent="." instance=ExtResource("17_8db5l")]
@@ -308,7 +304,7 @@ position = Vector2(13606, -59)
 space = 90
 
 [node name="Ghoul" parent="." instance=ExtResource("18_xm5a5")]
-position = Vector2(1451, -62)
+position = Vector2(1450, -60)
 
 [node name="Ghoul3" parent="." instance=ExtResource("18_xm5a5")]
 position = Vector2(5101, -259)
@@ -330,13 +326,13 @@ position = Vector2(3340, -42)
 position = Vector2(3340, -42)
 
 [node name="TwigBlight2" parent="." instance=ExtResource("20_hf85b")]
-position = Vector2(6200, -44)
+position = Vector2(6200, -41)
 
 [node name="ShardsoulSlayer" parent="." instance=ExtResource("21_uk3mu")]
 position = Vector2(7917, -126)
 
 [node name="ShardsoulSlayer2" parent="." instance=ExtResource("21_uk3mu")]
-position = Vector2(9531, -132)
+position = Vector2(9531, -126)
 
 [node name="BrainMoleMonarch" parent="." instance=ExtResource("22_8cyee")]
 position = Vector2(7849, 170)

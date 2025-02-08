@@ -3,6 +3,8 @@ extends Node2D
 
 var coin = load("res://Assets/Music/Coin.mp3")
 var potion = load("res://Assets/Music/LifePotion.mp3")
+var attack = load("res://Assets/Music/Attack.mp3")
+var treasure = load("res://Assets/Music/Treasure.mp3")
 var audio_player = AudioStreamPlayer.new()
 
 var score : int = 0
@@ -18,10 +20,15 @@ func addOneScore():
 	score += 1
 	audio_player.stream = coin
 	audio_player.play()
+	
+# Adds 1 to score variable
+func addKeyScore():
+	audio_player.stream = coin
+	audio_player.play()
 
 func addChestScore():
 	score += 20
-	audio_player.stream = coin
+	audio_player.stream = treasure
 	audio_player.play()
 
 func getDamage():
@@ -29,8 +36,10 @@ func getDamage():
 	#print("Adventurer ha preso danno")
 
 func giveDamage(enemy : CharacterBody2D):
-	#print("Manager deve togliere vita a nemico")
+	#Manager deve togliere vita a nemico
 	enemy.life -= 20
+	audio_player.stream = attack
+	audio_player.play()
 
 func restoreLife():
 	adventurerLife = 100
