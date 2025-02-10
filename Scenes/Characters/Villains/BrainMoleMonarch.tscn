@@ -139,14 +139,15 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_wute7"]
 states/Attack/node = SubResource("AnimationNodeAnimation_kmyji")
-states/Attack/position = Vector2(514, 34)
+states/Attack/position = Vector2(552, -13)
 states/Die/node = SubResource("AnimationNodeAnimation_vofhl")
-states/Die/position = Vector2(514, 155)
+states/Die/position = Vector2(551.25, 208.5)
 states/Idle/node = SubResource("AnimationNodeAnimation_kopfp")
 states/Idle/position = Vector2(762, 100)
 states/Walk/node = SubResource("AnimationNodeAnimation_nbgvb")
 states/Walk/position = Vector2(384, 100)
 transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_smt3e"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_f7lvv"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_hnfia"), "Walk", "Attack", SubResource("AnimationNodeStateMachineTransition_pkvjw"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_rif52"), "Walk", "Die", SubResource("AnimationNodeStateMachineTransition_n6r0e"), "Attack", "Die", SubResource("AnimationNodeStateMachineTransition_rhws8"), "Idle", "Die", SubResource("AnimationNodeStateMachineTransition_8m6t8"), "Attack", "Walk", SubResource("AnimationNodeStateMachineTransition_3gpl1"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_jqmn6")]
+graph_offset = Vector2(37.11, -77.55)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vnit5"]
 radius = 63.0
@@ -195,6 +196,7 @@ texture_progress = ExtResource("3_8ktx3")
 
 [node name="Cooldown" type="Timer" parent="."]
 wait_time = 2.0
+one_shot = true
 
 [node name="DetectionArea" type="Area2D" parent="."]
 collision_layer = 8

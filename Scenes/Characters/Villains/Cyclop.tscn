@@ -194,7 +194,7 @@ value = 150.0
 texture_progress = ExtResource("3_b0k3y")
 
 [node name="Cooldown" type="Timer" parent="."]
-wait_time = 2.0
+one_shot = true
 
 [node name="DetectionArea" type="Area2D" parent="."]
 collision_layer = 8

@@ -35,6 +35,9 @@ func addChestScore():
 
 func getDamage():
 	adventurerLife -= 10
+	
+func getLessDamage():
+	adventurerLife -= 5
 	#print("Adventurer ha preso danno")
 
 func giveDamage(enemy : CharacterBody2D):

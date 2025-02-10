@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://drjh0ca2uoyuw"]
+[gd_scene load_steps=23 format=4 uid="uid://drjh0ca2uoyuw"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Level2.gd" id="1_ixkdm"]
 [ext_resource type="Texture2D" uid="uid://86gt8x2tkk4i" path="res://Assets/Landscapes/Possibili tileset/Dungeon Tile Set.png" id="1_rlp10"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://nmxmjn74m57l" path="res://Scenes/Characters/Villains/Cyclop.tscn" id="13_xvtmh"]
 [ext_resource type="PackedScene" uid="uid://cs5s38gwsh52a" path="res://Scenes/Characters/Villains/Ghoul.tscn" id="14_y7u73"]
 [ext_resource type="PackedScene" uid="uid://chwhfulyew35h" path="res://Scenes/Characters/Villains/Monster.tscn" id="15_muckc"]
+[ext_resource type="PackedScene" uid="uid://8xtwxe1fifct" path="res://Scenes/Items/Props/Portale.tscn" id="19_mr8lg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mbbb1"]
 texture = ExtResource("1_rlp10")
@@ -419,3 +420,7 @@ position = Vector2(11022, 535)
 
 [node name="Cobra4" parent="." instance=ExtResource("10_qs6ka")]
 position = Vector2(11776, 418)
+
+[node name="Portale" parent="." instance=ExtResource("19_mr8lg")]
+position = Vector2(12003, 267)
+scale = Vector2(1.8, 1.8)
