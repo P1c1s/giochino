@@ -7,3 +7,5 @@ res://Scenes/Characters/Villains/BrainMoleMonarch.tscn
 res://Scenes/Characters/Villains/Cyclop.tscn
 res://Scripts/GameManager.gd
 res://Scenes/Characters/Villains/Imp.tscn
+res://Scenes/Characters/Villains/Incubus.tscn
+res://Scripts/Characters/Villains/Imp.gd

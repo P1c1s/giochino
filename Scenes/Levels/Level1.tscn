@@ -273,7 +273,7 @@ position = Vector2(1626, -43)
 scale = Vector2(2.3, 2.3)
 
 [node name="LifePotion2" parent="LifePotions" instance=ExtResource("11_n5yf6")]
-position = Vector2(7082, -49)
+position = Vector2(7083, -40)
 scale = Vector2(2.3, 2.3)
 
 [node name="LifePotion3" parent="LifePotions" instance=ExtResource("11_n5yf6")]

@@ -4,9 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bsv1khng7yjy0" path="res://Assets/Characters/Villains/Incubus Sprite Sheet.png" id="2_avrcb"]
 [ext_resource type="Texture2D" uid="uid://ckd1mtuus8hmb" path="res://Assets/Items/Props/healthbarProgress.png" id="3_y0raj"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5dwgj"]
-radius = 14.5
-height = 43.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ybaa6"]
+size = Vector2(30.5, 37)
 
 [sub_resource type="Animation" id="Animation_6g1bw"]
 resource_name = "Attack"
@@ -151,12 +150,11 @@ states/Walk/position = Vector2(441, 203)
 transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_4b1f7"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_dipuk"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_hg5s5"), "Walk", "Attack", SubResource("AnimationNodeStateMachineTransition_vbh7d"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_p5hcm"), "Walk", "Die", SubResource("AnimationNodeStateMachineTransition_3ca23"), "Attack", "Die", SubResource("AnimationNodeStateMachineTransition_8jggf"), "Idle", "Die", SubResource("AnimationNodeStateMachineTransition_2rfxm"), "Attack", "Walk", SubResource("AnimationNodeStateMachineTransition_meq6q"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_1nitg")]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vnit5"]
-radius = 21.0
+radius = 25.2957
 height = 157.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pktee"]
-radius = 26.0
-height = 52.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_byu15"]
+size = Vector2(42.5, 40)
 
 [node name="Incubus" type="CharacterBody2D" groups=["Enemies"]]
 scale = Vector2(2, 2)
@@ -172,8 +170,8 @@ hframes = 8
 vframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 5)
-shape = SubResource("CapsuleShape2D_5dwgj")
+position = Vector2(-2.25, 2)
+shape = SubResource("RectangleShape2D_ybaa6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -215,7 +213,8 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-shape = SubResource("CapsuleShape2D_pktee")
+position = Vector2(0.75, 2)
+shape = SubResource("RectangleShape2D_byu15")
 
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]

@@ -83,7 +83,7 @@ func attack():
 	state_machine.travel("Attack")
 	
 	if collisionPlayer and numAttacks == 0:
-		GameManager.getDamage()
+		GameManager.getLessDamage()
 		#print("ghoul ha fatto danno")
 	
 		#cooldown()
